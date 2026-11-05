@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-14T17:06:29.324633+00:00",
+  "files": {
+    "thresholds/large_obqa.json": "e874e2d8aeb5d10450d4110725e09b5652a5c4d53e874739d16fd526ce735268"
+  },
+  "cal_d_read": false,
+  "gold_read": false
+}

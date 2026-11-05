@@ -1,0 +1,15 @@
+setting,N_dev,n_fit,fit_split_median_u,n_changed,changed_pct,median_u_changed,share_u_le_fit_median_changed,median_u_all_dev,share_u_le_fit_median_all_dev,n_dev_u_exactly_at_or_below,n_dev_u_tied_at_cut,label
+small/OBQA/Text,742,2100,0.0233409,339,45.69,0.0402899,0.404,0.0210935,0.511,379,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+small/OBQA/C2C,742,2100,0.0233409,350,47.17,0.0484325,0.357,0.0210935,0.511,379,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+small/ARC/Text,299,670,0.0300193,145,48.49,0.0761465,0.359,0.0431347,0.455,136,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+small/ARC/C2C,299,670,0.0300193,160,53.51,0.0602286,0.362,0.0431347,0.455,136,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/OBQA/Text,742,2100,2.98023e-07,174,23.45,0.0015012,0.149,4.76837e-07,0.478,355,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/OBQA/C2C,742,2100,2.98023e-07,131,17.65,0.00669789,0.053,4.76837e-07,0.478,355,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/ARC/Text,299,670,0,52,17.39,0.00145984,0.269,0,0.582,174,174,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/ARC/C2C,299,670,0,48,16.05,0.0125625,0.021,0,0.582,174,174,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/OBQA/Text,742,2100,1.19209e-07,72,9.70,0.0294045,0.028,1.19209e-07,0.512,380,26,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/OBQA/C2C,742,2100,1.19209e-07,60,8.09,0.0262082,0.017,1.19209e-07,0.512,380,26,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/ARC/Text,299,670,0,15,5.02,0.00858754,0.000,0,0.726,217,217,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/ARC/C2C,299,670,0,12,4.01,0.0268734,0.083,0,0.726,217,217,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/MMLU-Pro/Text,2641,3000,0.000740498,561,21.24,0.126435,0.130,0.000637233,0.508,1341,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/MMLU-Pro/C2C,2641,3000,0.000740498,756,28.63,0.0953497,0.112,0.000637233,0.508,1341,0,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision

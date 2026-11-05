@@ -1,0 +1,15 @@
+{"label": "A", "token_id": 32, "token_string": "A", "decoded": "A"}
+{"label": "B", "token_id": 33, "token_string": "B", "decoded": "B"}
+{"label": "C", "token_id": 34, "token_string": "C", "decoded": "C"}
+{"label": "D", "token_id": 35, "token_string": "D", "decoded": "D"}
+{"label": "E", "token_id": 36, "token_string": "E", "decoded": "E"}
+{"label": "C", "token_id": 356, "token_string": "ĠC", "decoded": " C"}
+{"label": "A", "token_id": 362, "token_string": "ĠA", "decoded": " A"}
+{"label": "D", "token_id": 422, "token_string": "ĠD", "decoded": " D"}
+{"label": "B", "token_id": 425, "token_string": "ĠB", "decoded": " B"}
+{"label": "E", "token_id": 468, "token_string": "ĠE", "decoded": " E"}
+{"label": "C", "token_id": 6258, "token_string": "ĉC", "decoded": "\tC"}
+{"label": "D", "token_id": 10957, "token_string": "ĉD", "decoded": "\tD"}
+{"label": "B", "token_id": 12791, "token_string": "ĉB", "decoded": "\tB"}
+{"label": "E", "token_id": 22784, "token_string": "ĉE", "decoded": "\tE"}
+{"label": "A", "token_id": 22985, "token_string": "ĉA", "decoded": "\tA"}

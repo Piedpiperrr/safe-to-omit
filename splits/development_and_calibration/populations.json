@@ -1,0 +1,46 @@
+[
+  {
+    "dataset": "obqa",
+    "split": "fit",
+    "rows": 2100,
+    "groups": 2100,
+    "omitted_from_primary": []
+  },
+  {
+    "dataset": "obqa",
+    "split": "cal",
+    "rows": 1366,
+    "groups": 1366,
+    "omitted_from_primary": []
+  },
+  {
+    "dataset": "obqa",
+    "split": "dev",
+    "rows": 742,
+    "groups": 742,
+    "omitted_from_primary": []
+  },
+  {
+    "dataset": "arc",
+    "split": "fit",
+    "rows": 671,
+    "groups": 670,
+    "omitted_from_primary": [
+      "MEA_2012_5_8"
+    ]
+  },
+  {
+    "dataset": "arc",
+    "split": "cal",
+    "rows": 448,
+    "groups": 448,
+    "omitted_from_primary": []
+  },
+  {
+    "dataset": "arc",
+    "split": "dev",
+    "rows": 299,
+    "groups": 299,
+    "omitted_from_primary": []
+  }
+]

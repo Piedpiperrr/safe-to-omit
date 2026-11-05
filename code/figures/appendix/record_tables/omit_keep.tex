@@ -1,0 +1,16 @@
+\begin{table}[h]\centering\footnotesize
+\caption{The five C2C policies lose 1 to 3 reference corrections each, whereas the large/ARC/Text policy loses 6 of the 10 that Text makes. Reference corrections under the eight deployed Qwen-pair policies (large/OBQA/Text is the historically reused setting) (development populations; descriptive and gold-dependent). Columns are defined in the text of this appendix.}
+\label{tab:omit_keep}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}\toprule
+Setting & Omitted/$N$ & Lost & Kept & Gained & Net & Other & Unused (omit/keep)\\\midrule
+medium/OBQA/C2C & 390/742 & 1/44 & 43/44 & 7 & $+6$ & 11 & 12/89\\
+medium/ARC/C2C & 189/299 & 1/10 & 9/10 & 2 & $+1$ & 8 & 9/36\\
+large/OBQA/Text & 572/742 & 13/46 & 33/46 & 6 & $-7$ & 1 & 14/18\\
+large/OBQA/C2C & 572/742 & 2/16 & 14/16 & 9 & $+7$ & 12 & 14/51\\
+large/ARC/Text & 284/299 & 6/10 & 4/10 & 2 & $-4$ & 1 & 7/3\\
+large/ARC/C2C & 270/299 & 1/4 & 3/4 & 2 & $+1$ & 2 & 3/10\\
+large/MMLU-Pro/Text & 1069/2641 & 12/166 & 154/166 & 14 & $+2$ & 2 & 14/223\\
+large/MMLU-Pro/C2C & 1069/2641 & 3/155 & 152/155 & 27 & $+24$ & 11 & 14/287\\
+\bottomrule\end{tabular}
+\end{table}

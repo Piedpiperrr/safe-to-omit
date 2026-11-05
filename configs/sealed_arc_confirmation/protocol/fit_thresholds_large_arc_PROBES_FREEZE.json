@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-14T17:10:05.280900+00:00",
+  "files": {
+    "records/large_arc_fit_probes.jsonl": "995361860f55956d44fcd989de6bfa43603872b8153a9546e1d64d89f10c898c",
+    "records/large_arc_cal_probes.jsonl": "15c62f9b7d602d865fb52348d43ed6ea8bbea1997671b8768969fe77c93de7ce"
+  },
+  "cal_d_read": false
+}

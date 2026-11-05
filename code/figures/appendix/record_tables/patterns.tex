@@ -1,0 +1,14 @@
+\begin{table}[h]\centering\footnotesize
+\caption{Only on the two small-pair populations are there more questions with C2C correct and Text wrong (001\,+\,101) than the reverse (010\,+\,110). All eight correctness patterns of $R$/Text/C2C on each development population (1 = correct, 0 = incorrect; \textsc{invalid} counts as incorrect). Pattern 001 is the C2C-only column of the table above; 010\,+\,110 counts questions on which Text is correct and C2C is not, and 001\,+\,101 the reverse; the oracle is correct on all but pattern 000.}
+\label{tab:patterns}
+\begin{tabular}{lrrrrrrrrr}\toprule
+Pair/task & $N$ & 000 & 100 & 010 & 001 & 110 & 101 & 011 & 111\\\midrule
+small/OBQA & 742 & 244 & 29 & 66 & 77 & 37 & 46 & 70 & 173\\
+small/ARC & 299 & 95 & 12 & 25 & 39 & 12 & 27 & 30 & 59\\
+medium/OBQA & 742 & 149 & 11 & 59 & 21 & 37 & 38 & 23 & 404\\
+medium/ARC & 299 & 51 & 10 & 21 & 6 & 15 & 11 & 4 & 181\\
+large/OBQA & 742 & 72 & 5 & 37 & 7 & 30 & 13 & 9 & 569\\
+large/ARC & 299 & 19 & 1 & 8 & 2 & 5 & 3 & 2 & 259\\
+large/MMLU-Pro & 2641 & 1083 & 54 & 121 & 110 & 150 & 75 & 45 & 1003\\
+\bottomrule\end{tabular}
+\end{table}

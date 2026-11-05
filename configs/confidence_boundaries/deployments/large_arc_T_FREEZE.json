@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:10:05.604330+00:00",
+  "files": {
+    "deployments/large_arc_T.json": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c",
+    "deployments/large_arc_T_tests.csv": "89f477a0b19a9b941e71f258ca2a91cc4fce84c0fce22db35997a41e13c03d6b",
+    "thresholds/large_arc_FREEZE.json": "2358d14f9a16cd69ea0bca3a2244e0fa83feb50834e20c336059772c1492998a"
+  },
+  "dev_probes_read": false,
+  "dev_gold_read": false,
+  "identity": "new predetermined stratum"
+}

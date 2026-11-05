@@ -1,0 +1,42 @@
+NOTICE
+======
+
+This repository is the public research artifact for the preprint
+"Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an
+LLM Agent Skips Another's Message".
+
+Code and documentation in this repository are released under the MIT License
+(see LICENSE), except as noted below.
+
+--------------------------------------------------------------------------
+C2C (Cache-to-Cache)
+--------------------------------------------------------------------------
+
+https://github.com/thu-nics/C2C, commit 113c3a9b2538cbf096a0477e1ec99ae2a2e0d12a
+License: Apache-2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+The following functions are copied unchanged from rosetta/utils/evaluate.py of
+that commit, so that prompts, generation settings and answer extraction match
+the official C2C evaluator. They remain under the Apache License 2.0:
+
+  code/pipeline/native_action_runtime/protocol_min.py
+      build_prompt, extract_answer_from_content, apply_generation_config
+  code/pipeline/confidence_boundaries/receiver_prompt.py
+      build_prompt
+
+The C2C package itself is not included. code/pipeline/native_action_runtime/
+legacy_methods.py imports it from the checkout named by the C2C_ROOT
+environment variable. The C2C fusers are the released nics-efc/C2C_Fuser
+checkpoints (revision in configs/model_identities.json).
+
+--------------------------------------------------------------------------
+Data
+--------------------------------------------------------------------------
+
+The per-question records are in the Hugging Face dataset
+AgentsSci/ICLR2027-SafeToOmit, released under CC BY-SA 4.0. The records
+contain question text, options and passages from OpenBookQA, ARC-Challenge,
+MMLU-Pro, SQuAD, GSM8K, Natural Questions (MRQA and NQ-Open versions) and
+TriviaQA; that text remains under the licence of its source, listed on the
+dataset card. Model outputs remain subject to the terms of the model that
+produced them (Qwen2.5, Qwen3, OLMo-2, Llama 3.1 and Llama 3.2).

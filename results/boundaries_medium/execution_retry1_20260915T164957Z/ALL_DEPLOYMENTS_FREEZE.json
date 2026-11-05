@@ -1,0 +1,122 @@
+{
+  "utc": "2026-09-15T19:04:38.682460+00:00",
+  "deployments": {
+    "obqa_T": {
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false,
+      "task": "obqa",
+      "reference": "T",
+      "utc": "2026-09-15T18:30:07.770590+00:00",
+      "fit_threshold_sha256": "e9a57c9fbede98cb626d5cfc69d7097996ec3d570946fa378db48f4836383d35",
+      "dev_project_inference_started": false
+    },
+    "obqa_C": {
+      "q": 0.55,
+      "threshold": 1.3113021850585938e-06,
+      "mode": "selective",
+      "accepted_q": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55
+      ],
+      "chosen_calibration": {
+        "q": 0.55,
+        "threshold": 1.3113021850585938e-06,
+        "N_cal": 1366,
+        "routed": 739,
+        "changed": 19,
+        "coverage": 0.54099560761347,
+        "conditional_disagreement": 0.02571041948579161,
+        "p_value": 0.0006941865963785939,
+        "CP_upper_0_999": 0.0490693013388247,
+        "accepted": true,
+        "task": "obqa",
+        "reference": "C",
+        "pair": "medium"
+      },
+      "accuracy_used_for_selection": false,
+      "task": "obqa",
+      "reference": "C",
+      "utc": "2026-09-15T18:30:07.802945+00:00",
+      "fit_threshold_sha256": "e9a57c9fbede98cb626d5cfc69d7097996ec3d570946fa378db48f4836383d35",
+      "dev_project_inference_started": false
+    },
+    "arc_T": {
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false,
+      "task": "arc",
+      "reference": "T",
+      "utc": "2026-09-15T19:04:38.657165+00:00",
+      "fit_threshold_sha256": "3da87f5c00fcb65357f0fc46fa0eaae410456660952871807f239eff183e4ec8",
+      "dev_project_inference_started": false
+    },
+    "arc_C": {
+      "q": 0.6,
+      "threshold": 3.5762786865234375e-07,
+      "mode": "selective",
+      "accepted_q": [
+        0.05,
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6
+      ],
+      "chosen_calibration": {
+        "q": 0.6,
+        "threshold": 3.5762786865234375e-07,
+        "N_cal": 448,
+        "routed": 290,
+        "changed": 1,
+        "coverage": 0.6473214285714286,
+        "conditional_disagreement": 0.0034482758620689655,
+        "p_value": 5.637030858186349e-06,
+        "CP_upper_0_999": 0.03139127484505013,
+        "accepted": true,
+        "task": "arc",
+        "reference": "C",
+        "pair": "medium"
+      },
+      "accuracy_used_for_selection": false,
+      "task": "arc",
+      "reference": "C",
+      "utc": "2026-09-15T19:04:38.670065+00:00",
+      "fit_threshold_sha256": "3da87f5c00fcb65357f0fc46fa0eaae410456660952871807f239eff183e4ec8",
+      "dev_project_inference_started": false
+    }
+  },
+  "hashes": {
+    "deployments/arc_C.json": "dee8cb8c7e71f067c9b4cbdf3e53f3ec2dfaad575507f5584043a24395d660b5",
+    "deployments/arc_C_FREEZE.json": "d8480c532548c798a2f3dc661d838b68802d2464ec333d3ffd2c9d3b91aecca1",
+    "deployments/arc_T.json": "5eb18d002154905949784b7a355ceefbefb1044d33abcf7956ed760682c82472",
+    "deployments/arc_T_FREEZE.json": "ad654ab39c2a127260ff8308a979f7810c9d00915eecc8c1475c182d7941834e",
+    "deployments/obqa_C.json": "b8035cb6fe74f6a4bf738343e08f0efb4e01d5bbbf4da97f1f99b425f5589050",
+    "deployments/obqa_C_FREEZE.json": "c5d55339f53427cbfbb84967fa971b9e4fd01f63ccbdebf9a6b3cf2f72d6cd75",
+    "deployments/obqa_T.json": "0289b50e3c3dfc5af26929d28b3646c314a86f895851e05511444ffb790260fc",
+    "deployments/obqa_T_FREEZE.json": "cd23e5e75111125835cdf7030c2f2ab493b3618476c536209f9b480fc8583903"
+  },
+  "development_project_inference_started": false,
+  "gold_read": false
+}

@@ -1,0 +1,17 @@
+{
+  "version": "SCORING_V2",
+  "implementation": "2.0.0",
+  "frozen_utc": "2026-09-12T19:19:38.860954+00:00",
+  "code_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "rules_sha256": "e5b0463ec013f3b7760c59e23a6499ad47191a339b1acfac7c7a8c883bb49811",
+  "validation_code_sha256": "8d6509ab6bd3b84d0024e526b8f6a1387a537425d03d0776131d10edb6136f27",
+  "validation_result_sha256": "ae5056dd3d52198371f4335fcd532098d2fce2b7c9502455e6ba3217b86fbca4",
+  "targeted_checks_passed": 297,
+  "v2_population_statistics_started": false,
+  "exposure_disclosure": "Revision followed review of exposed cases, gold and old/D1 outcomes; NOT globally blinded.",
+  "rule_authority": "User-approved general V2 principles; no question-ID or method-specific scoring exceptions.",
+  "revision_chain": [],
+  "revision_policy": "At most one directed implementation correction for deviation from predetermined rules; never select by accuracy.",
+  "parent_D1_freeze_path": "<private_path>/RULE_FREEZE_V1.json",
+  "parent_D1_freeze_sha256": "1fe2f353190eb87d36600ef407eb1d4809e693c1aaf93782003fd218c964dfe7"
+}

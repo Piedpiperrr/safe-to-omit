@@ -1,0 +1,28 @@
+\begin{table}[t]
+\caption{Input changes without answer-specific content create comparable oracle headroom and reproduce about three quarters of the real gain. Correct answers: development questions each path answers correctly, out of $N$. Headroom: oracle over $R$, Text, and C2C minus the best single path (points). Null/real: the content-free null's headroom or oracle gain over $R$ divided by the real one; near or above 1, the null reproduces the effect. Stratified: the null also matches how many changes fall on questions $R$ answers correctly and incorrectly. $^{*}$95\% interval excludes 1 (per-path columns); $^{\dagger}$not fully matched (too few questions); $^{\S}$lower bound (0.99 rescaled). All intervals: Appendix~\ref{app:complementarity}.}
+\label{tab:complementarity_main}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\resizebox{\linewidth}{!}{\begin{tabular}{llrrrcccccccc}
+\toprule
+& & \multicolumn{4}{c}{Real paths} & \multicolumn{3}{c}{Null / real, all paths} & \multicolumn{4}{c}{Null / real gain, per path}\\
+\cmidrule(lr){3-6}\cmidrule(lr){7-9}\cmidrule(lr){10-13}
+& & \multicolumn{3}{c}{Correct answers} & Oracle & \multicolumn{2}{c}{Headroom} & Gain & \multicolumn{2}{c}{Unstratified} & \multicolumn{2}{c}{Stratified}\\
+\cmidrule(lr){3-5}\cmidrule(lr){7-8}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+Pair & Benchmark ($N$) & \multicolumn{1}{c}{$R$} & \multicolumn{1}{c}{Text} & \multicolumn{1}{c}{C2C} & headroom (pp) & Unstratified & Stratified & over $R$ & Text & C2C & Text & C2C\\
+\midrule
+small & OBQA (742) & 285 & 346 & 366 & 17.79 & 1.05 & 0.79 & 0.66 & 0.72$^{*}$ & 0.69$^{*}$ & 0.80$^{*}$ & 0.80$^{*}$\\
+small & ARC (299) & 110 & 126 & 155 & 16.39 & 1.15 & 0.73 & 0.74 & 0.85 & 0.75$^{*}$ & 0.84 & 0.86\\
+\addlinespace[2pt]
+medium & OBQA (742) & 490 & 523 & 486 & 9.43 & 1.30 & 1.00$^{\dagger}$ & 0.90 & 0.80$^{*}$ & 1.13 & 0.97 & 1.20\\
+medium & ARC (299) & 217 & 221 & 202 & 9.03 & 0.95$^{\dagger}$ & 0.94$^{\dagger}$ & 0.85$^{\dagger}$ & 0.74 & 1.71$^{*}$ & 0.79 & 1.48\\
+\addlinespace[2pt]
+large & OBQA (742) & 617 & 645 & 598 & 3.37 & 1.60 & 1.08 & 0.76 & 0.55$^{*}$ & 1.31 & 0.81$^{*}$ & 1.08\\
+large & ARC (299) & 268 & 274 & 266 & 2.01 & 1.27 & 0.97$^{\dagger}$ & 0.64 & 0.50$^{*}$ & 0.99 & 0.90$^{\S}$ & 1.35\\
+large & MMLU-Pro (2641) & 1282 & 1319 & 1233 & 9.05 & 1.09 & 1.02 & 0.97 & 0.86$^{*}$ & 1.25$^{*}$ & 0.89 & 1.22$^{*}$\\
+\midrule
+\multicolumn{6}{l}{Median over the seven populations} & 1.15 & 0.97 & 0.76 & 0.74 & 1.13 & 0.84 & 1.20\\
+\bottomrule
+\end{tabular}}
+\end{table}

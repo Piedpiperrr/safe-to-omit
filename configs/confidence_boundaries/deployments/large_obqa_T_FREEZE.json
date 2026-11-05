@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:06:29.634886+00:00",
+  "files": {
+    "deployments/large_obqa_T.json": "6f4f7baa8054e9e6e50397d07492408d0e381bdee3c45a526a8a877b7441814b",
+    "deployments/large_obqa_T_tests.csv": "7365c3fa318f0f3c17622e05464a8f3742107d1821d5c0b7da39167ac7d556bc",
+    "thresholds/large_obqa_FREEZE.json": "653c009d3fb246b37b1477b78ded288752503e76c90ada67d837b80450080241"
+  },
+  "dev_probes_read": true,
+  "dev_gold_read": false,
+  "identity": "reused historical exposure"
+}

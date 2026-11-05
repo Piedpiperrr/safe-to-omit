@@ -1,0 +1,44 @@
+{
+  "openbookqa": {
+    "hf_dataset": "allenai/openbookqa",
+    "config": "main",
+    "revision": "388097ea7776314e93a529163e0fea805b8a6454",
+    "split_used": "train",
+    "train_parquet": {
+      "file": "main/train-00000-of-00001.parquet",
+      "bytes": 495845,
+      "sha256": "98148f8a54e62eb862346a75192d5fb824d6cbb68f2f59aecd793d39ecb5cd8b",
+      "note": "SHA-256 of the local file equals the Hub download etag recorded for this revision"
+    },
+    "populations": {
+      "fit": 2100,
+      "calibration": 1366,
+      "development": 742,
+      "exact_ids": "splits/development_and_calibration/obqa_fit_ids.json, obqa_cal_ids.json, obqa_dev_ids.json (with representatives and group members)"
+    },
+    "provenance_note": "All 4,208 fit, calibration, and development questions come from the official OpenBookQA training split. They form a pre-existing, repeatedly used project pool of 3,466 training and 742 development questions. The original rule that selected this 4,208-question pool from the 4,957 training questions predates the study, is not recoverable from the retained artifacts, and is not used as sealed evidence. The 3,466 training questions were later split into fit (2,100) and calibration (1,366) by sorting minimum-ID group representatives, shuffling them with Python random.Random(0), and taking the first 2,100 as fit. OpenBookQA is used only as exposed development evidence."
+  },
+  "arc_challenge": {
+    "hf_dataset": "allenai/ai2_arc",
+    "config": "ARC-Challenge",
+    "revision": "210d026faf9955653af8916fad021475a3f00453",
+    "files": {
+      "train": {
+        "file": "ARC-Challenge/train-00000-of-00001.parquet",
+        "sha256": "e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb",
+        "role": "fit (670 groups) and calibration (448 groups)"
+      },
+      "validation": {
+        "file": "ARC-Challenge/validation-00000-of-00001.parquet",
+        "sha256": "395a5c88d1580d69855fbaee9450270578df1ad5af6259771cd0a42c20e99f05",
+        "role": "development (299 questions)"
+      },
+      "test": {
+        "file": "ARC-Challenge/test-00000-of-00001.parquet",
+        "sha256": "62f03257e737aed263f55c6abf87c7bb0028a44a6bdd2a26eb1279eb42c1d1e9",
+        "role": "project-sealed confirmation (1,172 questions)"
+      }
+    },
+    "manifest": "configs/sealed_arc_confirmation/protocol/arc_source_manifest.json"
+  }
+}

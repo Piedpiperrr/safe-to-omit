@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:06:29.717973+00:00",
+  "files": {
+    "deployments/large_obqa_C.json": "507a9c099e1836ab75cad162605a86f7e4dfd97d3bed1e8823d1a4f13dab641e",
+    "deployments/large_obqa_C_tests.csv": "ef34a5a01bdbc2a9b340569603c62fc47770ed1964ca7ea15f31a0a099722e79",
+    "thresholds/large_obqa_FREEZE.json": "653c009d3fb246b37b1477b78ded288752503e76c90ada67d837b80450080241"
+  },
+  "dev_probes_read": false,
+  "dev_gold_read": false,
+  "identity": "new predetermined stratum"
+}

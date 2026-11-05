@@ -1,0 +1,11 @@
+{
+  "train_rows": 3466,
+  "train_unique": 3466,
+  "train_duplicate_groups": 0,
+  "dev_rows": 742,
+  "dev_unique": 742,
+  "dev_duplicate_groups": 0,
+  "cross_train_dev_groups": [],
+  "duplicate_definition": "exact whitespace-normalized question + ordered label/text, inherited E0 prepare_protocol.py lines 52-57; no id prefixes",
+  "representative_rule": "lexicographically smallest complete ID"
+}

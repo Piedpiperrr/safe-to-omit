@@ -1,0 +1,39 @@
+{
+  "q": 0.8,
+  "threshold": 0.001170039176940918,
+  "mode": "selective",
+  "accepted_q": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8
+  ],
+  "calibration": {
+    "pair": "large",
+    "dataset": "obqa",
+    "reference": "C",
+    "q": 0.8,
+    "threshold": 0.001170039176940918,
+    "N": 1366,
+    "n_R": 1064,
+    "changed": 22,
+    "conditional_risk": 0.020676691729323307,
+    "p_value": 6.7085048137187e-07,
+    "CP_upper_0_999": 0.03791617334278821,
+    "accepted": true,
+    "coverage": 0.7789165446559297,
+    "calculation_identity": "new"
+  }
+}

@@ -1,0 +1,21 @@
+\begin{table}[t]\centering\footnotesize
+\caption{Every deployed policy tested on unseen questions keeps the change rate's 95\% upper bound below 5\% under our parsers; skipping Text saves hundreds of milliseconds per query, skipping C2C much less. Skipped: \% of development questions answered by the receiver agent alone. Changed: changed skipped answers on development and on sealed or held-out (unseen) questions. Level: the test rejects $\rho\ge0.05$ at 0.001, or only the upper bound is below 5\% (0.025). $\Delta$acc: policy minus reference accuracy on unseen questions (SQuAD: point estimate). Gain ($G$): development reference minus receiver-alone accuracy; Gain Kept: \% of it retained (--: $G\le0$). Saving: paired mean per query on 128-question panels, cold requests included. $^\ddagger$Nominal certificate. $^{\circ}$Pass rule prespecified. $^{\S}$Official C2C extraction: 54/1,044. $^{*}$Certified only at a lower quantile $q$ without the parser-review questions. $^{b}$Second hardware configuration. $^{e}$Estimated, not replayed. Full results: Tables~\ref{tab:e2e_full} and~\ref{tab:dev_full}.}
+\label{tab:e2e}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\linewidth}{!}{\begin{tabular}{lllcrlcrccl}\toprule
+ & & & & \multicolumn{2}{c}{Changed} & & \multicolumn{1}{c}{$\Delta$acc (pp)} & & & \multicolumn{1}{c}{Saving (ms)}\\\cmidrule(lr){5-6}
+Pair & Task & Path & Skipped (\%) & \multicolumn{1}{c}{Dev.} & \multicolumn{1}{c}{Unseen} & Level & \multicolumn{1}{c}{[95\% CI]} & Gain (pp) & Gain Kept (\%) & \multicolumn{1}{c}{[95\% CI]}\\\midrule
+medium & OBQA & C2C$^{*}$ & 52.6 & 11/390 & held out 8/388 & 0.025 & $+0.27$ [$-0.54$, $+1.08$] & $-0.5$ & -- & 79.7 [48.1, 129.1]\\
+medium & ARC & C2C & 63.2 & 4/189 & held out 15/733$^{\circ}$ & 0.001 & $+0.34$ [$-0.26$, $+0.94$] & $-5.0$ & -- & 100.7 [74.5, 133.1]\\\midrule
+large & OBQA & Text$^\ddagger$ & 77.1 & 19/572 & held out 12/595 & 0.001 & $-0.94$ [$-1.88$, $-0.13$] & 3.8 & 75 & 517.1 [447.8, 583.6]\\
+large & OBQA & C2C$^\ddagger$ & 77.1 & 13/572 & held out 13/595 & 0.001 & $+1.21$ [$+0.40$, $+2.15$] & $-2.6$ & -- & 36.6 [18.0, 56.8]\\
+large & ARC & Text & 95.0 & 9/284 & sealed 20/1,100 & 0.001 & $-0.43$ [$-1.19$, $+0.26$] & 2.0 & 33 & 717.6 [670.6, 763.2]\\
+large & ARC & C2C & 90.3 & 3/270 & sealed 11/1,047$^{\S}$ & 0.001 & $+0.34$ [$-0.17$, $+0.85$] & $-0.7$ & -- & 110.9 [82.0, 142.8]\\
+large & MMLU-Pro & Text & 40.5 & 40/1,069 & none & -- & -- & 1.4 & 105 & 346.3 [249.8, 443.0]\\
+large & MMLU-Pro & C2C & 40.5 & 37/1,069 & none & -- & -- & $-1.9$ & -- & 8.2 [$-20.5$, $+44.0$]\\
+large & OBQA & Text+fact$^\ddagger$ & 72.2 & 13/536 & held out 16/558 & 0.025 & $-1.48$ [$-2.55$, $-0.54$] & 7.1 & 81 & 343.4 [297.7, 386.0]$^{b}$\\\midrule
+Llama-8B & OBQA & Text$^{*}$ & 59.0 & 7/438 & held out 3/440$^{\circ}$ & 0.001 & $-0.40$ [$-0.94$, 0.00] & 4.4 & 106 & 318.6 [261.1, 372.1]$^{b}$\\
+Llama-8B & ARC & Text$^{*}$ & 68.9 & 4/206 & held out 15/794$^{\circ}$ & 0.001 & $-0.17$ [$-0.77$, $+0.43$] & 7.0 & 90 & 418.9 [361.7, 473.7]$^{b}$\\
+Llama-8B & SQuAD & Text & 39.6 & 16/396 & sealed 9/364$^{\circ}$ & 0.025 & $+0.4$ & 1.0 & 140 & 198.5 [167.2, 229.9]$^{e}$\\\bottomrule
+\end{tabular}}
+\end{table}

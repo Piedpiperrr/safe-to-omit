@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message"
+type: software
+license: MIT
+repository-code: "https://github.com/Piedpiperrr/safe-to-omit"
+url: "https://piedpiperrr.github.io/safe-to-omit/"
+authors:
+  - given-names: Xinyang
+    family-names: Li
+    affiliation: University of Houston
+  - given-names: Chih-Hsuan
+    family-names: Yang
+    affiliation: Argonne National Laboratory
+    email: bellayang@anl.gov
+  - given-names: Xiaolong
+    family-names: Ma
+    affiliation: Argonne National Laboratory
+  - given-names: Anjir Ahmed
+    family-names: Chowdhury
+    affiliation: University of Houston
+  - given-names: Vikram
+    family-names: Vasudevan
+    affiliation: Oregon State University
+  - given-names: Rajeev
+    family-names: Thakur
+    affiliation: Argonne National Laboratory
+  - given-names: Feng
+    family-names: Yan
+    affiliation: University of Houston
+preferred-citation:
+  type: article
+  title: "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message"
+  year: 2026
+  notes: "Preprint"
+  authors:
+    - given-names: Xinyang
+      family-names: Li
+    - given-names: Chih-Hsuan
+      family-names: Yang
+    - given-names: Xiaolong
+      family-names: Ma
+    - given-names: Anjir Ahmed
+      family-names: Chowdhury
+    - given-names: Vikram
+      family-names: Vasudevan
+    - given-names: Rajeev
+      family-names: Thakur
+    - given-names: Feng
+      family-names: Yan

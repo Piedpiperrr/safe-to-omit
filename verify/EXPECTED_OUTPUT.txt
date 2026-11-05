@@ -1,0 +1,45 @@
+Expected output of the three CPU checks (verify/run_all.sh).
+Identical on Python 3.10, 3.11, 3.12 and 3.13 with the versions pinned in requirements.txt.
+Wall time: about 1 second.
+
+--- verify_a_certification
+Verification (a) - certification test from released calibration records
+alpha = 0.05   p_cutoff = 0.001   grid = 20 points
+
+large/OBQA/Text   grid=20  accepted=16  recomputed q=0.8   deployed q=0.8    PASS
+                  per-test accept flags disagreeing with recomputation: 0/20
+large/ARC/Text    grid=20  accepted=19  recomputed q=0.95  deployed q=0.95   PASS
+                  per-test accept flags disagreeing with recomputation: 0/20
+medium/OBQA/C2C   grid=20  accepted=11  recomputed q=0.55  deployed q=0.55   PASS
+                  per-test accept flags disagreeing with recomputation: 0/20
+
+RESULT: PASS - all three deployed q reproduced from the released ledgers
+
+--- verify_b_e22_ratio
+Verification (b) - E22-1 per-reference unstratified ratio, large/OBQA/Text
+
+  N dev questions        : 742
+  eligible (|P(x)|>0)  E : 166
+  m_Text (answers changed): 72
+  real gain over R       : 46
+  null gain mean (1000 draws): 25.17
+  ratio null/real        : 0.547   expected 0.547
+
+RESULT: PASS - 0.547 reproduced from released records
+
+--- verify_c_table2_row
+Verification (c) - Table 2 row, large/ARC/Text (mode=selective, q=0.95)
+
+  threshold (frozen)   : 0.01800704002380371
+  N dev questions      : 299   (expected 299)
+  skipped (receiver only): 284   (expected 284)
+  coverage / % skipped  : 0.9498  = 95.0%   (expected 95.0%)
+  changed among skipped: 9/284   (expected 9/284)
+  conditional risk     : 0.031690
+
+RESULT: PASS - 95.0% skipped and 9/284 changed reproduced
+
+All three checks ran. Expected RESULT lines:
+  RESULT: PASS - all three deployed q reproduced from the released ledgers
+  RESULT: PASS - 0.547 reproduced from released records
+  RESULT: PASS - 95.0% skipped and 9/284 changed reproduced

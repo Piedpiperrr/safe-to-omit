@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-14T17:12:51.027014+00:00",
+  "files": {
+    "thresholds/small_obqa.json": "b1ecd1cedc747d4869243404a34838ca616f36358b77c7d1bb9b3ecb4ef4eb57"
+  },
+  "cal_d_read": false,
+  "gold_read": false
+}

@@ -1,0 +1,8 @@
+population,N,a_Text_only,b_C2C_only,c_both,c_same_answer,c_different_answer,expected_both_if_independent,ratio_c_over_expected,a_plus_b_plus_c,n_eligible_P_nonempty,under_matched_joint,label
+small/OBQA,742,120,131,219,114,105,159.91,1.370,470,590,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+small/ARC,299,45,60,100,54,46,77.59,1.289,205,231,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/OBQA,742,113,70,61,37,24,30.72,1.986,244,253,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/ARC,299,29,25,23,13,10,8.35,2.755,77,73,yes,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/OBQA,742,55,43,17,13,4,5.82,2.920,115,166,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/ARC,299,11,8,4,3,1,0.60,6.644,23,27,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/MMLU-Pro,2641,277,472,284,126,158,160.59,1.768,1033,1115,no,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision

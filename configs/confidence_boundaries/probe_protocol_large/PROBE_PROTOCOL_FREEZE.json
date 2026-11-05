@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T17:06:31.738489+00:00",
+  "files": {
+    "protocol/large/chat_template.jinja": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "protocol/large/token_decode_mapping.jsonl": "b50d9d3316d3dd679000c90cf8d2d94da1a91c21dc9ef907716a9c489ac92d27",
+    "protocol/large/label_token_sets.json": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac",
+    "protocol/large/FIRST_INPUT_CHECK.json": "33ff9c897d64cb7e1de521ac898f8662860d70e8652ff5be299f79ee661c3e6e",
+    "protocol/large/prefix_ids.json": "4947bce493a63335a402c84ef1bc327ca0dddc281ef07980fe902a574aac8899",
+    "src/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+    "src/run_boundaries.py": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7",
+    "frozen_config.json": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22"
+  },
+  "prefill_attempts": 0,
+  "gold_read": false
+}

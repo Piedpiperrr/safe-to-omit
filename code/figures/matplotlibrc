@@ -1,0 +1,3 @@
+# Used by `make figures`. Uncompressed PDF streams make the output independent of the
+# zlib build, so the regenerated figures are byte-identical on every platform.
+pdf.compression: 0

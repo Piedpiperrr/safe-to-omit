@@ -1,0 +1,37 @@
+{
+  "dataset": "allenai/ai2_arc",
+  "config": "ARC-Challenge",
+  "revision": "210d026faf9955653af8916fad021475a3f00453",
+  "revision_last_modified": "2023-12-21T15:09:48+00:00",
+  "url": "https://huggingface.co/datasets/allenai/ai2_arc",
+  "license": "cc-by-sa-4.0 (README)",
+  "paper": "arXiv:1803.05457",
+  "readme_sha256": "4a293e352253d771604725c978adcea71ee6504e89ed40e1cb0024ecafa9b37e",
+  "downloaded": {
+    "train": {
+      "file": "ARC-Challenge/train-00000-of-00001.parquet",
+      "local": "<private_path>/train-00000-of-00001.parquet",
+      "sha256": "e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb",
+      "bytes": 189909
+    },
+    "validation": {
+      "file": "ARC-Challenge/validation-00000-of-00001.parquet",
+      "local": "<private_path>/validation-00000-of-00001.parquet",
+      "sha256": "395a5c88d1580d69855fbaee9450270578df1ad5af6259771cd0a42c20e99f05",
+      "bytes": 55743
+    }
+  },
+  "test_metadata_only": {
+    "file": "ARC-Challenge/test-00000-of-00001.parquet",
+    "lfs_sha256": "62f03257e737aed263f55c6abf87c7bb0028a44a6bdd2a26eb1279eb42c1d1e9",
+    "bytes": 203808,
+    "num_examples_readme": 1172,
+    "downloaded": false,
+    "answers_viewed": false
+  },
+  "not_downloaded": [
+    "ARC-Challenge/test",
+    "ARC-Easy",
+    "any additional science corpus"
+  ]
+}

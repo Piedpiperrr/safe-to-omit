@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Safe to Omit, Worth Omitting? | Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message (Preprint 2026)</title>
+<meta name="description" content="A receiver agent can often skip a helper agent&#x27;s message. A certified confidence threshold keeps at most 5% of skipped answers from changing; skipping text saves hundreds of milliseconds per query, skipping the KV cache far less.">
+<meta name="author" content="Xinyang Li, Chih-Hsuan Yang, Xiaolong Ma, Anjir Ahmed Chowdhury, Vikram Vasudevan, Rajeev Thakur, Feng Yan">
+<meta name="keywords" content="LLM agents,multi-agent systems,agent communication,KV cache,Cache-to-Cache,selective prediction,risk control,latency">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="citation_title" content="Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another&#x27;s Message">
+<meta name="citation_author" content="Li, Xinyang">
+<meta name="citation_author" content="Yang, Chih-Hsuan">
+<meta name="citation_author" content="Ma, Xiaolong">
+<meta name="citation_author" content="Chowdhury, Anjir Ahmed">
+<meta name="citation_author" content="Vasudevan, Vikram">
+<meta name="citation_author" content="Thakur, Rajeev">
+<meta name="citation_author" content="Yan, Feng">
+<meta name="citation_publication_date" content="2026/11">
+<meta name="citation_pdf_url" content="https://piedpiperrr.github.io/safe-to-omit/paper.pdf">
+<link rel="canonical" href="https://piedpiperrr.github.io/safe-to-omit/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Safe to Omit, Worth Omitting?">
+<meta property="og:title" content="Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another&#x27;s Message">
+<meta property="og:description" content="Certify when a receiver agent can skip a helper agent&#x27;s message: at most 5% of skipped answers change. Skipping text saves hundreds of ms per query; skipping the KV cache far less.">
+<meta property="og:url" content="https://piedpiperrr.github.io/safe-to-omit/">
+<meta property="og:image" content="https://piedpiperrr.github.io/safe-to-omit/assets/overview-large.png">
+<meta property="og:image:alt" content="Dynamic message skipping: the receiver agent answers alone when its uncertainty is below a certified threshold.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another&#x27;s Message">
+<meta name="twitter:description" content="Certify when a receiver agent can skip a helper agent&#x27;s message: at most 5% of skipped answers change. Skipping text saves hundreds of ms per query; skipping the KV cache far less.">
+<meta name="twitter:image" content="https://piedpiperrr.github.io/safe-to-omit/assets/overview-large.png">
+<meta name="twitter:image:alt" content="Dynamic message skipping: the receiver agent answers alone when its uncertainty is below a certified threshold.">
+
+<style>
+:root { color-scheme: light; --paper:#fff; --ink:#252629; --muted:#62666d; --link:#366b91; --rule:#e2e3e5; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+a { color:var(--link); text-decoration:none; text-underline-offset:4px; }
+a:hover { text-decoration:underline; }
+a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid var(--link); outline-offset:5px; }
+.skip { position:absolute; top:-100px; left:20px; background:var(--paper); padding:12px; z-index:2; }
+.skip:focus { top:8px; }
+.hero { max-width:1100px; margin:auto; padding:52px 24px 34px; text-align:center; }
+.venue { margin:0 0 17px; color:var(--muted); font-size:13px; letter-spacing:.09em; text-transform:uppercase; }
+h1 { font:normal clamp(30px,3.3vw,46px)/1.13 Georgia,"Times New Roman",serif; letter-spacing:-.035em; margin:0 auto; max-width:1000px; text-wrap:balance; }
+.subtitle { margin:16px 0 24px; font-size:20px; line-height:1.4; color:var(--muted); text-wrap:balance; }
+.authors { max-width:920px; margin:0 auto 7px; font-size:15px; line-height:1.9; }
+.au { white-space:nowrap; }
+.authors sup { margin-left:2px; }
+sup { font-size:.68em; line-height:0; }
+.affiliations { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 24px; margin:0; font-size:13px; color:var(--muted); }
+.resources { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:25px; }
+.resource { display:inline-flex; justify-content:center; align-items:center; gap:8px; padding:9px 19px; border-radius:999px; color:#fff; background:#303236; font-size:15px; line-height:1.6; min-height:44px; transition:background .15s; }
+.resource:hover { background:#4c5056; text-decoration:none; }
+.resource svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.overview { max-width:1128px; padding:16px 24px 0; margin:auto; }
+figure { margin:0; }
+.figure-link { display:block; }
+figure img { display:block; width:100%; height:auto; /* White image canvas blends with the page; no card or frame. */ }
+figcaption { margin:20px auto 0; max-width:850px; font:20px/1.5 Georgia,"Times New Roman",serif; text-align:center; text-wrap:balance; }
+.figure-note { display:block; margin-top:8px; color:var(--muted); font:13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+.reading { max-width:800px; margin:0 auto; padding:46px 24px 0; }
+h2 { font:normal 27px/1.3 Georgia,"Times New Roman",serif; letter-spacing:-.015em; margin:0 0 16px; }
+p { margin:0 0 16px; }
+.detail-links { display:flex; flex-wrap:wrap; gap:8px 25px; margin-top:20px; font-size:14px; }
+.citation { padding-top:32px; }
+.section-heading { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px; }
+.section-heading>a { font-size:13px; }
+.citation p { font-size:15px; }
+details { border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:12px 0; }
+summary { cursor:pointer; font-size:14px; padding:3px 0; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; margin:20px 0; }
+.copy { font:inherit; font-size:13px; padding:7px 12px; background:transparent; color:var(--ink); border:1px solid var(--rule); border-radius:4px; cursor:pointer; }
+.copy-status { font-size:13px; margin-left:12px; color:var(--muted); }
+footer.reading { padding-top:38px; padding-bottom:35px; font-size:12px; color:var(--muted); }
+.footer-links { display:flex; justify-content:space-between; margin-top:22px; font-size:13px; }
+@media(max-width:640px) { .hero { padding-top:36px; padding-bottom:24px; } h1 { font-size:32px; line-height:1.14; } .desktop-break { display:none; } .subtitle { font-size:17px; margin:16px 0 22px; } .authors { font-size:14px; } .affiliations { font-size:12px; } .resources { display:grid; grid-template-columns:repeat(2,max-content); gap:8px; } .resource { padding:8px 14px; font-size:14px; } .overview { padding-top:12px; } figcaption { font-size:18px; } .reading { padding-top:34px; } h2 { font-size:25px; } body { font-size:16px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .resource { transition:none; } }
+
+.figure-full { display:block; width:max-content; margin:10px auto 0; font-size:12px; }
+
+
+/* Safe areas and a full-screen viewer for the full-size figure. */
+:root { padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+dialog.full { border:0; padding:0; margin:0; width:100vw; height:100vh; height:100dvh; max-width:none; max-height:none; background:rgba(18,19,22,.95); color:#fff; overflow:hidden; }
+dialog.full[open] { display:flex; flex-direction:column; }
+dialog.full::backdrop { background:rgba(18,19,22,.88); }
+.full-bar { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 10px; font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+.full-title { opacity:.85; }
+.full-actions { display:flex; align-items:center; gap:8px; }
+.full-bar button, .full-bar a { font:inherit; font-size:13px; color:#fff; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:6px 13px; cursor:pointer; text-decoration:none; line-height:1.3; }
+.full-bar button:hover, .full-bar a:hover { background:rgba(255,255,255,.22); text-decoration:none; }
+.full-close { width:36px; height:36px; padding:0 !important; font-size:20px !important; line-height:1 !important; }
+.full-bar :focus-visible { outline:2px solid #fff; outline-offset:2px; }
+.full-stage { flex:1; min-height:0; overflow:auto; display:flex; padding:0 16px; outline:none; }
+.full-stage img { margin:auto; display:block; max-width:100%; max-height:100%; width:auto; height:auto; background:#fff; border-radius:4px; cursor:zoom-in; }
+dialog.full.zoom .full-stage img { max-width:none; max-height:none; width:2160px; cursor:zoom-out; }
+.full-hint { margin:0; padding:8px 16px calc(env(safe-area-inset-bottom,0px) + 12px); text-align:center; font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; opacity:.7; }
+@media (max-width:640px) { .full-zoom, .full-hint { display:none; } dialog.full.zoom .full-stage img { width:auto; max-width:100%; } }
+
+</style>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ScholarlyArticle",
+   "headline": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message",
+   "name": "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message",
+   "inLanguage": "en",
+   "url": "https://piedpiperrr.github.io/safe-to-omit/",
+   "mainEntityOfPage": "https://piedpiperrr.github.io/safe-to-omit/",
+   "image": "https://piedpiperrr.github.io/safe-to-omit/assets/overview-large.png",
+   "abstract": "In collaborative multi-agent systems, a receiver agent often waits for a message from a helper agent, which can be either natural-language text or its latent KV cache. While this communication can improve performance, it also adds latency. We investigate when a receiver agent can skip the helper agent's message safely (the final answer rarely changes) and beneficially (the time saved exceeds the cost of deciding). We propose a dynamic skipping mechanism that reads the receiver agent's confidence without the message and applies a finite-sample statistical test. This test certifies a confidence threshold at which, with high probability, at most 5% of skipped answers change; if no threshold passes, the system keeps communicating. We evaluate our mechanism on five benchmarks: three multiple-choice benchmarks with three model pairs each, plus an extractive (SQuAD) and a math (GSM8K) benchmark. Three main insights emerge. First, oracle headroom, a common metric for routing among paths, is weak evidence that messages help. Control inputs without answer-specific content, matched to change answers as often as real messages, give comparable headroom and reproduce a median 76% of the oracle's gain over the receiver agent. Whether text messages beat these controls with statistical significance depends on how they are matched. Second, whether a message can be skipped depends on how often and how predictably it alters the receiver agent's answer, not on its overall accuracy. Third, safety does not determine efficiency: at batch size one, skipping text messages saves hundreds of milliseconds per query, whereas skipping latent KV cache saves far less. Certification extends to SQuAD, which a label-free rule chose from eight candidate settings, while on GSM8K no threshold passes. Finally, in eleven tests on unseen questions, every certified policy we could test kept its change rate's 95% upper bound below 5%, though only four tests had a pass criterion set in advance, and the sealed KV-cache result holds only under our answer parser.",
+   "datePublished": "2026-11",
+   "keywords": [
+    "LLM agents",
+    "multi-agent systems",
+    "agent communication",
+    "KV cache",
+    "selective prediction",
+    "risk control",
+    "latency"
+   ],
+   "author": [
+    {
+     "@type": "Person",
+     "name": "Xinyang Li",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "University of Houston"
+     }
+    },
+    {
+     "@type": "Person",
+     "name": "Chih-Hsuan Yang",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "Argonne National Laboratory"
+     },
+     "email": "bellayang@anl.gov"
+    },
+    {
+     "@type": "Person",
+     "name": "Xiaolong Ma",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "Argonne National Laboratory"
+     }
+    },
+    {
+     "@type": "Person",
+     "name": "Anjir Ahmed Chowdhury",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "University of Houston"
+     }
+    },
+    {
+     "@type": "Person",
+     "name": "Vikram Vasudevan",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "Oregon State University"
+     }
+    },
+    {
+     "@type": "Person",
+     "name": "Rajeev Thakur",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "Argonne National Laboratory"
+     }
+    },
+    {
+     "@type": "Person",
+     "name": "Feng Yan",
+     "affiliation": {
+      "@type": "Organization",
+      "name": "University of Houston"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero" id="top">
+  <p class="venue">Preprint 2026</p>
+  <h1>Safe to Omit, Worth Omitting?</h1>
+  <p class="subtitle">Keeping the Answer and Cutting Latency When an LLM Agent Skips Another&rsquo;s Message</p>
+  <p class="authors">
+      <span class="au">Xinyang Li<sup>1</sup></span><span class="sep">, </span><span class="au">Chih-Hsuan Yang<sup>2*</sup></span><span class="sep">, </span><span class="au">Xiaolong Ma<sup>2</sup></span><span class="sep">, </span><span class="au">Anjir Ahmed Chowdhury<sup>1</sup></span><span class="sep">, </span><span class="au">Vikram Vasudevan<sup>3</sup></span><span class="sep">, </span><span class="au">Rajeev Thakur<sup>2</sup></span><span class="sep">, </span><span class="au">Feng Yan<sup>1</sup></span>
+    </p>
+  <p class="affiliations"><span><sup>1</sup> University of Houston</span><span><sup>2</sup> Argonne National Laboratory</span><span><sup>3</sup> Oregon State University</span><span><sup>*</sup> Corresponding author</span></p>
+  <nav class="resources" aria-label="Paper resources">
+    <a class="resource" href="paper.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h4M10 12h5M10 16h5"/></svg>Paper</a>
+    <a class="resource" href="https://github.com/Piedpiperrr/safe-to-omit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></svg>Code</a>
+    <a class="resource" href="https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg>Dataset</a>
+  </nav>
+</header>
+<main id="main">
+  <section class="overview" id="finding" aria-label="Research overview">
+    <figure>
+      <a class="figure-link" href="assets/overview-large.png" data-full-figure aria-label="Open Figure 1 at full resolution">
+        <img src="assets/overview.png" srcset="assets/overview.png 1080w, assets/overview-large.png 2160w" sizes="(max-width: 1128px) calc(100vw - 48px), 1080px" width="1080" height="342" alt="(a) The deployed system: every query waits for the helper agent&#x27;s message, text or KV cache, before the receiver agent answers. (b) Our method: a probe reads the receiver agent&#x27;s uncertainty u(x); if u(x) is at most the threshold tau, the receiver agent answers alone; otherwise the deployed system runs. Tau is certified on unlabeled calibration questions so that at most 5% of skipped answers change." fetchpriority="high">
+      </a>
+      <a class="figure-full" href="assets/overview-large.png" data-full-figure>View full-size figure ↗</a>
+      <figcaption>Skip the helper&rsquo;s message when the receiver agent is confident, with a certified bound on how many answers change.<span class="figure-note">The threshold is certified on unlabeled calibration questions: with high probability, at most 5% of skipped answers differ from the deployed system&rsquo;s. If no threshold passes, the system keeps communicating.</span></figcaption>
+    </figure>
+  </section>
+  <section class="reading" id="abstract" aria-labelledby="about-title">
+    <h2 id="about-title">When can an agent skip another agent&rsquo;s message?</h2>
+    <p>A receiver agent often waits for a helper agent&rsquo;s message, sent as text or as the helper&rsquo;s KV cache. We read the receiver&rsquo;s confidence without the message and certify, with a finite-sample test, a threshold at which at most 5% of skipped answers change. Across five benchmarks and three model pairs, oracle headroom proves weak evidence that messages help: control inputs without answer-specific content reproduce a median 76% of the oracle&rsquo;s gain. Whether a message can be skipped depends on how often and how predictably it changes the receiver&rsquo;s answer. And safety does not determine efficiency: skipping text saves hundreds of milliseconds per query at batch size one, while skipping the KV cache saves far less.</p>
+    <p class="detail-links"><a href="https://github.com/Piedpiperrr/safe-to-omit#reproducing-the-paper">Reproduction guide ↗</a><a href="https://github.com/Piedpiperrr/safe-to-omit/blob/main/docs/PAPER_MAP.md">Paper map ↗</a><a href="https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit">Per-question records ↗</a></p>
+  </section>
+  <section class="reading citation" id="cite" aria-labelledby="cite-title">
+    <div class="section-heading"><h2 id="cite-title">Citation</h2><a href="citation.bib">Download BibTeX ↗</a></div>
+    <p>Xinyang Li, Chih-Hsuan Yang, Xiaolong Ma, Anjir Ahmed Chowdhury, Vikram Vasudevan, Rajeev Thakur, and Feng Yan. <em>Preprint, 2026.</em></p>
+    <details id="bibtex-details">
+      <summary>BibTeX</summary>
+      <pre id="bibtex"><code>@misc{li2026safetoomit,
+  title  = {Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an {LLM} Agent Skips Another's Message},
+  author = {Li, Xinyang and Yang, Chih-Hsuan and Ma, Xiaolong and Chowdhury, Anjir Ahmed and Vasudevan, Vikram and Thakur, Rajeev and Yan, Feng},
+  year   = {2026},
+  note   = {Preprint}
+}</code></pre>
+      <button type="button" class="copy" data-copy="bibtex">Copy BibTeX</button><span class="copy-status" role="status" aria-live="polite"></span>
+    </details>
+  </section>
+</main>
+<footer class="reading">
+  <p>This research used resources of the Argonne Leadership Computing Facility, a U.S. Department of Energy Office of Science user facility operated under Contract No. DE-AC02-06CH11357. The work of the University of Houston coauthors was supported in part by the National Science Foundation under grants CAREER-2305491 and CNS-2504762.</p>
+  <div class="footer-links"><span><a href="https://chihhsuan-yang.github.io/">Research homepage</a> · <a href="https://www.linkedin.com/in/chih-hsuan-yang-isu/">LinkedIn</a> · <a href="mailto:bellayang@anl.gov">Contact</a></span><a href="#top">Back to top ↑</a></div>
+</footer>
+<dialog class="full" id="full-figure" aria-label="Figure 1 at full size"><div class="full-bar"><span class="full-title">Figure 1</span><span class="full-actions"><button type="button" class="full-zoom" aria-pressed="false">Actual size</button><a class="full-tab" href="assets/overview-large.png" target="_blank" rel="noopener">Open in new tab ↗</a><button type="button" class="full-close" aria-label="Close">×</button></span></div><div class="full-stage" tabindex="-1"><img src="assets/overview-large.png" width="2160" height="683" alt="Figure 1 of the paper at full size."></div><p class="full-hint">Click the figure to switch between fit and actual size. Press Esc to close.</p></dialog>
+<script>
+/* Optional citation convenience. Links and content work without JavaScript. */
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-copy]").forEach(function (button) {
+    button.addEventListener("click", async function () {
+      var source = document.getElementById(button.dataset.copy);
+      var status = button.nextElementSibling;
+      if (!source || !status) return;
+      try {
+        await navigator.clipboard.writeText(source.innerText);
+        status.textContent = "Copied.";
+      } catch (error) {
+        var range = document.createRange();
+        range.selectNodeContents(source);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.textContent = "Text selected. Use your browser’s Copy command.";
+      }
+    });
+  });
+})();
+
+/* Full-size scientific figure viewer. */
+(function () {
+  var dlg = document.getElementById("full-figure");
+  if (!dlg) return;
+  var img = dlg.querySelector(".full-stage img"), zoomBtn = dlg.querySelector(".full-zoom"),
+      tab = dlg.querySelector(".full-tab"), stage = dlg.querySelector(".full-stage"), blobUrl = null;
+  function setZoom(on) {
+    dlg.classList.toggle("zoom", on);
+    zoomBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    zoomBtn.textContent = on ? "Fit to screen" : "Actual size";
+    if (!on) stage.scrollTo(0, 0);
+  }
+  function open(e) {
+    e.preventDefault();
+    tab.href = img.src;
+    setZoom(false);
+    if (dlg.showModal) { dlg.showModal(); stage.focus({ preventScroll: true }); }
+    document.documentElement.style.overflow = "hidden";
+  }
+  document.querySelectorAll('a[data-full-figure]').forEach(function (a) { a.addEventListener("click", open); });
+  dlg.addEventListener("close", function () { document.documentElement.style.overflow = ""; setZoom(false); });
+  dlg.querySelector(".full-close").addEventListener("click", function () { dlg.close(); });
+  zoomBtn.addEventListener("click", function () { setZoom(!dlg.classList.contains("zoom")); });
+  img.addEventListener("click", function () { setZoom(!dlg.classList.contains("zoom")); });
+  stage.addEventListener("click", function (e) { if (e.target === stage) dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  document.querySelectorAll("[data-open-bib]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); var d = document.getElementById("bibtex-details"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "center" }); });
+  });
+})();
+
+</script>
+</body>
+</html>

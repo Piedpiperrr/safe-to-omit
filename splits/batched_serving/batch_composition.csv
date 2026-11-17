@@ -1,0 +1,2413 @@
+pair,dataset,B,batch_id,N,ids
+large,arc,1,0,1,Mercury_SC_407695
+large,arc,1,1,1,Mercury_7103565
+large,arc,1,2,1,MDSA_2009_5_16
+large,arc,1,3,1,Mercury_7027230
+large,arc,1,4,1,Mercury_SC_405487
+large,arc,1,5,1,Mercury_7032743
+large,arc,1,6,1,Mercury_7205135
+large,arc,1,7,1,MDSA_2007_4_52
+large,arc,1,8,1,Mercury_7103215
+large,arc,1,9,1,Mercury_192168
+large,arc,1,10,1,Mercury_SC_412337
+large,arc,1,11,1,Mercury_7162838
+large,arc,1,12,1,Mercury_7159775
+large,arc,1,13,1,Mercury_7195440
+large,arc,1,14,1,Mercury_7017990
+large,arc,1,15,1,TIMSS_2007_4_pg90
+large,arc,1,16,1,Mercury_7198380
+large,arc,1,17,1,NAEP_2005_8_S11+14
+large,arc,1,18,1,Mercury_192290
+large,arc,1,19,1,Mercury_7192990
+large,arc,1,20,1,Mercury_7217053
+large,arc,1,21,1,Mercury_7179358
+large,arc,1,22,1,MCAS_2005_8_5
+large,arc,1,23,1,MCAS_2000_8_10
+large,arc,1,24,1,Mercury_7187915
+large,arc,1,25,1,Mercury_7189823
+large,arc,1,26,1,Mercury_405454
+large,arc,1,27,1,MCAS_2012_5_8
+large,arc,1,28,1,Mercury_SC_LBS10040
+large,arc,1,29,1,Mercury_7115063
+large,arc,1,30,1,MCAS_2015_8_7
+large,arc,1,31,1,Mercury_184765
+large,arc,1,32,1,ACTAAP_2013_7_17
+large,arc,1,33,1,Mercury_7248238
+large,arc,1,34,1,Mercury_SC_410964
+large,arc,1,35,1,NYSEDREGENTS_2014_4_4
+large,arc,1,36,1,MCAS_8_2015_11
+large,arc,1,37,1,Mercury_7183733
+large,arc,1,38,1,MDSA_2010_5_18
+large,arc,1,39,1,LEAP__7_10354
+large,arc,1,40,1,Mercury_7282608
+large,arc,1,41,1,Mercury_7071365
+large,arc,1,42,1,Mercury_SC_407169
+large,arc,1,43,1,ACTAAP_2007_7_5
+large,arc,1,44,1,Mercury_7207358
+large,arc,1,45,1,Mercury_7245893
+large,arc,1,46,1,Mercury_7223038
+large,arc,1,47,1,Mercury_SC_415541
+large,arc,1,48,1,Mercury_7236023
+large,arc,1,49,1,Mercury_417146
+large,arc,1,50,1,Mercury_7128695
+large,arc,1,51,1,Mercury_7270008
+large,arc,1,52,1,Mercury_7242743
+large,arc,1,53,1,Mercury_SC_400655
+large,arc,1,54,1,Mercury_7100695
+large,arc,1,55,1,MSA_2013_8_3
+large,arc,1,56,1,NYSEDREGENTS_2014_4_19
+large,arc,1,57,1,MCAS_2013_8_29432
+large,arc,1,58,1,Mercury_7042700
+large,arc,1,59,1,Mercury_7201705
+large,arc,1,60,1,MCAS_1998_8_13
+large,arc,1,61,1,Mercury_7138513
+large,arc,1,62,1,Mercury_SC_401663
+large,arc,1,63,1,NCEOGA_2013_8_4
+large,arc,1,64,1,Mercury_7235813
+large,arc,1,65,1,Mercury_7011270
+large,arc,1,66,1,Mercury_7228603
+large,arc,1,67,1,Mercury_SC_400339
+large,arc,1,68,1,Mercury_SC_406705
+large,arc,1,69,1,MCAS_2010_5_11998
+large,arc,1,70,1,Mercury_7029505
+large,arc,1,71,1,Mercury_SC_401286
+large,arc,1,72,1,Mercury_7120908
+large,arc,1,73,1,MCAS_2010_8_12010
+large,arc,1,74,1,Mercury_7008138
+large,arc,1,75,1,Mercury_7018148
+large,arc,1,76,1,MCAS_2004_8_28
+large,arc,1,77,1,Mercury_176015
+large,arc,1,78,1,Mercury_7189035
+large,arc,1,79,1,Mercury_7207410
+large,arc,1,80,1,Mercury_7233678
+large,arc,1,81,1,Mercury_SC_402101
+large,arc,1,82,1,Mercury_SC_402104
+large,arc,1,83,1,Mercury_7183015
+large,arc,1,84,1,Mercury_7238963
+large,arc,1,85,1,NYSEDREGENTS_2014_4_14
+large,arc,1,86,1,Mercury_7004410
+large,arc,1,87,1,Mercury_SC_406939
+large,arc,1,88,1,Mercury_7270200
+large,arc,1,89,1,NYSEDREGENTS_2014_8_20
+large,arc,1,90,1,Mercury_7135310
+large,arc,1,91,1,Mercury_400885
+large,arc,1,92,1,Mercury_412551
+large,arc,1,93,1,Mercury_7193043
+large,arc,1,94,1,Mercury_7181685
+large,arc,1,95,1,LEAP_2006_8_10412
+large,arc,1,96,1,Mercury_7215180
+large,arc,1,97,1,NYSEDREGENTS_2014_8_38
+large,arc,1,98,1,Mercury_7145513
+large,arc,1,99,1,MEA_2010_8_11
+large,arc,1,100,1,Mercury_7241115
+large,arc,1,101,1,NYSEDREGENTS_2014_4_17
+large,arc,1,102,1,NYSEDREGENTS_2014_4_13
+large,arc,1,103,1,Mercury_7033653
+large,arc,1,104,1,AKDE&ED_2008_8_44
+large,arc,1,105,1,Mercury_SC_415026
+large,arc,1,106,1,Mercury_7219415
+large,arc,1,107,1,Mercury_400934
+large,arc,1,108,1,Mercury_7139493
+large,arc,1,109,1,Mercury_7032340
+large,arc,1,110,1,MEAP_2005_5_1
+large,arc,1,111,1,ACTAAP_2007_7_25
+large,arc,1,112,1,Mercury_SC_415348
+large,arc,1,113,1,Mercury_7171938
+large,arc,1,114,1,NYSEDREGENTS_2014_4_1
+large,arc,1,115,1,Mercury_7185133
+large,arc,1,116,1,Mercury_SC_411306
+large,arc,1,117,1,Mercury_SC_LBS10666
+large,arc,1,118,1,Mercury_SC_401294
+large,arc,1,119,1,MCAS_2005_5_21
+large,arc,1,120,1,MCAS_2004_9_13
+large,arc,1,121,1,Mercury_7251685
+large,arc,1,122,1,MDSA_2011_5_20
+large,arc,1,123,1,MCAS_2006_5_29
+large,arc,1,124,1,VASoL_2008_5_19
+large,arc,1,125,1,Mercury_7246348
+large,arc,1,126,1,MCAS_2006_9_33
+large,arc,1,127,1,Mercury_SC_LBS10598
+large,arc,1,128,1,MDSA_2008_5_24
+large,arc,1,129,1,Mercury_7141400
+large,arc,1,130,1,Mercury_SC_415366
+large,arc,1,131,1,Mercury_408809
+large,arc,1,132,1,MDSA_2007_5_39
+large,arc,1,133,1,Mercury_7164850
+large,arc,1,134,1,MCAS_2006_9_31-v1
+large,arc,1,135,1,MCAS_2002_5_6
+large,arc,1,136,1,MEA_2016_5_6
+large,arc,1,137,1,Mercury_180058
+large,arc,1,138,1,Mercury_7133858
+large,arc,1,139,1,Mercury_7130603
+large,arc,1,140,1,Mercury_7018008
+large,arc,1,141,1,AIMS_2009_4_29
+large,arc,1,142,1,Mercury_189490
+large,arc,1,143,1,Mercury_7138688
+large,arc,1,144,1,Mercury_409529
+large,arc,1,145,1,Mercury_7092295
+large,arc,1,146,1,Mercury_7044678
+large,arc,1,147,1,MCAS_1998_4_8
+large,arc,1,148,1,LEAP_2004_8_10397
+large,arc,1,149,1,Mercury_7112753
+large,arc,1,150,1,Mercury_7097318
+large,arc,1,151,1,Mercury_7158673
+large,arc,1,152,1,Mercury_7038273
+large,arc,1,153,1,ACTAAP_2010_5_10
+large,arc,1,154,1,VASoL_2008_5_28
+large,arc,1,155,1,Mercury_177818
+large,arc,1,156,1,NYSEDREGENTS_2014_8_12
+large,arc,1,157,1,Mercury_7139790
+large,arc,1,158,1,MCAS_2003_8_25
+large,arc,1,159,1,Mercury_7003955
+large,arc,1,160,1,Mercury_176838
+large,arc,1,161,1,Mercury_SC_407314
+large,arc,1,162,1,Mercury_SC_400845
+large,arc,1,163,1,Mercury_7245193
+large,arc,1,164,1,Mercury_7068863
+large,arc,1,165,1,NCEOGA_2013_8_38
+large,arc,1,166,1,Mercury_7090720
+large,arc,1,167,1,MCAS_2006_9_35
+large,arc,1,168,1,Mercury_7144795
+large,arc,1,169,1,Mercury_SC_LBS10915
+large,arc,1,170,1,MCAS_2009_8_5
+large,arc,1,171,1,Mercury_7175455
+large,arc,1,172,1,Mercury_7100608
+large,arc,1,173,1,Mercury_177398
+large,arc,1,174,1,Mercury_SC_415491
+large,arc,1,175,1,Mercury_SC_400047
+large,arc,1,176,1,Mercury_7218750
+large,arc,1,177,1,Mercury_7115395
+large,arc,1,178,1,Mercury_7205555
+large,arc,1,179,1,Mercury_7093975
+large,arc,1,180,1,MCAS_2012_5_23632
+large,arc,1,181,1,Mercury_7130883
+large,arc,1,182,1,Mercury_416648
+large,arc,1,183,1,Mercury_7006790
+large,arc,1,184,1,Mercury_SC_401244
+large,arc,1,185,1,Mercury_7141908
+large,arc,1,186,1,Mercury_7186148
+large,arc,1,187,1,Mercury_7124338
+large,arc,1,188,1,Mercury_184258
+large,arc,1,189,1,Mercury_SC_400178
+large,arc,1,190,1,Mercury_7007875
+large,arc,1,191,1,Mercury_7221865
+large,arc,1,192,1,Mercury_7269238
+large,arc,1,193,1,NCEOGA_2013_8_40
+large,arc,1,194,1,Mercury_SC_415735
+large,arc,1,195,1,Mercury_7115273
+large,arc,1,196,1,Mercury_7233660
+large,arc,1,197,1,Mercury_7026198
+large,arc,1,198,1,Mercury_7044100
+large,arc,1,199,1,Mercury_SC_408859
+large,arc,1,200,1,LEAP_2012_8_10441
+large,arc,1,201,1,Mercury_7220378
+large,arc,1,202,1,TIMSS_2003_8_pg14
+large,arc,1,203,1,Mercury_SC_405973
+large,arc,1,204,1,OHAT_2011_8_3
+large,arc,1,205,1,Mercury_412683
+large,arc,1,206,1,MCAS_1998_8_2
+large,arc,1,207,1,Mercury_7005478
+large,arc,1,208,1,Mercury_7105123
+large,arc,1,209,1,Mercury_7154263
+large,arc,1,210,1,TIMSS_2003_8_pg29
+large,arc,1,211,1,Mercury_7245053
+large,arc,1,212,1,TIMSS_2007_4_pg26
+large,arc,1,213,1,NYSEDREGENTS_2014_4_9
+large,arc,1,214,1,Mercury_414131
+large,arc,1,215,1,Mercury_SC_407574
+large,arc,1,216,1,Mercury_7018515
+large,arc,1,217,1,TIMSS_2003_8_pg31
+large,arc,1,218,1,Mercury_7015435
+large,arc,1,219,1,Mercury_7166880
+large,arc,1,220,1,Mercury_7251668
+large,arc,1,221,1,Mercury_415263
+large,arc,1,222,1,MEA_2013_5_3
+large,arc,1,223,1,Mercury_7205345
+large,arc,1,224,1,Mercury_7250023
+large,arc,1,225,1,ACTAAP_2009_5_5
+large,arc,1,226,1,Mercury_406781
+large,arc,1,227,1,Mercury_7086013
+large,arc,1,228,1,Mercury_7057313
+large,arc,1,229,1,Mercury_SC_LBS10472
+large,arc,1,230,1,Mercury_7190155
+large,arc,1,231,1,Mercury_7081760
+large,arc,1,232,1,Mercury_7075145
+large,arc,1,233,1,Mercury_7037573
+large,arc,1,234,1,NYSEDREGENTS_2014_8_41
+large,arc,1,235,1,Mercury_SC_408700
+large,arc,1,236,1,Mercury_7284043
+large,arc,1,237,1,Mercury_7103180
+large,arc,1,238,1,Mercury_7099768
+large,arc,1,239,1,Mercury_7133648
+large,arc,1,240,1,NYSEDREGENTS_2014_4_22
+large,arc,1,241,1,NYSEDREGENTS_2014_4_28
+large,arc,1,242,1,Mercury_SC_406029
+large,arc,1,243,1,Mercury_7267593
+large,arc,1,244,1,Mercury_7085820
+large,arc,1,245,1,MCAS_2011_5_17673
+large,arc,1,246,1,Mercury_7090738
+large,arc,1,247,1,Mercury_7234483
+large,arc,1,248,1,NYSEDREGENTS_2014_4_20
+large,arc,1,249,1,Mercury_7141698
+large,arc,1,250,1,Mercury_SC_415354
+large,arc,1,251,1,NYSEDREGENTS_2014_4_2
+large,arc,1,252,1,Mercury_7187058
+large,arc,1,253,1,Mercury_7221095
+large,arc,1,254,1,Mercury_7143518
+large,arc,1,255,1,Mercury_7014368
+large,arc,1,256,1,Mercury_7018445
+large,arc,1,257,1,MCAS_2014_8_17
+large,arc,1,258,1,Mercury_180443
+large,arc,1,259,1,Mercury_7120890
+large,arc,1,260,1,Mercury_7159268
+large,arc,1,261,1,MCAS_1999_8_22
+large,arc,1,262,1,Mercury_SC_415397
+large,arc,1,263,1,Mercury_7042735
+large,arc,1,264,1,Mercury_SC_400172
+large,arc,1,265,1,Mercury_7008120
+large,arc,1,266,1,Mercury_7267995
+large,arc,1,267,1,Mercury_7038133
+large,arc,1,268,1,Mercury_7026443
+large,arc,1,269,1,Mercury_7099103
+large,arc,1,270,1,Mercury_7207620
+large,arc,1,271,1,NCEOGA_2013_5_43
+large,arc,1,272,1,Mercury_7166180
+large,arc,1,273,1,Mercury_7168123
+large,arc,1,274,1,MCAS_2012_8_23636
+large,arc,1,275,1,MCAS_2013_8_29421
+large,arc,1,276,1,Mercury_400397
+large,arc,1,277,1,Mercury_184013
+large,arc,1,278,1,MDSA_2007_8_15
+large,arc,1,279,1,Mercury_SC_401714
+large,arc,1,280,1,Mercury_7246925
+large,arc,1,281,1,Mercury_400905
+large,arc,1,282,1,Mercury_7131828
+large,arc,1,283,1,Mercury_7166530
+large,arc,1,284,1,Mercury_7074865
+large,arc,1,285,1,Mercury_7246995
+large,arc,1,286,1,TIMSS_2011_8_pg63
+large,arc,1,287,1,Mercury_SC_400612
+large,arc,1,288,1,MEA_2016_5_7
+large,arc,1,289,1,ACTAAP_2011_5_3
+large,arc,1,290,1,Mercury_7264023
+large,arc,1,291,1,Mercury_SC_400050
+large,arc,1,292,1,MCAS_2003_5_31
+large,arc,1,293,1,Mercury_LBS10399
+large,arc,1,294,1,Mercury_7090598
+large,arc,1,295,1,OHAT_2007_5_24
+large,arc,1,296,1,Mercury_SC_402239
+large,arc,1,297,1,Mercury_7245088
+large,arc,1,298,1,Mercury_7082145
+large,arc,8,0,8,Mercury_SC_407695 Mercury_7103565 MDSA_2009_5_16 Mercury_7027230 Mercury_SC_405487 Mercury_7032743 Mercury_7205135 MDSA_2007_4_52
+large,arc,8,1,8,Mercury_7103215 Mercury_192168 Mercury_SC_412337 Mercury_7162838 Mercury_7159775 Mercury_7195440 Mercury_7017990 TIMSS_2007_4_pg90
+large,arc,8,2,8,Mercury_7198380 NAEP_2005_8_S11+14 Mercury_192290 Mercury_7192990 Mercury_7217053 Mercury_7179358 MCAS_2005_8_5 MCAS_2000_8_10
+large,arc,8,3,8,Mercury_7187915 Mercury_7189823 Mercury_405454 MCAS_2012_5_8 Mercury_SC_LBS10040 Mercury_7115063 MCAS_2015_8_7 Mercury_184765
+large,arc,8,4,8,ACTAAP_2013_7_17 Mercury_7248238 Mercury_SC_410964 NYSEDREGENTS_2014_4_4 MCAS_8_2015_11 Mercury_7183733 MDSA_2010_5_18 LEAP__7_10354
+large,arc,8,5,8,Mercury_7282608 Mercury_7071365 Mercury_SC_407169 ACTAAP_2007_7_5 Mercury_7207358 Mercury_7245893 Mercury_7223038 Mercury_SC_415541
+large,arc,8,6,8,Mercury_7236023 Mercury_417146 Mercury_7128695 Mercury_7270008 Mercury_7242743 Mercury_SC_400655 Mercury_7100695 MSA_2013_8_3
+large,arc,8,7,8,NYSEDREGENTS_2014_4_19 MCAS_2013_8_29432 Mercury_7042700 Mercury_7201705 MCAS_1998_8_13 Mercury_7138513 Mercury_SC_401663 NCEOGA_2013_8_4
+large,arc,8,8,8,Mercury_7235813 Mercury_7011270 Mercury_7228603 Mercury_SC_400339 Mercury_SC_406705 MCAS_2010_5_11998 Mercury_7029505 Mercury_SC_401286
+large,arc,8,9,8,Mercury_7120908 MCAS_2010_8_12010 Mercury_7008138 Mercury_7018148 MCAS_2004_8_28 Mercury_176015 Mercury_7189035 Mercury_7207410
+large,arc,8,10,8,Mercury_7233678 Mercury_SC_402101 Mercury_SC_402104 Mercury_7183015 Mercury_7238963 NYSEDREGENTS_2014_4_14 Mercury_7004410 Mercury_SC_406939
+large,arc,8,11,8,Mercury_7270200 NYSEDREGENTS_2014_8_20 Mercury_7135310 Mercury_400885 Mercury_412551 Mercury_7193043 Mercury_7181685 LEAP_2006_8_10412
+large,arc,8,12,8,Mercury_7215180 NYSEDREGENTS_2014_8_38 Mercury_7145513 MEA_2010_8_11 Mercury_7241115 NYSEDREGENTS_2014_4_17 NYSEDREGENTS_2014_4_13 Mercury_7033653
+large,arc,8,13,8,AKDE&ED_2008_8_44 Mercury_SC_415026 Mercury_7219415 Mercury_400934 Mercury_7139493 Mercury_7032340 MEAP_2005_5_1 ACTAAP_2007_7_25
+large,arc,8,14,8,Mercury_SC_415348 Mercury_7171938 NYSEDREGENTS_2014_4_1 Mercury_7185133 Mercury_SC_411306 Mercury_SC_LBS10666 Mercury_SC_401294 MCAS_2005_5_21
+large,arc,8,15,8,MCAS_2004_9_13 Mercury_7251685 MDSA_2011_5_20 MCAS_2006_5_29 VASoL_2008_5_19 Mercury_7246348 MCAS_2006_9_33 Mercury_SC_LBS10598
+large,arc,8,16,8,MDSA_2008_5_24 Mercury_7141400 Mercury_SC_415366 Mercury_408809 MDSA_2007_5_39 Mercury_7164850 MCAS_2006_9_31-v1 MCAS_2002_5_6
+large,arc,8,17,8,MEA_2016_5_6 Mercury_180058 Mercury_7133858 Mercury_7130603 Mercury_7018008 AIMS_2009_4_29 Mercury_189490 Mercury_7138688
+large,arc,8,18,8,Mercury_409529 Mercury_7092295 Mercury_7044678 MCAS_1998_4_8 LEAP_2004_8_10397 Mercury_7112753 Mercury_7097318 Mercury_7158673
+large,arc,8,19,8,Mercury_7038273 ACTAAP_2010_5_10 VASoL_2008_5_28 Mercury_177818 NYSEDREGENTS_2014_8_12 Mercury_7139790 MCAS_2003_8_25 Mercury_7003955
+large,arc,8,20,8,Mercury_176838 Mercury_SC_407314 Mercury_SC_400845 Mercury_7245193 Mercury_7068863 NCEOGA_2013_8_38 Mercury_7090720 MCAS_2006_9_35
+large,arc,8,21,8,Mercury_7144795 Mercury_SC_LBS10915 MCAS_2009_8_5 Mercury_7175455 Mercury_7100608 Mercury_177398 Mercury_SC_415491 Mercury_SC_400047
+large,arc,8,22,8,Mercury_7218750 Mercury_7115395 Mercury_7205555 Mercury_7093975 MCAS_2012_5_23632 Mercury_7130883 Mercury_416648 Mercury_7006790
+large,arc,8,23,8,Mercury_SC_401244 Mercury_7141908 Mercury_7186148 Mercury_7124338 Mercury_184258 Mercury_SC_400178 Mercury_7007875 Mercury_7221865
+large,arc,8,24,8,Mercury_7269238 NCEOGA_2013_8_40 Mercury_SC_415735 Mercury_7115273 Mercury_7233660 Mercury_7026198 Mercury_7044100 Mercury_SC_408859
+large,arc,8,25,8,LEAP_2012_8_10441 Mercury_7220378 TIMSS_2003_8_pg14 Mercury_SC_405973 OHAT_2011_8_3 Mercury_412683 MCAS_1998_8_2 Mercury_7005478
+large,arc,8,26,8,Mercury_7105123 Mercury_7154263 TIMSS_2003_8_pg29 Mercury_7245053 TIMSS_2007_4_pg26 NYSEDREGENTS_2014_4_9 Mercury_414131 Mercury_SC_407574
+large,arc,8,27,8,Mercury_7018515 TIMSS_2003_8_pg31 Mercury_7015435 Mercury_7166880 Mercury_7251668 Mercury_415263 MEA_2013_5_3 Mercury_7205345
+large,arc,8,28,8,Mercury_7250023 ACTAAP_2009_5_5 Mercury_406781 Mercury_7086013 Mercury_7057313 Mercury_SC_LBS10472 Mercury_7190155 Mercury_7081760
+large,arc,8,29,8,Mercury_7075145 Mercury_7037573 NYSEDREGENTS_2014_8_41 Mercury_SC_408700 Mercury_7284043 Mercury_7103180 Mercury_7099768 Mercury_7133648
+large,arc,8,30,8,NYSEDREGENTS_2014_4_22 NYSEDREGENTS_2014_4_28 Mercury_SC_406029 Mercury_7267593 Mercury_7085820 MCAS_2011_5_17673 Mercury_7090738 Mercury_7234483
+large,arc,8,31,8,NYSEDREGENTS_2014_4_20 Mercury_7141698 Mercury_SC_415354 NYSEDREGENTS_2014_4_2 Mercury_7187058 Mercury_7221095 Mercury_7143518 Mercury_7014368
+large,arc,8,32,8,Mercury_7018445 MCAS_2014_8_17 Mercury_180443 Mercury_7120890 Mercury_7159268 MCAS_1999_8_22 Mercury_SC_415397 Mercury_7042735
+large,arc,8,33,8,Mercury_SC_400172 Mercury_7008120 Mercury_7267995 Mercury_7038133 Mercury_7026443 Mercury_7099103 Mercury_7207620 NCEOGA_2013_5_43
+large,arc,8,34,8,Mercury_7166180 Mercury_7168123 MCAS_2012_8_23636 MCAS_2013_8_29421 Mercury_400397 Mercury_184013 MDSA_2007_8_15 Mercury_SC_401714
+large,arc,8,35,8,Mercury_7246925 Mercury_400905 Mercury_7131828 Mercury_7166530 Mercury_7074865 Mercury_7246995 TIMSS_2011_8_pg63 Mercury_SC_400612
+large,arc,8,36,8,MEA_2016_5_7 ACTAAP_2011_5_3 Mercury_7264023 Mercury_SC_400050 MCAS_2003_5_31 Mercury_LBS10399 Mercury_7090598 OHAT_2007_5_24
+large,arc,8,37,3,Mercury_SC_402239 Mercury_7245088 Mercury_7082145
+large,arc,32,0,32,Mercury_SC_407695 Mercury_7103565 MDSA_2009_5_16 Mercury_7027230 Mercury_SC_405487 Mercury_7032743 Mercury_7205135 MDSA_2007_4_52 Mercury_7103215 Mercury_192168 Mercury_SC_412337 Mercury_7162838 Mercury_7159775 Mercury_7195440 Mercury_7017990 TIMSS_2007_4_pg90 Mercury_7198380 NAEP_2005_8_S11+14 Mercury_192290 Mercury_7192990 Mercury_7217053 Mercury_7179358 MCAS_2005_8_5 MCAS_2000_8_10 Mercury_7187915 Mercury_7189823 Mercury_405454 MCAS_2012_5_8 Mercury_SC_LBS10040 Mercury_7115063 MCAS_2015_8_7 Mercury_184765
+large,arc,32,1,32,ACTAAP_2013_7_17 Mercury_7248238 Mercury_SC_410964 NYSEDREGENTS_2014_4_4 MCAS_8_2015_11 Mercury_7183733 MDSA_2010_5_18 LEAP__7_10354 Mercury_7282608 Mercury_7071365 Mercury_SC_407169 ACTAAP_2007_7_5 Mercury_7207358 Mercury_7245893 Mercury_7223038 Mercury_SC_415541 Mercury_7236023 Mercury_417146 Mercury_7128695 Mercury_7270008 Mercury_7242743 Mercury_SC_400655 Mercury_7100695 MSA_2013_8_3 NYSEDREGENTS_2014_4_19 MCAS_2013_8_29432 Mercury_7042700 Mercury_7201705 MCAS_1998_8_13 Mercury_7138513 Mercury_SC_401663 NCEOGA_2013_8_4
+large,arc,32,2,32,Mercury_7235813 Mercury_7011270 Mercury_7228603 Mercury_SC_400339 Mercury_SC_406705 MCAS_2010_5_11998 Mercury_7029505 Mercury_SC_401286 Mercury_7120908 MCAS_2010_8_12010 Mercury_7008138 Mercury_7018148 MCAS_2004_8_28 Mercury_176015 Mercury_7189035 Mercury_7207410 Mercury_7233678 Mercury_SC_402101 Mercury_SC_402104 Mercury_7183015 Mercury_7238963 NYSEDREGENTS_2014_4_14 Mercury_7004410 Mercury_SC_406939 Mercury_7270200 NYSEDREGENTS_2014_8_20 Mercury_7135310 Mercury_400885 Mercury_412551 Mercury_7193043 Mercury_7181685 LEAP_2006_8_10412
+large,arc,32,3,32,Mercury_7215180 NYSEDREGENTS_2014_8_38 Mercury_7145513 MEA_2010_8_11 Mercury_7241115 NYSEDREGENTS_2014_4_17 NYSEDREGENTS_2014_4_13 Mercury_7033653 AKDE&ED_2008_8_44 Mercury_SC_415026 Mercury_7219415 Mercury_400934 Mercury_7139493 Mercury_7032340 MEAP_2005_5_1 ACTAAP_2007_7_25 Mercury_SC_415348 Mercury_7171938 NYSEDREGENTS_2014_4_1 Mercury_7185133 Mercury_SC_411306 Mercury_SC_LBS10666 Mercury_SC_401294 MCAS_2005_5_21 MCAS_2004_9_13 Mercury_7251685 MDSA_2011_5_20 MCAS_2006_5_29 VASoL_2008_5_19 Mercury_7246348 MCAS_2006_9_33 Mercury_SC_LBS10598
+large,arc,32,4,32,MDSA_2008_5_24 Mercury_7141400 Mercury_SC_415366 Mercury_408809 MDSA_2007_5_39 Mercury_7164850 MCAS_2006_9_31-v1 MCAS_2002_5_6 MEA_2016_5_6 Mercury_180058 Mercury_7133858 Mercury_7130603 Mercury_7018008 AIMS_2009_4_29 Mercury_189490 Mercury_7138688 Mercury_409529 Mercury_7092295 Mercury_7044678 MCAS_1998_4_8 LEAP_2004_8_10397 Mercury_7112753 Mercury_7097318 Mercury_7158673 Mercury_7038273 ACTAAP_2010_5_10 VASoL_2008_5_28 Mercury_177818 NYSEDREGENTS_2014_8_12 Mercury_7139790 MCAS_2003_8_25 Mercury_7003955
+large,arc,32,5,32,Mercury_176838 Mercury_SC_407314 Mercury_SC_400845 Mercury_7245193 Mercury_7068863 NCEOGA_2013_8_38 Mercury_7090720 MCAS_2006_9_35 Mercury_7144795 Mercury_SC_LBS10915 MCAS_2009_8_5 Mercury_7175455 Mercury_7100608 Mercury_177398 Mercury_SC_415491 Mercury_SC_400047 Mercury_7218750 Mercury_7115395 Mercury_7205555 Mercury_7093975 MCAS_2012_5_23632 Mercury_7130883 Mercury_416648 Mercury_7006790 Mercury_SC_401244 Mercury_7141908 Mercury_7186148 Mercury_7124338 Mercury_184258 Mercury_SC_400178 Mercury_7007875 Mercury_7221865
+large,arc,32,6,32,Mercury_7269238 NCEOGA_2013_8_40 Mercury_SC_415735 Mercury_7115273 Mercury_7233660 Mercury_7026198 Mercury_7044100 Mercury_SC_408859 LEAP_2012_8_10441 Mercury_7220378 TIMSS_2003_8_pg14 Mercury_SC_405973 OHAT_2011_8_3 Mercury_412683 MCAS_1998_8_2 Mercury_7005478 Mercury_7105123 Mercury_7154263 TIMSS_2003_8_pg29 Mercury_7245053 TIMSS_2007_4_pg26 NYSEDREGENTS_2014_4_9 Mercury_414131 Mercury_SC_407574 Mercury_7018515 TIMSS_2003_8_pg31 Mercury_7015435 Mercury_7166880 Mercury_7251668 Mercury_415263 MEA_2013_5_3 Mercury_7205345
+large,arc,32,7,32,Mercury_7250023 ACTAAP_2009_5_5 Mercury_406781 Mercury_7086013 Mercury_7057313 Mercury_SC_LBS10472 Mercury_7190155 Mercury_7081760 Mercury_7075145 Mercury_7037573 NYSEDREGENTS_2014_8_41 Mercury_SC_408700 Mercury_7284043 Mercury_7103180 Mercury_7099768 Mercury_7133648 NYSEDREGENTS_2014_4_22 NYSEDREGENTS_2014_4_28 Mercury_SC_406029 Mercury_7267593 Mercury_7085820 MCAS_2011_5_17673 Mercury_7090738 Mercury_7234483 NYSEDREGENTS_2014_4_20 Mercury_7141698 Mercury_SC_415354 NYSEDREGENTS_2014_4_2 Mercury_7187058 Mercury_7221095 Mercury_7143518 Mercury_7014368
+large,arc,32,8,32,Mercury_7018445 MCAS_2014_8_17 Mercury_180443 Mercury_7120890 Mercury_7159268 MCAS_1999_8_22 Mercury_SC_415397 Mercury_7042735 Mercury_SC_400172 Mercury_7008120 Mercury_7267995 Mercury_7038133 Mercury_7026443 Mercury_7099103 Mercury_7207620 NCEOGA_2013_5_43 Mercury_7166180 Mercury_7168123 MCAS_2012_8_23636 MCAS_2013_8_29421 Mercury_400397 Mercury_184013 MDSA_2007_8_15 Mercury_SC_401714 Mercury_7246925 Mercury_400905 Mercury_7131828 Mercury_7166530 Mercury_7074865 Mercury_7246995 TIMSS_2011_8_pg63 Mercury_SC_400612
+large,arc,32,9,11,MEA_2016_5_7 ACTAAP_2011_5_3 Mercury_7264023 Mercury_SC_400050 MCAS_2003_5_31 Mercury_LBS10399 Mercury_7090598 OHAT_2007_5_24 Mercury_SC_402239 Mercury_7245088 Mercury_7082145
+large,obqa,1,0,1,10-1005
+large,obqa,1,1,1,10-1009
+large,obqa,1,2,1,10-1018
+large,obqa,1,3,1,10-1026
+large,obqa,1,4,1,10-1027
+large,obqa,1,5,1,10-1035
+large,obqa,1,6,1,10-1044
+large,obqa,1,7,1,10-1062
+large,obqa,1,8,1,10-1063
+large,obqa,1,9,1,10-1068
+large,obqa,1,10,1,10-1074
+large,obqa,1,11,1,10-1085
+large,obqa,1,12,1,10-1095
+large,obqa,1,13,1,10-1120
+large,obqa,1,14,1,10-114
+large,obqa,1,15,1,10-1142
+large,obqa,1,16,1,10-1152
+large,obqa,1,17,1,10-1171
+large,obqa,1,18,1,10-1179
+large,obqa,1,19,1,10-1186
+large,obqa,1,20,1,10-1190
+large,obqa,1,21,1,10-1196
+large,obqa,1,22,1,10-1217
+large,obqa,1,23,1,10-128
+large,obqa,1,24,1,10-160
+large,obqa,1,25,1,10-165
+large,obqa,1,26,1,10-170
+large,obqa,1,27,1,10-176
+large,obqa,1,28,1,10-18
+large,obqa,1,29,1,10-184
+large,obqa,1,30,1,10-186
+large,obqa,1,31,1,10-198
+large,obqa,1,32,1,10-2
+large,obqa,1,33,1,10-217
+large,obqa,1,34,1,10-232
+large,obqa,1,35,1,10-233
+large,obqa,1,36,1,10-240
+large,obqa,1,37,1,10-255
+large,obqa,1,38,1,10-293
+large,obqa,1,39,1,10-298
+large,obqa,1,40,1,10-299
+large,obqa,1,41,1,10-300
+large,obqa,1,42,1,10-306
+large,obqa,1,43,1,10-329
+large,obqa,1,44,1,10-336
+large,obqa,1,45,1,10-347
+large,obqa,1,46,1,10-351
+large,obqa,1,47,1,10-352
+large,obqa,1,48,1,10-353
+large,obqa,1,49,1,10-354
+large,obqa,1,50,1,10-366
+large,obqa,1,51,1,10-375
+large,obqa,1,52,1,10-380
+large,obqa,1,53,1,10-386
+large,obqa,1,54,1,10-389
+large,obqa,1,55,1,10-391
+large,obqa,1,56,1,10-399
+large,obqa,1,57,1,10-415
+large,obqa,1,58,1,10-416
+large,obqa,1,59,1,10-419
+large,obqa,1,60,1,10-441
+large,obqa,1,61,1,10-443
+large,obqa,1,62,1,10-453
+large,obqa,1,63,1,10-489
+large,obqa,1,64,1,10-500
+large,obqa,1,65,1,10-516
+large,obqa,1,66,1,10-525
+large,obqa,1,67,1,10-527
+large,obqa,1,68,1,10-528
+large,obqa,1,69,1,10-53
+large,obqa,1,70,1,10-55
+large,obqa,1,71,1,10-555
+large,obqa,1,72,1,10-570
+large,obqa,1,73,1,10-571
+large,obqa,1,74,1,10-58
+large,obqa,1,75,1,10-580
+large,obqa,1,76,1,10-596
+large,obqa,1,77,1,10-598
+large,obqa,1,78,1,10-616
+large,obqa,1,79,1,10-639
+large,obqa,1,80,1,10-640
+large,obqa,1,81,1,10-648
+large,obqa,1,82,1,10-651
+large,obqa,1,83,1,10-677
+large,obqa,1,84,1,10-681
+large,obqa,1,85,1,10-684
+large,obqa,1,86,1,10-688
+large,obqa,1,87,1,10-700
+large,obqa,1,88,1,10-702
+large,obqa,1,89,1,10-724
+large,obqa,1,90,1,10-729
+large,obqa,1,91,1,10-735
+large,obqa,1,92,1,10-739
+large,obqa,1,93,1,10-741
+large,obqa,1,94,1,10-748
+large,obqa,1,95,1,10-749
+large,obqa,1,96,1,10-75
+large,obqa,1,97,1,10-752
+large,obqa,1,98,1,10-757
+large,obqa,1,99,1,10-768
+large,obqa,1,100,1,10-780
+large,obqa,1,101,1,10-783
+large,obqa,1,102,1,10-789
+large,obqa,1,103,1,10-797
+large,obqa,1,104,1,10-815
+large,obqa,1,105,1,10-820
+large,obqa,1,106,1,10-823
+large,obqa,1,107,1,10-852
+large,obqa,1,108,1,10-864
+large,obqa,1,109,1,10-875
+large,obqa,1,110,1,10-876
+large,obqa,1,111,1,10-877
+large,obqa,1,112,1,10-882
+large,obqa,1,113,1,10-894
+large,obqa,1,114,1,10-916
+large,obqa,1,115,1,10-92
+large,obqa,1,116,1,10-921
+large,obqa,1,117,1,10-93
+large,obqa,1,118,1,10-959
+large,obqa,1,119,1,10-963
+large,obqa,1,120,1,10-973
+large,obqa,1,121,1,10-997
+large,obqa,1,122,1,1033
+large,obqa,1,123,1,1043
+large,obqa,1,124,1,1046
+large,obqa,1,125,1,11-110
+large,obqa,1,126,1,11-131
+large,obqa,1,127,1,11-141
+large,obqa,1,128,1,11-149
+large,obqa,1,129,1,11-174
+large,obqa,1,130,1,11-176
+large,obqa,1,131,1,11-199
+large,obqa,1,132,1,11-200
+large,obqa,1,133,1,11-206
+large,obqa,1,134,1,11-208
+large,obqa,1,135,1,11-222
+large,obqa,1,136,1,11-240
+large,obqa,1,137,1,11-247
+large,obqa,1,138,1,11-251
+large,obqa,1,139,1,11-275
+large,obqa,1,140,1,11-281
+large,obqa,1,141,1,11-282
+large,obqa,1,142,1,11-284
+large,obqa,1,143,1,11-302
+large,obqa,1,144,1,11-324
+large,obqa,1,145,1,11-347
+large,obqa,1,146,1,11-349
+large,obqa,1,147,1,11-35
+large,obqa,1,148,1,11-358
+large,obqa,1,149,1,11-37
+large,obqa,1,150,1,11-370
+large,obqa,1,151,1,11-371
+large,obqa,1,152,1,11-389
+large,obqa,1,153,1,11-397
+large,obqa,1,154,1,11-4
+large,obqa,1,155,1,11-404
+large,obqa,1,156,1,11-406
+large,obqa,1,157,1,11-415
+large,obqa,1,158,1,11-417
+large,obqa,1,159,1,11-430
+large,obqa,1,160,1,11-431
+large,obqa,1,161,1,11-442
+large,obqa,1,162,1,11-444
+large,obqa,1,163,1,11-454
+large,obqa,1,164,1,11-481
+large,obqa,1,165,1,11-486
+large,obqa,1,166,1,11-506
+large,obqa,1,167,1,11-515
+large,obqa,1,168,1,11-521
+large,obqa,1,169,1,11-523
+large,obqa,1,170,1,11-552
+large,obqa,1,171,1,11-559
+large,obqa,1,172,1,11-561
+large,obqa,1,173,1,11-564
+large,obqa,1,174,1,11-57
+large,obqa,1,175,1,11-599
+large,obqa,1,176,1,11-603
+large,obqa,1,177,1,11-606
+large,obqa,1,178,1,11-629
+large,obqa,1,179,1,11-642
+large,obqa,1,180,1,11-646
+large,obqa,1,181,1,11-648
+large,obqa,1,182,1,11-652
+large,obqa,1,183,1,11-655
+large,obqa,1,184,1,11-656
+large,obqa,1,185,1,11-663
+large,obqa,1,186,1,11-665
+large,obqa,1,187,1,11-666
+large,obqa,1,188,1,11-669
+large,obqa,1,189,1,11-671
+large,obqa,1,190,1,11-678
+large,obqa,1,191,1,11-679
+large,obqa,1,192,1,11-681
+large,obqa,1,193,1,11-686
+large,obqa,1,194,1,11-692
+large,obqa,1,195,1,11-693
+large,obqa,1,196,1,11-694
+large,obqa,1,197,1,11-705
+large,obqa,1,198,1,11-731
+large,obqa,1,199,1,11-737
+large,obqa,1,200,1,11-742
+large,obqa,1,201,1,11-744
+large,obqa,1,202,1,11-747
+large,obqa,1,203,1,1107
+large,obqa,1,204,1,1118
+large,obqa,1,205,1,112
+large,obqa,1,206,1,1122
+large,obqa,1,207,1,1124
+large,obqa,1,208,1,1144
+large,obqa,1,209,1,115
+large,obqa,1,210,1,1171
+large,obqa,1,211,1,1195
+large,obqa,1,212,1,12-1
+large,obqa,1,213,1,12-100
+large,obqa,1,214,1,12-1011
+large,obqa,1,215,1,12-1021
+large,obqa,1,216,1,12-1045
+large,obqa,1,217,1,12-1046
+large,obqa,1,218,1,12-105
+large,obqa,1,219,1,12-1052
+large,obqa,1,220,1,12-1057
+large,obqa,1,221,1,12-1066
+large,obqa,1,222,1,12-1078
+large,obqa,1,223,1,12-1083
+large,obqa,1,224,1,12-1090
+large,obqa,1,225,1,12-1108
+large,obqa,1,226,1,12-111
+large,obqa,1,227,1,12-1130
+large,obqa,1,228,1,12-1132
+large,obqa,1,229,1,12-1134
+large,obqa,1,230,1,12-1146
+large,obqa,1,231,1,12-1159
+large,obqa,1,232,1,12-116
+large,obqa,1,233,1,12-1163
+large,obqa,1,234,1,12-1170
+large,obqa,1,235,1,12-1177
+large,obqa,1,236,1,12-1202
+large,obqa,1,237,1,12-1206
+large,obqa,1,238,1,12-1208
+large,obqa,1,239,1,12-132
+large,obqa,1,240,1,12-166
+large,obqa,1,241,1,12-17
+large,obqa,1,242,1,12-175
+large,obqa,1,243,1,12-200
+large,obqa,1,244,1,12-208
+large,obqa,1,245,1,12-22
+large,obqa,1,246,1,12-221
+large,obqa,1,247,1,12-242
+large,obqa,1,248,1,12-251
+large,obqa,1,249,1,12-264
+large,obqa,1,250,1,12-271
+large,obqa,1,251,1,12-275
+large,obqa,1,252,1,12-281
+large,obqa,1,253,1,12-282
+large,obqa,1,254,1,12-291
+large,obqa,1,255,1,12-301
+large,obqa,1,256,1,12-306
+large,obqa,1,257,1,12-310
+large,obqa,1,258,1,12-318
+large,obqa,1,259,1,12-321
+large,obqa,1,260,1,12-324
+large,obqa,1,261,1,12-333
+large,obqa,1,262,1,12-342
+large,obqa,1,263,1,12-352
+large,obqa,1,264,1,12-368
+large,obqa,1,265,1,12-397
+large,obqa,1,266,1,12-401
+large,obqa,1,267,1,12-416
+large,obqa,1,268,1,12-425
+large,obqa,1,269,1,12-426
+large,obqa,1,270,1,12-428
+large,obqa,1,271,1,12-443
+large,obqa,1,272,1,12-45
+large,obqa,1,273,1,12-462
+large,obqa,1,274,1,12-468
+large,obqa,1,275,1,12-470
+large,obqa,1,276,1,12-478
+large,obqa,1,277,1,12-488
+large,obqa,1,278,1,12-494
+large,obqa,1,279,1,12-496
+large,obqa,1,280,1,12-541
+large,obqa,1,281,1,12-545
+large,obqa,1,282,1,12-561
+large,obqa,1,283,1,12-577
+large,obqa,1,284,1,12-584
+large,obqa,1,285,1,12-587
+large,obqa,1,286,1,12-605
+large,obqa,1,287,1,12-645
+large,obqa,1,288,1,12-669
+large,obqa,1,289,1,12-674
+large,obqa,1,290,1,12-68
+large,obqa,1,291,1,12-680
+large,obqa,1,292,1,12-693
+large,obqa,1,293,1,12-702
+large,obqa,1,294,1,12-704
+large,obqa,1,295,1,12-706
+large,obqa,1,296,1,12-721
+large,obqa,1,297,1,12-722
+large,obqa,1,298,1,12-745
+large,obqa,1,299,1,12-768
+large,obqa,1,300,1,12-77
+large,obqa,1,301,1,12-773
+large,obqa,1,302,1,12-777
+large,obqa,1,303,1,12-783
+large,obqa,1,304,1,12-792
+large,obqa,1,305,1,12-817
+large,obqa,1,306,1,12-824
+large,obqa,1,307,1,12-829
+large,obqa,1,308,1,12-834
+large,obqa,1,309,1,12-835
+large,obqa,1,310,1,12-84
+large,obqa,1,311,1,12-845
+large,obqa,1,312,1,12-859
+large,obqa,1,313,1,12-907
+large,obqa,1,314,1,12-911
+large,obqa,1,315,1,12-914
+large,obqa,1,316,1,12-92
+large,obqa,1,317,1,12-923
+large,obqa,1,318,1,12-928
+large,obqa,1,319,1,12-931
+large,obqa,1,320,1,12-936
+large,obqa,1,321,1,12-950
+large,obqa,1,322,1,12-958
+large,obqa,1,323,1,12-961
+large,obqa,1,324,1,12-964
+large,obqa,1,325,1,12-981
+large,obqa,1,326,1,12-983
+large,obqa,1,327,1,1219
+large,obqa,1,328,1,1230
+large,obqa,1,329,1,1232
+large,obqa,1,330,1,1286
+large,obqa,1,331,1,13-1001
+large,obqa,1,332,1,13-1007
+large,obqa,1,333,1,13-1012
+large,obqa,1,334,1,13-1019
+large,obqa,1,335,1,13-1023
+large,obqa,1,336,1,13-1038
+large,obqa,1,337,1,13-104
+large,obqa,1,338,1,13-1051
+large,obqa,1,339,1,13-1054
+large,obqa,1,340,1,13-128
+large,obqa,1,341,1,13-148
+large,obqa,1,342,1,13-152
+large,obqa,1,343,1,13-160
+large,obqa,1,344,1,13-168
+large,obqa,1,345,1,13-181
+large,obqa,1,346,1,13-190
+large,obqa,1,347,1,13-216
+large,obqa,1,348,1,13-245
+large,obqa,1,349,1,13-266
+large,obqa,1,350,1,13-271
+large,obqa,1,351,1,13-276
+large,obqa,1,352,1,13-278
+large,obqa,1,353,1,13-286
+large,obqa,1,354,1,13-312
+large,obqa,1,355,1,13-32
+large,obqa,1,356,1,13-324
+large,obqa,1,357,1,13-331
+large,obqa,1,358,1,13-332
+large,obqa,1,359,1,13-349
+large,obqa,1,360,1,13-355
+large,obqa,1,361,1,13-365
+large,obqa,1,362,1,13-367
+large,obqa,1,363,1,13-372
+large,obqa,1,364,1,13-374
+large,obqa,1,365,1,13-376
+large,obqa,1,366,1,13-407
+large,obqa,1,367,1,13-409
+large,obqa,1,368,1,13-42
+large,obqa,1,369,1,13-424
+large,obqa,1,370,1,13-438
+large,obqa,1,371,1,13-441
+large,obqa,1,372,1,13-446
+large,obqa,1,373,1,13-450
+large,obqa,1,374,1,13-460
+large,obqa,1,375,1,13-462
+large,obqa,1,376,1,13-463
+large,obqa,1,377,1,13-484
+large,obqa,1,378,1,13-490
+large,obqa,1,379,1,13-492
+large,obqa,1,380,1,13-501
+large,obqa,1,381,1,13-504
+large,obqa,1,382,1,13-516
+large,obqa,1,383,1,13-518
+large,obqa,1,384,1,13-525
+large,obqa,1,385,1,13-53
+large,obqa,1,386,1,13-548
+large,obqa,1,387,1,13-550
+large,obqa,1,388,1,13-554
+large,obqa,1,389,1,13-60
+large,obqa,1,390,1,13-618
+large,obqa,1,391,1,13-631
+large,obqa,1,392,1,13-635
+large,obqa,1,393,1,13-638
+large,obqa,1,394,1,13-655
+large,obqa,1,395,1,13-660
+large,obqa,1,396,1,13-677
+large,obqa,1,397,1,13-709
+large,obqa,1,398,1,13-71
+large,obqa,1,399,1,13-720
+large,obqa,1,400,1,13-721
+large,obqa,1,401,1,13-761
+large,obqa,1,402,1,13-762
+large,obqa,1,403,1,13-802
+large,obqa,1,404,1,13-804
+large,obqa,1,405,1,13-816
+large,obqa,1,406,1,13-819
+large,obqa,1,407,1,13-823
+large,obqa,1,408,1,13-836
+large,obqa,1,409,1,13-898
+large,obqa,1,410,1,13-9
+large,obqa,1,411,1,13-907
+large,obqa,1,412,1,13-944
+large,obqa,1,413,1,13-954
+large,obqa,1,414,1,13-963
+large,obqa,1,415,1,13-987
+large,obqa,1,416,1,1320
+large,obqa,1,417,1,1341
+large,obqa,1,418,1,14-1004
+large,obqa,1,419,1,14-103
+large,obqa,1,420,1,14-1031
+large,obqa,1,421,1,14-1038
+large,obqa,1,422,1,14-1048
+large,obqa,1,423,1,14-1056
+large,obqa,1,424,1,14-1068
+large,obqa,1,425,1,14-1073
+large,obqa,1,426,1,14-1084
+large,obqa,1,427,1,14-109
+large,obqa,1,428,1,14-1093
+large,obqa,1,429,1,14-1100
+large,obqa,1,430,1,14-1101
+large,obqa,1,431,1,14-1112
+large,obqa,1,432,1,14-1115
+large,obqa,1,433,1,14-1123
+large,obqa,1,434,1,14-1124
+large,obqa,1,435,1,14-1139
+large,obqa,1,436,1,14-1155
+large,obqa,1,437,1,14-1168
+large,obqa,1,438,1,14-1170
+large,obqa,1,439,1,14-1171
+large,obqa,1,440,1,14-1210
+large,obqa,1,441,1,14-1215
+large,obqa,1,442,1,14-1230
+large,obqa,1,443,1,14-1233
+large,obqa,1,444,1,14-1253
+large,obqa,1,445,1,14-127
+large,obqa,1,446,1,14-1272
+large,obqa,1,447,1,14-1277
+large,obqa,1,448,1,14-129
+large,obqa,1,449,1,14-1296
+large,obqa,1,450,1,14-1299
+large,obqa,1,451,1,14-1303
+large,obqa,1,452,1,14-1312
+large,obqa,1,453,1,14-1328
+large,obqa,1,454,1,14-1329
+large,obqa,1,455,1,14-1338
+large,obqa,1,456,1,14-1339
+large,obqa,1,457,1,14-1360
+large,obqa,1,458,1,14-1362
+large,obqa,1,459,1,14-1387
+large,obqa,1,460,1,14-1404
+large,obqa,1,461,1,14-1409
+large,obqa,1,462,1,14-1415
+large,obqa,1,463,1,14-1422
+large,obqa,1,464,1,14-1432
+large,obqa,1,465,1,14-1443
+large,obqa,1,466,1,14-1445
+large,obqa,1,467,1,14-1447
+large,obqa,1,468,1,14-1451
+large,obqa,1,469,1,14-1459
+large,obqa,1,470,1,14-1462
+large,obqa,1,471,1,14-1467
+large,obqa,1,472,1,14-1481
+large,obqa,1,473,1,14-1504
+large,obqa,1,474,1,14-155
+large,obqa,1,475,1,14-167
+large,obqa,1,476,1,14-173
+large,obqa,1,477,1,14-18
+large,obqa,1,478,1,14-181
+large,obqa,1,479,1,14-186
+large,obqa,1,480,1,14-200
+large,obqa,1,481,1,14-216
+large,obqa,1,482,1,14-218
+large,obqa,1,483,1,14-221
+large,obqa,1,484,1,14-222
+large,obqa,1,485,1,14-223
+large,obqa,1,486,1,14-245
+large,obqa,1,487,1,14-251
+large,obqa,1,488,1,14-261
+large,obqa,1,489,1,14-264
+large,obqa,1,490,1,14-269
+large,obqa,1,491,1,14-279
+large,obqa,1,492,1,14-290
+large,obqa,1,493,1,14-311
+large,obqa,1,494,1,14-314
+large,obqa,1,495,1,14-316
+large,obqa,1,496,1,14-342
+large,obqa,1,497,1,14-347
+large,obqa,1,498,1,14-349
+large,obqa,1,499,1,14-352
+large,obqa,1,500,1,14-357
+large,obqa,1,501,1,14-362
+large,obqa,1,502,1,14-372
+large,obqa,1,503,1,14-378
+large,obqa,1,504,1,14-380
+large,obqa,1,505,1,14-386
+large,obqa,1,506,1,14-4
+large,obqa,1,507,1,14-409
+large,obqa,1,508,1,14-411
+large,obqa,1,509,1,14-425
+large,obqa,1,510,1,14-432
+large,obqa,1,511,1,14-443
+large,obqa,1,512,1,14-448
+large,obqa,1,513,1,14-45
+large,obqa,1,514,1,14-450
+large,obqa,1,515,1,14-456
+large,obqa,1,516,1,14-457
+large,obqa,1,517,1,14-458
+large,obqa,1,518,1,14-467
+large,obqa,1,519,1,14-472
+large,obqa,1,520,1,14-489
+large,obqa,1,521,1,14-491
+large,obqa,1,522,1,14-529
+large,obqa,1,523,1,14-537
+large,obqa,1,524,1,14-574
+large,obqa,1,525,1,14-585
+large,obqa,1,526,1,14-587
+large,obqa,1,527,1,14-595
+large,obqa,1,528,1,14-60
+large,obqa,1,529,1,14-61
+large,obqa,1,530,1,14-624
+large,obqa,1,531,1,14-628
+large,obqa,1,532,1,14-629
+large,obqa,1,533,1,14-64
+large,obqa,1,534,1,14-647
+large,obqa,1,535,1,14-655
+large,obqa,1,536,1,14-668
+large,obqa,1,537,1,14-67
+large,obqa,1,538,1,14-671
+large,obqa,1,539,1,14-676
+large,obqa,1,540,1,14-683
+large,obqa,1,541,1,14-720
+large,obqa,1,542,1,14-745
+large,obqa,1,543,1,14-747
+large,obqa,1,544,1,14-752
+large,obqa,1,545,1,14-754
+large,obqa,1,546,1,14-756
+large,obqa,1,547,1,14-757
+large,obqa,1,548,1,14-782
+large,obqa,1,549,1,14-790
+large,obqa,1,550,1,14-797
+large,obqa,1,551,1,14-807
+large,obqa,1,552,1,14-824
+large,obqa,1,553,1,14-835
+large,obqa,1,554,1,14-854
+large,obqa,1,555,1,14-859
+large,obqa,1,556,1,14-868
+large,obqa,1,557,1,14-877
+large,obqa,1,558,1,14-885
+large,obqa,1,559,1,14-888
+large,obqa,1,560,1,14-89
+large,obqa,1,561,1,14-897
+large,obqa,1,562,1,14-903
+large,obqa,1,563,1,14-927
+large,obqa,1,564,1,14-930
+large,obqa,1,565,1,14-948
+large,obqa,1,566,1,14-949
+large,obqa,1,567,1,14-96
+large,obqa,1,568,1,14-977
+large,obqa,1,569,1,14-979
+large,obqa,1,570,1,14-984
+large,obqa,1,571,1,14-988
+large,obqa,1,572,1,14-994
+large,obqa,1,573,1,1430
+large,obqa,1,574,1,1455
+large,obqa,1,575,1,154
+large,obqa,1,576,1,1547
+large,obqa,1,577,1,1558
+large,obqa,1,578,1,1652
+large,obqa,1,579,1,1655
+large,obqa,1,580,1,1683
+large,obqa,1,581,1,1789
+large,obqa,1,582,1,1832
+large,obqa,1,583,1,1834
+large,obqa,1,584,1,1845
+large,obqa,1,585,1,1851
+large,obqa,1,586,1,1894
+large,obqa,1,587,1,19
+large,obqa,1,588,1,1927
+large,obqa,1,589,1,241
+large,obqa,1,590,1,291
+large,obqa,1,591,1,38
+large,obqa,1,592,1,383
+large,obqa,1,593,1,499
+large,obqa,1,594,1,544
+large,obqa,1,595,1,612
+large,obqa,1,596,1,617
+large,obqa,1,597,1,7-1006
+large,obqa,1,598,1,7-1025
+large,obqa,1,599,1,7-104
+large,obqa,1,600,1,7-1076
+large,obqa,1,601,1,7-1080
+large,obqa,1,602,1,7-115
+large,obqa,1,603,1,7-1160
+large,obqa,1,604,1,7-124
+large,obqa,1,605,1,7-164
+large,obqa,1,606,1,7-166
+large,obqa,1,607,1,7-172
+large,obqa,1,608,1,7-194
+large,obqa,1,609,1,7-197
+large,obqa,1,610,1,7-220
+large,obqa,1,611,1,7-229
+large,obqa,1,612,1,7-253
+large,obqa,1,613,1,7-256
+large,obqa,1,614,1,7-26
+large,obqa,1,615,1,7-277
+large,obqa,1,616,1,7-319
+large,obqa,1,617,1,7-321
+large,obqa,1,618,1,7-329
+large,obqa,1,619,1,7-338
+large,obqa,1,620,1,7-347
+large,obqa,1,621,1,7-359
+large,obqa,1,622,1,7-40
+large,obqa,1,623,1,7-43
+large,obqa,1,624,1,7-434
+large,obqa,1,625,1,7-455
+large,obqa,1,626,1,7-500
+large,obqa,1,627,1,7-557
+large,obqa,1,628,1,7-590
+large,obqa,1,629,1,7-647
+large,obqa,1,630,1,7-650
+large,obqa,1,631,1,7-697
+large,obqa,1,632,1,7-703
+large,obqa,1,633,1,7-763
+large,obqa,1,634,1,7-776
+large,obqa,1,635,1,7-813
+large,obqa,1,636,1,7-858
+large,obqa,1,637,1,7-860
+large,obqa,1,638,1,7-870
+large,obqa,1,639,1,7-876
+large,obqa,1,640,1,7-899
+large,obqa,1,641,1,7-908
+large,obqa,1,642,1,7-912
+large,obqa,1,643,1,7-936
+large,obqa,1,644,1,7-969
+large,obqa,1,645,1,71
+large,obqa,1,646,1,751
+large,obqa,1,647,1,789
+large,obqa,1,648,1,8-10
+large,obqa,1,649,1,8-126
+large,obqa,1,650,1,8-133
+large,obqa,1,651,1,8-180
+large,obqa,1,652,1,8-221
+large,obqa,1,653,1,8-23
+large,obqa,1,654,1,8-244
+large,obqa,1,655,1,8-248
+large,obqa,1,656,1,8-262
+large,obqa,1,657,1,8-291
+large,obqa,1,658,1,8-306
+large,obqa,1,659,1,8-32
+large,obqa,1,660,1,8-323
+large,obqa,1,661,1,8-337
+large,obqa,1,662,1,8-34
+large,obqa,1,663,1,8-385
+large,obqa,1,664,1,8-387
+large,obqa,1,665,1,8-408
+large,obqa,1,666,1,8-420
+large,obqa,1,667,1,8-437
+large,obqa,1,668,1,8-495
+large,obqa,1,669,1,8-76
+large,obqa,1,670,1,853
+large,obqa,1,671,1,870
+large,obqa,1,672,1,89
+large,obqa,1,673,1,899
+large,obqa,1,674,1,9-1036
+large,obqa,1,675,1,9-1040
+large,obqa,1,676,1,9-1063
+large,obqa,1,677,1,9-1064
+large,obqa,1,678,1,9-1077
+large,obqa,1,679,1,9-1079
+large,obqa,1,680,1,9-1118
+large,obqa,1,681,1,9-1120
+large,obqa,1,682,1,9-113
+large,obqa,1,683,1,9-1162
+large,obqa,1,684,1,9-1184
+large,obqa,1,685,1,9-1193
+large,obqa,1,686,1,9-122
+large,obqa,1,687,1,9-134
+large,obqa,1,688,1,9-150
+large,obqa,1,689,1,9-17
+large,obqa,1,690,1,9-196
+large,obqa,1,691,1,9-202
+large,obqa,1,692,1,9-21
+large,obqa,1,693,1,9-218
+large,obqa,1,694,1,9-237
+large,obqa,1,695,1,9-246
+large,obqa,1,696,1,9-255
+large,obqa,1,697,1,9-326
+large,obqa,1,698,1,9-335
+large,obqa,1,699,1,9-380
+large,obqa,1,700,1,9-383
+large,obqa,1,701,1,9-400
+large,obqa,1,702,1,9-419
+large,obqa,1,703,1,9-423
+large,obqa,1,704,1,9-427
+large,obqa,1,705,1,9-449
+large,obqa,1,706,1,9-460
+large,obqa,1,707,1,9-530
+large,obqa,1,708,1,9-538
+large,obqa,1,709,1,9-551
+large,obqa,1,710,1,9-565
+large,obqa,1,711,1,9-592
+large,obqa,1,712,1,9-6
+large,obqa,1,713,1,9-603
+large,obqa,1,714,1,9-607
+large,obqa,1,715,1,9-626
+large,obqa,1,716,1,9-628
+large,obqa,1,717,1,9-691
+large,obqa,1,718,1,9-695
+large,obqa,1,719,1,9-697
+large,obqa,1,720,1,9-739
+large,obqa,1,721,1,9-74
+large,obqa,1,722,1,9-744
+large,obqa,1,723,1,9-750
+large,obqa,1,724,1,9-778
+large,obqa,1,725,1,9-782
+large,obqa,1,726,1,9-795
+large,obqa,1,727,1,9-820
+large,obqa,1,728,1,9-831
+large,obqa,1,729,1,9-844
+large,obqa,1,730,1,9-855
+large,obqa,1,731,1,9-863
+large,obqa,1,732,1,9-879
+large,obqa,1,733,1,9-884
+large,obqa,1,734,1,9-892
+large,obqa,1,735,1,9-927
+large,obqa,1,736,1,9-945
+large,obqa,1,737,1,9-967
+large,obqa,1,738,1,9-972
+large,obqa,1,739,1,9-973
+large,obqa,1,740,1,9-985
+large,obqa,1,741,1,919
+large,obqa,8,0,8,10-1005 10-1009 10-1018 10-1026 10-1027 10-1035 10-1044 10-1062
+large,obqa,8,1,8,10-1063 10-1068 10-1074 10-1085 10-1095 10-1120 10-114 10-1142
+large,obqa,8,2,8,10-1152 10-1171 10-1179 10-1186 10-1190 10-1196 10-1217 10-128
+large,obqa,8,3,8,10-160 10-165 10-170 10-176 10-18 10-184 10-186 10-198
+large,obqa,8,4,8,10-2 10-217 10-232 10-233 10-240 10-255 10-293 10-298
+large,obqa,8,5,8,10-299 10-300 10-306 10-329 10-336 10-347 10-351 10-352
+large,obqa,8,6,8,10-353 10-354 10-366 10-375 10-380 10-386 10-389 10-391
+large,obqa,8,7,8,10-399 10-415 10-416 10-419 10-441 10-443 10-453 10-489
+large,obqa,8,8,8,10-500 10-516 10-525 10-527 10-528 10-53 10-55 10-555
+large,obqa,8,9,8,10-570 10-571 10-58 10-580 10-596 10-598 10-616 10-639
+large,obqa,8,10,8,10-640 10-648 10-651 10-677 10-681 10-684 10-688 10-700
+large,obqa,8,11,8,10-702 10-724 10-729 10-735 10-739 10-741 10-748 10-749
+large,obqa,8,12,8,10-75 10-752 10-757 10-768 10-780 10-783 10-789 10-797
+large,obqa,8,13,8,10-815 10-820 10-823 10-852 10-864 10-875 10-876 10-877
+large,obqa,8,14,8,10-882 10-894 10-916 10-92 10-921 10-93 10-959 10-963
+large,obqa,8,15,8,10-973 10-997 1033 1043 1046 11-110 11-131 11-141
+large,obqa,8,16,8,11-149 11-174 11-176 11-199 11-200 11-206 11-208 11-222
+large,obqa,8,17,8,11-240 11-247 11-251 11-275 11-281 11-282 11-284 11-302
+large,obqa,8,18,8,11-324 11-347 11-349 11-35 11-358 11-37 11-370 11-371
+large,obqa,8,19,8,11-389 11-397 11-4 11-404 11-406 11-415 11-417 11-430
+large,obqa,8,20,8,11-431 11-442 11-444 11-454 11-481 11-486 11-506 11-515
+large,obqa,8,21,8,11-521 11-523 11-552 11-559 11-561 11-564 11-57 11-599
+large,obqa,8,22,8,11-603 11-606 11-629 11-642 11-646 11-648 11-652 11-655
+large,obqa,8,23,8,11-656 11-663 11-665 11-666 11-669 11-671 11-678 11-679
+large,obqa,8,24,8,11-681 11-686 11-692 11-693 11-694 11-705 11-731 11-737
+large,obqa,8,25,8,11-742 11-744 11-747 1107 1118 112 1122 1124
+large,obqa,8,26,8,1144 115 1171 1195 12-1 12-100 12-1011 12-1021
+large,obqa,8,27,8,12-1045 12-1046 12-105 12-1052 12-1057 12-1066 12-1078 12-1083
+large,obqa,8,28,8,12-1090 12-1108 12-111 12-1130 12-1132 12-1134 12-1146 12-1159
+large,obqa,8,29,8,12-116 12-1163 12-1170 12-1177 12-1202 12-1206 12-1208 12-132
+large,obqa,8,30,8,12-166 12-17 12-175 12-200 12-208 12-22 12-221 12-242
+large,obqa,8,31,8,12-251 12-264 12-271 12-275 12-281 12-282 12-291 12-301
+large,obqa,8,32,8,12-306 12-310 12-318 12-321 12-324 12-333 12-342 12-352
+large,obqa,8,33,8,12-368 12-397 12-401 12-416 12-425 12-426 12-428 12-443
+large,obqa,8,34,8,12-45 12-462 12-468 12-470 12-478 12-488 12-494 12-496
+large,obqa,8,35,8,12-541 12-545 12-561 12-577 12-584 12-587 12-605 12-645
+large,obqa,8,36,8,12-669 12-674 12-68 12-680 12-693 12-702 12-704 12-706
+large,obqa,8,37,8,12-721 12-722 12-745 12-768 12-77 12-773 12-777 12-783
+large,obqa,8,38,8,12-792 12-817 12-824 12-829 12-834 12-835 12-84 12-845
+large,obqa,8,39,8,12-859 12-907 12-911 12-914 12-92 12-923 12-928 12-931
+large,obqa,8,40,8,12-936 12-950 12-958 12-961 12-964 12-981 12-983 1219
+large,obqa,8,41,8,1230 1232 1286 13-1001 13-1007 13-1012 13-1019 13-1023
+large,obqa,8,42,8,13-1038 13-104 13-1051 13-1054 13-128 13-148 13-152 13-160
+large,obqa,8,43,8,13-168 13-181 13-190 13-216 13-245 13-266 13-271 13-276
+large,obqa,8,44,8,13-278 13-286 13-312 13-32 13-324 13-331 13-332 13-349
+large,obqa,8,45,8,13-355 13-365 13-367 13-372 13-374 13-376 13-407 13-409
+large,obqa,8,46,8,13-42 13-424 13-438 13-441 13-446 13-450 13-460 13-462
+large,obqa,8,47,8,13-463 13-484 13-490 13-492 13-501 13-504 13-516 13-518
+large,obqa,8,48,8,13-525 13-53 13-548 13-550 13-554 13-60 13-618 13-631
+large,obqa,8,49,8,13-635 13-638 13-655 13-660 13-677 13-709 13-71 13-720
+large,obqa,8,50,8,13-721 13-761 13-762 13-802 13-804 13-816 13-819 13-823
+large,obqa,8,51,8,13-836 13-898 13-9 13-907 13-944 13-954 13-963 13-987
+large,obqa,8,52,8,1320 1341 14-1004 14-103 14-1031 14-1038 14-1048 14-1056
+large,obqa,8,53,8,14-1068 14-1073 14-1084 14-109 14-1093 14-1100 14-1101 14-1112
+large,obqa,8,54,8,14-1115 14-1123 14-1124 14-1139 14-1155 14-1168 14-1170 14-1171
+large,obqa,8,55,8,14-1210 14-1215 14-1230 14-1233 14-1253 14-127 14-1272 14-1277
+large,obqa,8,56,8,14-129 14-1296 14-1299 14-1303 14-1312 14-1328 14-1329 14-1338
+large,obqa,8,57,8,14-1339 14-1360 14-1362 14-1387 14-1404 14-1409 14-1415 14-1422
+large,obqa,8,58,8,14-1432 14-1443 14-1445 14-1447 14-1451 14-1459 14-1462 14-1467
+large,obqa,8,59,8,14-1481 14-1504 14-155 14-167 14-173 14-18 14-181 14-186
+large,obqa,8,60,8,14-200 14-216 14-218 14-221 14-222 14-223 14-245 14-251
+large,obqa,8,61,8,14-261 14-264 14-269 14-279 14-290 14-311 14-314 14-316
+large,obqa,8,62,8,14-342 14-347 14-349 14-352 14-357 14-362 14-372 14-378
+large,obqa,8,63,8,14-380 14-386 14-4 14-409 14-411 14-425 14-432 14-443
+large,obqa,8,64,8,14-448 14-45 14-450 14-456 14-457 14-458 14-467 14-472
+large,obqa,8,65,8,14-489 14-491 14-529 14-537 14-574 14-585 14-587 14-595
+large,obqa,8,66,8,14-60 14-61 14-624 14-628 14-629 14-64 14-647 14-655
+large,obqa,8,67,8,14-668 14-67 14-671 14-676 14-683 14-720 14-745 14-747
+large,obqa,8,68,8,14-752 14-754 14-756 14-757 14-782 14-790 14-797 14-807
+large,obqa,8,69,8,14-824 14-835 14-854 14-859 14-868 14-877 14-885 14-888
+large,obqa,8,70,8,14-89 14-897 14-903 14-927 14-930 14-948 14-949 14-96
+large,obqa,8,71,8,14-977 14-979 14-984 14-988 14-994 1430 1455 154
+large,obqa,8,72,8,1547 1558 1652 1655 1683 1789 1832 1834
+large,obqa,8,73,8,1845 1851 1894 19 1927 241 291 38
+large,obqa,8,74,8,383 499 544 612 617 7-1006 7-1025 7-104
+large,obqa,8,75,8,7-1076 7-1080 7-115 7-1160 7-124 7-164 7-166 7-172
+large,obqa,8,76,8,7-194 7-197 7-220 7-229 7-253 7-256 7-26 7-277
+large,obqa,8,77,8,7-319 7-321 7-329 7-338 7-347 7-359 7-40 7-43
+large,obqa,8,78,8,7-434 7-455 7-500 7-557 7-590 7-647 7-650 7-697
+large,obqa,8,79,8,7-703 7-763 7-776 7-813 7-858 7-860 7-870 7-876
+large,obqa,8,80,8,7-899 7-908 7-912 7-936 7-969 71 751 789
+large,obqa,8,81,8,8-10 8-126 8-133 8-180 8-221 8-23 8-244 8-248
+large,obqa,8,82,8,8-262 8-291 8-306 8-32 8-323 8-337 8-34 8-385
+large,obqa,8,83,8,8-387 8-408 8-420 8-437 8-495 8-76 853 870
+large,obqa,8,84,8,89 899 9-1036 9-1040 9-1063 9-1064 9-1077 9-1079
+large,obqa,8,85,8,9-1118 9-1120 9-113 9-1162 9-1184 9-1193 9-122 9-134
+large,obqa,8,86,8,9-150 9-17 9-196 9-202 9-21 9-218 9-237 9-246
+large,obqa,8,87,8,9-255 9-326 9-335 9-380 9-383 9-400 9-419 9-423
+large,obqa,8,88,8,9-427 9-449 9-460 9-530 9-538 9-551 9-565 9-592
+large,obqa,8,89,8,9-6 9-603 9-607 9-626 9-628 9-691 9-695 9-697
+large,obqa,8,90,8,9-739 9-74 9-744 9-750 9-778 9-782 9-795 9-820
+large,obqa,8,91,8,9-831 9-844 9-855 9-863 9-879 9-884 9-892 9-927
+large,obqa,8,92,6,9-945 9-967 9-972 9-973 9-985 919
+large,obqa,32,0,32,10-1005 10-1009 10-1018 10-1026 10-1027 10-1035 10-1044 10-1062 10-1063 10-1068 10-1074 10-1085 10-1095 10-1120 10-114 10-1142 10-1152 10-1171 10-1179 10-1186 10-1190 10-1196 10-1217 10-128 10-160 10-165 10-170 10-176 10-18 10-184 10-186 10-198
+large,obqa,32,1,32,10-2 10-217 10-232 10-233 10-240 10-255 10-293 10-298 10-299 10-300 10-306 10-329 10-336 10-347 10-351 10-352 10-353 10-354 10-366 10-375 10-380 10-386 10-389 10-391 10-399 10-415 10-416 10-419 10-441 10-443 10-453 10-489
+large,obqa,32,2,32,10-500 10-516 10-525 10-527 10-528 10-53 10-55 10-555 10-570 10-571 10-58 10-580 10-596 10-598 10-616 10-639 10-640 10-648 10-651 10-677 10-681 10-684 10-688 10-700 10-702 10-724 10-729 10-735 10-739 10-741 10-748 10-749
+large,obqa,32,3,32,10-75 10-752 10-757 10-768 10-780 10-783 10-789 10-797 10-815 10-820 10-823 10-852 10-864 10-875 10-876 10-877 10-882 10-894 10-916 10-92 10-921 10-93 10-959 10-963 10-973 10-997 1033 1043 1046 11-110 11-131 11-141
+large,obqa,32,4,32,11-149 11-174 11-176 11-199 11-200 11-206 11-208 11-222 11-240 11-247 11-251 11-275 11-281 11-282 11-284 11-302 11-324 11-347 11-349 11-35 11-358 11-37 11-370 11-371 11-389 11-397 11-4 11-404 11-406 11-415 11-417 11-430
+large,obqa,32,5,32,11-431 11-442 11-444 11-454 11-481 11-486 11-506 11-515 11-521 11-523 11-552 11-559 11-561 11-564 11-57 11-599 11-603 11-606 11-629 11-642 11-646 11-648 11-652 11-655 11-656 11-663 11-665 11-666 11-669 11-671 11-678 11-679
+large,obqa,32,6,32,11-681 11-686 11-692 11-693 11-694 11-705 11-731 11-737 11-742 11-744 11-747 1107 1118 112 1122 1124 1144 115 1171 1195 12-1 12-100 12-1011 12-1021 12-1045 12-1046 12-105 12-1052 12-1057 12-1066 12-1078 12-1083
+large,obqa,32,7,32,12-1090 12-1108 12-111 12-1130 12-1132 12-1134 12-1146 12-1159 12-116 12-1163 12-1170 12-1177 12-1202 12-1206 12-1208 12-132 12-166 12-17 12-175 12-200 12-208 12-22 12-221 12-242 12-251 12-264 12-271 12-275 12-281 12-282 12-291 12-301
+large,obqa,32,8,32,12-306 12-310 12-318 12-321 12-324 12-333 12-342 12-352 12-368 12-397 12-401 12-416 12-425 12-426 12-428 12-443 12-45 12-462 12-468 12-470 12-478 12-488 12-494 12-496 12-541 12-545 12-561 12-577 12-584 12-587 12-605 12-645
+large,obqa,32,9,32,12-669 12-674 12-68 12-680 12-693 12-702 12-704 12-706 12-721 12-722 12-745 12-768 12-77 12-773 12-777 12-783 12-792 12-817 12-824 12-829 12-834 12-835 12-84 12-845 12-859 12-907 12-911 12-914 12-92 12-923 12-928 12-931
+large,obqa,32,10,32,12-936 12-950 12-958 12-961 12-964 12-981 12-983 1219 1230 1232 1286 13-1001 13-1007 13-1012 13-1019 13-1023 13-1038 13-104 13-1051 13-1054 13-128 13-148 13-152 13-160 13-168 13-181 13-190 13-216 13-245 13-266 13-271 13-276
+large,obqa,32,11,32,13-278 13-286 13-312 13-32 13-324 13-331 13-332 13-349 13-355 13-365 13-367 13-372 13-374 13-376 13-407 13-409 13-42 13-424 13-438 13-441 13-446 13-450 13-460 13-462 13-463 13-484 13-490 13-492 13-501 13-504 13-516 13-518
+large,obqa,32,12,32,13-525 13-53 13-548 13-550 13-554 13-60 13-618 13-631 13-635 13-638 13-655 13-660 13-677 13-709 13-71 13-720 13-721 13-761 13-762 13-802 13-804 13-816 13-819 13-823 13-836 13-898 13-9 13-907 13-944 13-954 13-963 13-987
+large,obqa,32,13,32,1320 1341 14-1004 14-103 14-1031 14-1038 14-1048 14-1056 14-1068 14-1073 14-1084 14-109 14-1093 14-1100 14-1101 14-1112 14-1115 14-1123 14-1124 14-1139 14-1155 14-1168 14-1170 14-1171 14-1210 14-1215 14-1230 14-1233 14-1253 14-127 14-1272 14-1277
+large,obqa,32,14,32,14-129 14-1296 14-1299 14-1303 14-1312 14-1328 14-1329 14-1338 14-1339 14-1360 14-1362 14-1387 14-1404 14-1409 14-1415 14-1422 14-1432 14-1443 14-1445 14-1447 14-1451 14-1459 14-1462 14-1467 14-1481 14-1504 14-155 14-167 14-173 14-18 14-181 14-186
+large,obqa,32,15,32,14-200 14-216 14-218 14-221 14-222 14-223 14-245 14-251 14-261 14-264 14-269 14-279 14-290 14-311 14-314 14-316 14-342 14-347 14-349 14-352 14-357 14-362 14-372 14-378 14-380 14-386 14-4 14-409 14-411 14-425 14-432 14-443
+large,obqa,32,16,32,14-448 14-45 14-450 14-456 14-457 14-458 14-467 14-472 14-489 14-491 14-529 14-537 14-574 14-585 14-587 14-595 14-60 14-61 14-624 14-628 14-629 14-64 14-647 14-655 14-668 14-67 14-671 14-676 14-683 14-720 14-745 14-747
+large,obqa,32,17,32,14-752 14-754 14-756 14-757 14-782 14-790 14-797 14-807 14-824 14-835 14-854 14-859 14-868 14-877 14-885 14-888 14-89 14-897 14-903 14-927 14-930 14-948 14-949 14-96 14-977 14-979 14-984 14-988 14-994 1430 1455 154
+large,obqa,32,18,32,1547 1558 1652 1655 1683 1789 1832 1834 1845 1851 1894 19 1927 241 291 38 383 499 544 612 617 7-1006 7-1025 7-104 7-1076 7-1080 7-115 7-1160 7-124 7-164 7-166 7-172
+large,obqa,32,19,32,7-194 7-197 7-220 7-229 7-253 7-256 7-26 7-277 7-319 7-321 7-329 7-338 7-347 7-359 7-40 7-43 7-434 7-455 7-500 7-557 7-590 7-647 7-650 7-697 7-703 7-763 7-776 7-813 7-858 7-860 7-870 7-876
+large,obqa,32,20,32,7-899 7-908 7-912 7-936 7-969 71 751 789 8-10 8-126 8-133 8-180 8-221 8-23 8-244 8-248 8-262 8-291 8-306 8-32 8-323 8-337 8-34 8-385 8-387 8-408 8-420 8-437 8-495 8-76 853 870
+large,obqa,32,21,32,89 899 9-1036 9-1040 9-1063 9-1064 9-1077 9-1079 9-1118 9-1120 9-113 9-1162 9-1184 9-1193 9-122 9-134 9-150 9-17 9-196 9-202 9-21 9-218 9-237 9-246 9-255 9-326 9-335 9-380 9-383 9-400 9-419 9-423
+large,obqa,32,22,32,9-427 9-449 9-460 9-530 9-538 9-551 9-565 9-592 9-6 9-603 9-607 9-626 9-628 9-691 9-695 9-697 9-739 9-74 9-744 9-750 9-778 9-782 9-795 9-820 9-831 9-844 9-855 9-863 9-879 9-884 9-892 9-927
+large,obqa,32,23,6,9-945 9-967 9-972 9-973 9-985 919
+llama,arc,1,0,1,Mercury_SC_407695
+llama,arc,1,1,1,Mercury_7103565
+llama,arc,1,2,1,MDSA_2009_5_16
+llama,arc,1,3,1,Mercury_7027230
+llama,arc,1,4,1,Mercury_SC_405487
+llama,arc,1,5,1,Mercury_7032743
+llama,arc,1,6,1,Mercury_7205135
+llama,arc,1,7,1,MDSA_2007_4_52
+llama,arc,1,8,1,Mercury_7103215
+llama,arc,1,9,1,Mercury_192168
+llama,arc,1,10,1,Mercury_SC_412337
+llama,arc,1,11,1,Mercury_7162838
+llama,arc,1,12,1,Mercury_7159775
+llama,arc,1,13,1,Mercury_7195440
+llama,arc,1,14,1,Mercury_7017990
+llama,arc,1,15,1,TIMSS_2007_4_pg90
+llama,arc,1,16,1,Mercury_7198380
+llama,arc,1,17,1,NAEP_2005_8_S11+14
+llama,arc,1,18,1,Mercury_192290
+llama,arc,1,19,1,Mercury_7192990
+llama,arc,1,20,1,Mercury_7217053
+llama,arc,1,21,1,Mercury_7179358
+llama,arc,1,22,1,MCAS_2005_8_5
+llama,arc,1,23,1,MCAS_2000_8_10
+llama,arc,1,24,1,Mercury_7187915
+llama,arc,1,25,1,Mercury_7189823
+llama,arc,1,26,1,Mercury_405454
+llama,arc,1,27,1,MCAS_2012_5_8
+llama,arc,1,28,1,Mercury_SC_LBS10040
+llama,arc,1,29,1,Mercury_7115063
+llama,arc,1,30,1,MCAS_2015_8_7
+llama,arc,1,31,1,Mercury_184765
+llama,arc,1,32,1,ACTAAP_2013_7_17
+llama,arc,1,33,1,Mercury_7248238
+llama,arc,1,34,1,Mercury_SC_410964
+llama,arc,1,35,1,NYSEDREGENTS_2014_4_4
+llama,arc,1,36,1,MCAS_8_2015_11
+llama,arc,1,37,1,Mercury_7183733
+llama,arc,1,38,1,MDSA_2010_5_18
+llama,arc,1,39,1,LEAP__7_10354
+llama,arc,1,40,1,Mercury_7282608
+llama,arc,1,41,1,Mercury_7071365
+llama,arc,1,42,1,Mercury_SC_407169
+llama,arc,1,43,1,ACTAAP_2007_7_5
+llama,arc,1,44,1,Mercury_7207358
+llama,arc,1,45,1,Mercury_7245893
+llama,arc,1,46,1,Mercury_7223038
+llama,arc,1,47,1,Mercury_SC_415541
+llama,arc,1,48,1,Mercury_7236023
+llama,arc,1,49,1,Mercury_417146
+llama,arc,1,50,1,Mercury_7128695
+llama,arc,1,51,1,Mercury_7270008
+llama,arc,1,52,1,Mercury_7242743
+llama,arc,1,53,1,Mercury_SC_400655
+llama,arc,1,54,1,Mercury_7100695
+llama,arc,1,55,1,MSA_2013_8_3
+llama,arc,1,56,1,NYSEDREGENTS_2014_4_19
+llama,arc,1,57,1,MCAS_2013_8_29432
+llama,arc,1,58,1,Mercury_7042700
+llama,arc,1,59,1,Mercury_7201705
+llama,arc,1,60,1,MCAS_1998_8_13
+llama,arc,1,61,1,Mercury_7138513
+llama,arc,1,62,1,Mercury_SC_401663
+llama,arc,1,63,1,NCEOGA_2013_8_4
+llama,arc,1,64,1,Mercury_7235813
+llama,arc,1,65,1,Mercury_7011270
+llama,arc,1,66,1,Mercury_7228603
+llama,arc,1,67,1,Mercury_SC_400339
+llama,arc,1,68,1,Mercury_SC_406705
+llama,arc,1,69,1,MCAS_2010_5_11998
+llama,arc,1,70,1,Mercury_7029505
+llama,arc,1,71,1,Mercury_SC_401286
+llama,arc,1,72,1,Mercury_7120908
+llama,arc,1,73,1,MCAS_2010_8_12010
+llama,arc,1,74,1,Mercury_7008138
+llama,arc,1,75,1,Mercury_7018148
+llama,arc,1,76,1,MCAS_2004_8_28
+llama,arc,1,77,1,Mercury_176015
+llama,arc,1,78,1,Mercury_7189035
+llama,arc,1,79,1,Mercury_7207410
+llama,arc,1,80,1,Mercury_7233678
+llama,arc,1,81,1,Mercury_SC_402101
+llama,arc,1,82,1,Mercury_SC_402104
+llama,arc,1,83,1,Mercury_7183015
+llama,arc,1,84,1,Mercury_7238963
+llama,arc,1,85,1,NYSEDREGENTS_2014_4_14
+llama,arc,1,86,1,Mercury_7004410
+llama,arc,1,87,1,Mercury_SC_406939
+llama,arc,1,88,1,Mercury_7270200
+llama,arc,1,89,1,NYSEDREGENTS_2014_8_20
+llama,arc,1,90,1,Mercury_7135310
+llama,arc,1,91,1,Mercury_400885
+llama,arc,1,92,1,Mercury_412551
+llama,arc,1,93,1,Mercury_7193043
+llama,arc,1,94,1,Mercury_7181685
+llama,arc,1,95,1,LEAP_2006_8_10412
+llama,arc,1,96,1,Mercury_7215180
+llama,arc,1,97,1,NYSEDREGENTS_2014_8_38
+llama,arc,1,98,1,Mercury_7145513
+llama,arc,1,99,1,MEA_2010_8_11
+llama,arc,1,100,1,Mercury_7241115
+llama,arc,1,101,1,NYSEDREGENTS_2014_4_17
+llama,arc,1,102,1,NYSEDREGENTS_2014_4_13
+llama,arc,1,103,1,Mercury_7033653
+llama,arc,1,104,1,AKDE&ED_2008_8_44
+llama,arc,1,105,1,Mercury_SC_415026
+llama,arc,1,106,1,Mercury_7219415
+llama,arc,1,107,1,Mercury_400934
+llama,arc,1,108,1,Mercury_7139493
+llama,arc,1,109,1,Mercury_7032340
+llama,arc,1,110,1,MEAP_2005_5_1
+llama,arc,1,111,1,ACTAAP_2007_7_25
+llama,arc,1,112,1,Mercury_SC_415348
+llama,arc,1,113,1,Mercury_7171938
+llama,arc,1,114,1,NYSEDREGENTS_2014_4_1
+llama,arc,1,115,1,Mercury_7185133
+llama,arc,1,116,1,Mercury_SC_411306
+llama,arc,1,117,1,Mercury_SC_LBS10666
+llama,arc,1,118,1,Mercury_SC_401294
+llama,arc,1,119,1,MCAS_2005_5_21
+llama,arc,1,120,1,MCAS_2004_9_13
+llama,arc,1,121,1,Mercury_7251685
+llama,arc,1,122,1,MDSA_2011_5_20
+llama,arc,1,123,1,MCAS_2006_5_29
+llama,arc,1,124,1,VASoL_2008_5_19
+llama,arc,1,125,1,Mercury_7246348
+llama,arc,1,126,1,MCAS_2006_9_33
+llama,arc,1,127,1,Mercury_SC_LBS10598
+llama,arc,1,128,1,MDSA_2008_5_24
+llama,arc,1,129,1,Mercury_7141400
+llama,arc,1,130,1,Mercury_SC_415366
+llama,arc,1,131,1,Mercury_408809
+llama,arc,1,132,1,MDSA_2007_5_39
+llama,arc,1,133,1,Mercury_7164850
+llama,arc,1,134,1,MCAS_2006_9_31-v1
+llama,arc,1,135,1,MCAS_2002_5_6
+llama,arc,1,136,1,MEA_2016_5_6
+llama,arc,1,137,1,Mercury_180058
+llama,arc,1,138,1,Mercury_7133858
+llama,arc,1,139,1,Mercury_7130603
+llama,arc,1,140,1,Mercury_7018008
+llama,arc,1,141,1,AIMS_2009_4_29
+llama,arc,1,142,1,Mercury_189490
+llama,arc,1,143,1,Mercury_7138688
+llama,arc,1,144,1,Mercury_409529
+llama,arc,1,145,1,Mercury_7092295
+llama,arc,1,146,1,Mercury_7044678
+llama,arc,1,147,1,MCAS_1998_4_8
+llama,arc,1,148,1,LEAP_2004_8_10397
+llama,arc,1,149,1,Mercury_7112753
+llama,arc,1,150,1,Mercury_7097318
+llama,arc,1,151,1,Mercury_7158673
+llama,arc,1,152,1,Mercury_7038273
+llama,arc,1,153,1,ACTAAP_2010_5_10
+llama,arc,1,154,1,VASoL_2008_5_28
+llama,arc,1,155,1,Mercury_177818
+llama,arc,1,156,1,NYSEDREGENTS_2014_8_12
+llama,arc,1,157,1,Mercury_7139790
+llama,arc,1,158,1,MCAS_2003_8_25
+llama,arc,1,159,1,Mercury_7003955
+llama,arc,1,160,1,Mercury_176838
+llama,arc,1,161,1,Mercury_SC_407314
+llama,arc,1,162,1,Mercury_SC_400845
+llama,arc,1,163,1,Mercury_7245193
+llama,arc,1,164,1,Mercury_7068863
+llama,arc,1,165,1,NCEOGA_2013_8_38
+llama,arc,1,166,1,Mercury_7090720
+llama,arc,1,167,1,MCAS_2006_9_35
+llama,arc,1,168,1,Mercury_7144795
+llama,arc,1,169,1,Mercury_SC_LBS10915
+llama,arc,1,170,1,MCAS_2009_8_5
+llama,arc,1,171,1,Mercury_7175455
+llama,arc,1,172,1,Mercury_7100608
+llama,arc,1,173,1,Mercury_177398
+llama,arc,1,174,1,Mercury_SC_415491
+llama,arc,1,175,1,Mercury_SC_400047
+llama,arc,1,176,1,Mercury_7218750
+llama,arc,1,177,1,Mercury_7115395
+llama,arc,1,178,1,Mercury_7205555
+llama,arc,1,179,1,Mercury_7093975
+llama,arc,1,180,1,MCAS_2012_5_23632
+llama,arc,1,181,1,Mercury_7130883
+llama,arc,1,182,1,Mercury_416648
+llama,arc,1,183,1,Mercury_7006790
+llama,arc,1,184,1,Mercury_SC_401244
+llama,arc,1,185,1,Mercury_7141908
+llama,arc,1,186,1,Mercury_7186148
+llama,arc,1,187,1,Mercury_7124338
+llama,arc,1,188,1,Mercury_184258
+llama,arc,1,189,1,Mercury_SC_400178
+llama,arc,1,190,1,Mercury_7007875
+llama,arc,1,191,1,Mercury_7221865
+llama,arc,1,192,1,Mercury_7269238
+llama,arc,1,193,1,NCEOGA_2013_8_40
+llama,arc,1,194,1,Mercury_SC_415735
+llama,arc,1,195,1,Mercury_7115273
+llama,arc,1,196,1,Mercury_7233660
+llama,arc,1,197,1,Mercury_7026198
+llama,arc,1,198,1,Mercury_7044100
+llama,arc,1,199,1,Mercury_SC_408859
+llama,arc,1,200,1,LEAP_2012_8_10441
+llama,arc,1,201,1,Mercury_7220378
+llama,arc,1,202,1,TIMSS_2003_8_pg14
+llama,arc,1,203,1,Mercury_SC_405973
+llama,arc,1,204,1,OHAT_2011_8_3
+llama,arc,1,205,1,Mercury_412683
+llama,arc,1,206,1,MCAS_1998_8_2
+llama,arc,1,207,1,Mercury_7005478
+llama,arc,1,208,1,Mercury_7105123
+llama,arc,1,209,1,Mercury_7154263
+llama,arc,1,210,1,TIMSS_2003_8_pg29
+llama,arc,1,211,1,Mercury_7245053
+llama,arc,1,212,1,TIMSS_2007_4_pg26
+llama,arc,1,213,1,NYSEDREGENTS_2014_4_9
+llama,arc,1,214,1,Mercury_414131
+llama,arc,1,215,1,Mercury_SC_407574
+llama,arc,1,216,1,Mercury_7018515
+llama,arc,1,217,1,TIMSS_2003_8_pg31
+llama,arc,1,218,1,Mercury_7015435
+llama,arc,1,219,1,Mercury_7166880
+llama,arc,1,220,1,Mercury_7251668
+llama,arc,1,221,1,Mercury_415263
+llama,arc,1,222,1,MEA_2013_5_3
+llama,arc,1,223,1,Mercury_7205345
+llama,arc,1,224,1,Mercury_7250023
+llama,arc,1,225,1,ACTAAP_2009_5_5
+llama,arc,1,226,1,Mercury_406781
+llama,arc,1,227,1,Mercury_7086013
+llama,arc,1,228,1,Mercury_7057313
+llama,arc,1,229,1,Mercury_SC_LBS10472
+llama,arc,1,230,1,Mercury_7190155
+llama,arc,1,231,1,Mercury_7081760
+llama,arc,1,232,1,Mercury_7075145
+llama,arc,1,233,1,Mercury_7037573
+llama,arc,1,234,1,NYSEDREGENTS_2014_8_41
+llama,arc,1,235,1,Mercury_SC_408700
+llama,arc,1,236,1,Mercury_7284043
+llama,arc,1,237,1,Mercury_7103180
+llama,arc,1,238,1,Mercury_7099768
+llama,arc,1,239,1,Mercury_7133648
+llama,arc,1,240,1,NYSEDREGENTS_2014_4_22
+llama,arc,1,241,1,NYSEDREGENTS_2014_4_28
+llama,arc,1,242,1,Mercury_SC_406029
+llama,arc,1,243,1,Mercury_7267593
+llama,arc,1,244,1,Mercury_7085820
+llama,arc,1,245,1,MCAS_2011_5_17673
+llama,arc,1,246,1,Mercury_7090738
+llama,arc,1,247,1,Mercury_7234483
+llama,arc,1,248,1,NYSEDREGENTS_2014_4_20
+llama,arc,1,249,1,Mercury_7141698
+llama,arc,1,250,1,Mercury_SC_415354
+llama,arc,1,251,1,NYSEDREGENTS_2014_4_2
+llama,arc,1,252,1,Mercury_7187058
+llama,arc,1,253,1,Mercury_7221095
+llama,arc,1,254,1,Mercury_7143518
+llama,arc,1,255,1,Mercury_7014368
+llama,arc,1,256,1,Mercury_7018445
+llama,arc,1,257,1,MCAS_2014_8_17
+llama,arc,1,258,1,Mercury_180443
+llama,arc,1,259,1,Mercury_7120890
+llama,arc,1,260,1,Mercury_7159268
+llama,arc,1,261,1,MCAS_1999_8_22
+llama,arc,1,262,1,Mercury_SC_415397
+llama,arc,1,263,1,Mercury_7042735
+llama,arc,1,264,1,Mercury_SC_400172
+llama,arc,1,265,1,Mercury_7008120
+llama,arc,1,266,1,Mercury_7267995
+llama,arc,1,267,1,Mercury_7038133
+llama,arc,1,268,1,Mercury_7026443
+llama,arc,1,269,1,Mercury_7099103
+llama,arc,1,270,1,Mercury_7207620
+llama,arc,1,271,1,NCEOGA_2013_5_43
+llama,arc,1,272,1,Mercury_7166180
+llama,arc,1,273,1,Mercury_7168123
+llama,arc,1,274,1,MCAS_2012_8_23636
+llama,arc,1,275,1,MCAS_2013_8_29421
+llama,arc,1,276,1,Mercury_400397
+llama,arc,1,277,1,Mercury_184013
+llama,arc,1,278,1,MDSA_2007_8_15
+llama,arc,1,279,1,Mercury_SC_401714
+llama,arc,1,280,1,Mercury_7246925
+llama,arc,1,281,1,Mercury_400905
+llama,arc,1,282,1,Mercury_7131828
+llama,arc,1,283,1,Mercury_7166530
+llama,arc,1,284,1,Mercury_7074865
+llama,arc,1,285,1,Mercury_7246995
+llama,arc,1,286,1,TIMSS_2011_8_pg63
+llama,arc,1,287,1,Mercury_SC_400612
+llama,arc,1,288,1,MEA_2016_5_7
+llama,arc,1,289,1,ACTAAP_2011_5_3
+llama,arc,1,290,1,Mercury_7264023
+llama,arc,1,291,1,Mercury_SC_400050
+llama,arc,1,292,1,MCAS_2003_5_31
+llama,arc,1,293,1,Mercury_LBS10399
+llama,arc,1,294,1,Mercury_7090598
+llama,arc,1,295,1,OHAT_2007_5_24
+llama,arc,1,296,1,Mercury_SC_402239
+llama,arc,1,297,1,Mercury_7245088
+llama,arc,1,298,1,Mercury_7082145
+llama,arc,8,0,8,Mercury_SC_407695 Mercury_7103565 MDSA_2009_5_16 Mercury_7027230 Mercury_SC_405487 Mercury_7032743 Mercury_7205135 MDSA_2007_4_52
+llama,arc,8,1,8,Mercury_7103215 Mercury_192168 Mercury_SC_412337 Mercury_7162838 Mercury_7159775 Mercury_7195440 Mercury_7017990 TIMSS_2007_4_pg90
+llama,arc,8,2,8,Mercury_7198380 NAEP_2005_8_S11+14 Mercury_192290 Mercury_7192990 Mercury_7217053 Mercury_7179358 MCAS_2005_8_5 MCAS_2000_8_10
+llama,arc,8,3,8,Mercury_7187915 Mercury_7189823 Mercury_405454 MCAS_2012_5_8 Mercury_SC_LBS10040 Mercury_7115063 MCAS_2015_8_7 Mercury_184765
+llama,arc,8,4,8,ACTAAP_2013_7_17 Mercury_7248238 Mercury_SC_410964 NYSEDREGENTS_2014_4_4 MCAS_8_2015_11 Mercury_7183733 MDSA_2010_5_18 LEAP__7_10354
+llama,arc,8,5,8,Mercury_7282608 Mercury_7071365 Mercury_SC_407169 ACTAAP_2007_7_5 Mercury_7207358 Mercury_7245893 Mercury_7223038 Mercury_SC_415541
+llama,arc,8,6,8,Mercury_7236023 Mercury_417146 Mercury_7128695 Mercury_7270008 Mercury_7242743 Mercury_SC_400655 Mercury_7100695 MSA_2013_8_3
+llama,arc,8,7,8,NYSEDREGENTS_2014_4_19 MCAS_2013_8_29432 Mercury_7042700 Mercury_7201705 MCAS_1998_8_13 Mercury_7138513 Mercury_SC_401663 NCEOGA_2013_8_4
+llama,arc,8,8,8,Mercury_7235813 Mercury_7011270 Mercury_7228603 Mercury_SC_400339 Mercury_SC_406705 MCAS_2010_5_11998 Mercury_7029505 Mercury_SC_401286
+llama,arc,8,9,8,Mercury_7120908 MCAS_2010_8_12010 Mercury_7008138 Mercury_7018148 MCAS_2004_8_28 Mercury_176015 Mercury_7189035 Mercury_7207410
+llama,arc,8,10,8,Mercury_7233678 Mercury_SC_402101 Mercury_SC_402104 Mercury_7183015 Mercury_7238963 NYSEDREGENTS_2014_4_14 Mercury_7004410 Mercury_SC_406939
+llama,arc,8,11,8,Mercury_7270200 NYSEDREGENTS_2014_8_20 Mercury_7135310 Mercury_400885 Mercury_412551 Mercury_7193043 Mercury_7181685 LEAP_2006_8_10412
+llama,arc,8,12,8,Mercury_7215180 NYSEDREGENTS_2014_8_38 Mercury_7145513 MEA_2010_8_11 Mercury_7241115 NYSEDREGENTS_2014_4_17 NYSEDREGENTS_2014_4_13 Mercury_7033653
+llama,arc,8,13,8,AKDE&ED_2008_8_44 Mercury_SC_415026 Mercury_7219415 Mercury_400934 Mercury_7139493 Mercury_7032340 MEAP_2005_5_1 ACTAAP_2007_7_25
+llama,arc,8,14,8,Mercury_SC_415348 Mercury_7171938 NYSEDREGENTS_2014_4_1 Mercury_7185133 Mercury_SC_411306 Mercury_SC_LBS10666 Mercury_SC_401294 MCAS_2005_5_21
+llama,arc,8,15,8,MCAS_2004_9_13 Mercury_7251685 MDSA_2011_5_20 MCAS_2006_5_29 VASoL_2008_5_19 Mercury_7246348 MCAS_2006_9_33 Mercury_SC_LBS10598
+llama,arc,8,16,8,MDSA_2008_5_24 Mercury_7141400 Mercury_SC_415366 Mercury_408809 MDSA_2007_5_39 Mercury_7164850 MCAS_2006_9_31-v1 MCAS_2002_5_6
+llama,arc,8,17,8,MEA_2016_5_6 Mercury_180058 Mercury_7133858 Mercury_7130603 Mercury_7018008 AIMS_2009_4_29 Mercury_189490 Mercury_7138688
+llama,arc,8,18,8,Mercury_409529 Mercury_7092295 Mercury_7044678 MCAS_1998_4_8 LEAP_2004_8_10397 Mercury_7112753 Mercury_7097318 Mercury_7158673
+llama,arc,8,19,8,Mercury_7038273 ACTAAP_2010_5_10 VASoL_2008_5_28 Mercury_177818 NYSEDREGENTS_2014_8_12 Mercury_7139790 MCAS_2003_8_25 Mercury_7003955
+llama,arc,8,20,8,Mercury_176838 Mercury_SC_407314 Mercury_SC_400845 Mercury_7245193 Mercury_7068863 NCEOGA_2013_8_38 Mercury_7090720 MCAS_2006_9_35
+llama,arc,8,21,8,Mercury_7144795 Mercury_SC_LBS10915 MCAS_2009_8_5 Mercury_7175455 Mercury_7100608 Mercury_177398 Mercury_SC_415491 Mercury_SC_400047
+llama,arc,8,22,8,Mercury_7218750 Mercury_7115395 Mercury_7205555 Mercury_7093975 MCAS_2012_5_23632 Mercury_7130883 Mercury_416648 Mercury_7006790
+llama,arc,8,23,8,Mercury_SC_401244 Mercury_7141908 Mercury_7186148 Mercury_7124338 Mercury_184258 Mercury_SC_400178 Mercury_7007875 Mercury_7221865
+llama,arc,8,24,8,Mercury_7269238 NCEOGA_2013_8_40 Mercury_SC_415735 Mercury_7115273 Mercury_7233660 Mercury_7026198 Mercury_7044100 Mercury_SC_408859
+llama,arc,8,25,8,LEAP_2012_8_10441 Mercury_7220378 TIMSS_2003_8_pg14 Mercury_SC_405973 OHAT_2011_8_3 Mercury_412683 MCAS_1998_8_2 Mercury_7005478
+llama,arc,8,26,8,Mercury_7105123 Mercury_7154263 TIMSS_2003_8_pg29 Mercury_7245053 TIMSS_2007_4_pg26 NYSEDREGENTS_2014_4_9 Mercury_414131 Mercury_SC_407574
+llama,arc,8,27,8,Mercury_7018515 TIMSS_2003_8_pg31 Mercury_7015435 Mercury_7166880 Mercury_7251668 Mercury_415263 MEA_2013_5_3 Mercury_7205345
+llama,arc,8,28,8,Mercury_7250023 ACTAAP_2009_5_5 Mercury_406781 Mercury_7086013 Mercury_7057313 Mercury_SC_LBS10472 Mercury_7190155 Mercury_7081760
+llama,arc,8,29,8,Mercury_7075145 Mercury_7037573 NYSEDREGENTS_2014_8_41 Mercury_SC_408700 Mercury_7284043 Mercury_7103180 Mercury_7099768 Mercury_7133648
+llama,arc,8,30,8,NYSEDREGENTS_2014_4_22 NYSEDREGENTS_2014_4_28 Mercury_SC_406029 Mercury_7267593 Mercury_7085820 MCAS_2011_5_17673 Mercury_7090738 Mercury_7234483
+llama,arc,8,31,8,NYSEDREGENTS_2014_4_20 Mercury_7141698 Mercury_SC_415354 NYSEDREGENTS_2014_4_2 Mercury_7187058 Mercury_7221095 Mercury_7143518 Mercury_7014368
+llama,arc,8,32,8,Mercury_7018445 MCAS_2014_8_17 Mercury_180443 Mercury_7120890 Mercury_7159268 MCAS_1999_8_22 Mercury_SC_415397 Mercury_7042735
+llama,arc,8,33,8,Mercury_SC_400172 Mercury_7008120 Mercury_7267995 Mercury_7038133 Mercury_7026443 Mercury_7099103 Mercury_7207620 NCEOGA_2013_5_43
+llama,arc,8,34,8,Mercury_7166180 Mercury_7168123 MCAS_2012_8_23636 MCAS_2013_8_29421 Mercury_400397 Mercury_184013 MDSA_2007_8_15 Mercury_SC_401714
+llama,arc,8,35,8,Mercury_7246925 Mercury_400905 Mercury_7131828 Mercury_7166530 Mercury_7074865 Mercury_7246995 TIMSS_2011_8_pg63 Mercury_SC_400612
+llama,arc,8,36,8,MEA_2016_5_7 ACTAAP_2011_5_3 Mercury_7264023 Mercury_SC_400050 MCAS_2003_5_31 Mercury_LBS10399 Mercury_7090598 OHAT_2007_5_24
+llama,arc,8,37,3,Mercury_SC_402239 Mercury_7245088 Mercury_7082145
+llama,arc,32,0,32,Mercury_SC_407695 Mercury_7103565 MDSA_2009_5_16 Mercury_7027230 Mercury_SC_405487 Mercury_7032743 Mercury_7205135 MDSA_2007_4_52 Mercury_7103215 Mercury_192168 Mercury_SC_412337 Mercury_7162838 Mercury_7159775 Mercury_7195440 Mercury_7017990 TIMSS_2007_4_pg90 Mercury_7198380 NAEP_2005_8_S11+14 Mercury_192290 Mercury_7192990 Mercury_7217053 Mercury_7179358 MCAS_2005_8_5 MCAS_2000_8_10 Mercury_7187915 Mercury_7189823 Mercury_405454 MCAS_2012_5_8 Mercury_SC_LBS10040 Mercury_7115063 MCAS_2015_8_7 Mercury_184765
+llama,arc,32,1,32,ACTAAP_2013_7_17 Mercury_7248238 Mercury_SC_410964 NYSEDREGENTS_2014_4_4 MCAS_8_2015_11 Mercury_7183733 MDSA_2010_5_18 LEAP__7_10354 Mercury_7282608 Mercury_7071365 Mercury_SC_407169 ACTAAP_2007_7_5 Mercury_7207358 Mercury_7245893 Mercury_7223038 Mercury_SC_415541 Mercury_7236023 Mercury_417146 Mercury_7128695 Mercury_7270008 Mercury_7242743 Mercury_SC_400655 Mercury_7100695 MSA_2013_8_3 NYSEDREGENTS_2014_4_19 MCAS_2013_8_29432 Mercury_7042700 Mercury_7201705 MCAS_1998_8_13 Mercury_7138513 Mercury_SC_401663 NCEOGA_2013_8_4
+llama,arc,32,2,32,Mercury_7235813 Mercury_7011270 Mercury_7228603 Mercury_SC_400339 Mercury_SC_406705 MCAS_2010_5_11998 Mercury_7029505 Mercury_SC_401286 Mercury_7120908 MCAS_2010_8_12010 Mercury_7008138 Mercury_7018148 MCAS_2004_8_28 Mercury_176015 Mercury_7189035 Mercury_7207410 Mercury_7233678 Mercury_SC_402101 Mercury_SC_402104 Mercury_7183015 Mercury_7238963 NYSEDREGENTS_2014_4_14 Mercury_7004410 Mercury_SC_406939 Mercury_7270200 NYSEDREGENTS_2014_8_20 Mercury_7135310 Mercury_400885 Mercury_412551 Mercury_7193043 Mercury_7181685 LEAP_2006_8_10412
+llama,arc,32,3,32,Mercury_7215180 NYSEDREGENTS_2014_8_38 Mercury_7145513 MEA_2010_8_11 Mercury_7241115 NYSEDREGENTS_2014_4_17 NYSEDREGENTS_2014_4_13 Mercury_7033653 AKDE&ED_2008_8_44 Mercury_SC_415026 Mercury_7219415 Mercury_400934 Mercury_7139493 Mercury_7032340 MEAP_2005_5_1 ACTAAP_2007_7_25 Mercury_SC_415348 Mercury_7171938 NYSEDREGENTS_2014_4_1 Mercury_7185133 Mercury_SC_411306 Mercury_SC_LBS10666 Mercury_SC_401294 MCAS_2005_5_21 MCAS_2004_9_13 Mercury_7251685 MDSA_2011_5_20 MCAS_2006_5_29 VASoL_2008_5_19 Mercury_7246348 MCAS_2006_9_33 Mercury_SC_LBS10598
+llama,arc,32,4,32,MDSA_2008_5_24 Mercury_7141400 Mercury_SC_415366 Mercury_408809 MDSA_2007_5_39 Mercury_7164850 MCAS_2006_9_31-v1 MCAS_2002_5_6 MEA_2016_5_6 Mercury_180058 Mercury_7133858 Mercury_7130603 Mercury_7018008 AIMS_2009_4_29 Mercury_189490 Mercury_7138688 Mercury_409529 Mercury_7092295 Mercury_7044678 MCAS_1998_4_8 LEAP_2004_8_10397 Mercury_7112753 Mercury_7097318 Mercury_7158673 Mercury_7038273 ACTAAP_2010_5_10 VASoL_2008_5_28 Mercury_177818 NYSEDREGENTS_2014_8_12 Mercury_7139790 MCAS_2003_8_25 Mercury_7003955
+llama,arc,32,5,32,Mercury_176838 Mercury_SC_407314 Mercury_SC_400845 Mercury_7245193 Mercury_7068863 NCEOGA_2013_8_38 Mercury_7090720 MCAS_2006_9_35 Mercury_7144795 Mercury_SC_LBS10915 MCAS_2009_8_5 Mercury_7175455 Mercury_7100608 Mercury_177398 Mercury_SC_415491 Mercury_SC_400047 Mercury_7218750 Mercury_7115395 Mercury_7205555 Mercury_7093975 MCAS_2012_5_23632 Mercury_7130883 Mercury_416648 Mercury_7006790 Mercury_SC_401244 Mercury_7141908 Mercury_7186148 Mercury_7124338 Mercury_184258 Mercury_SC_400178 Mercury_7007875 Mercury_7221865
+llama,arc,32,6,32,Mercury_7269238 NCEOGA_2013_8_40 Mercury_SC_415735 Mercury_7115273 Mercury_7233660 Mercury_7026198 Mercury_7044100 Mercury_SC_408859 LEAP_2012_8_10441 Mercury_7220378 TIMSS_2003_8_pg14 Mercury_SC_405973 OHAT_2011_8_3 Mercury_412683 MCAS_1998_8_2 Mercury_7005478 Mercury_7105123 Mercury_7154263 TIMSS_2003_8_pg29 Mercury_7245053 TIMSS_2007_4_pg26 NYSEDREGENTS_2014_4_9 Mercury_414131 Mercury_SC_407574 Mercury_7018515 TIMSS_2003_8_pg31 Mercury_7015435 Mercury_7166880 Mercury_7251668 Mercury_415263 MEA_2013_5_3 Mercury_7205345
+llama,arc,32,7,32,Mercury_7250023 ACTAAP_2009_5_5 Mercury_406781 Mercury_7086013 Mercury_7057313 Mercury_SC_LBS10472 Mercury_7190155 Mercury_7081760 Mercury_7075145 Mercury_7037573 NYSEDREGENTS_2014_8_41 Mercury_SC_408700 Mercury_7284043 Mercury_7103180 Mercury_7099768 Mercury_7133648 NYSEDREGENTS_2014_4_22 NYSEDREGENTS_2014_4_28 Mercury_SC_406029 Mercury_7267593 Mercury_7085820 MCAS_2011_5_17673 Mercury_7090738 Mercury_7234483 NYSEDREGENTS_2014_4_20 Mercury_7141698 Mercury_SC_415354 NYSEDREGENTS_2014_4_2 Mercury_7187058 Mercury_7221095 Mercury_7143518 Mercury_7014368
+llama,arc,32,8,32,Mercury_7018445 MCAS_2014_8_17 Mercury_180443 Mercury_7120890 Mercury_7159268 MCAS_1999_8_22 Mercury_SC_415397 Mercury_7042735 Mercury_SC_400172 Mercury_7008120 Mercury_7267995 Mercury_7038133 Mercury_7026443 Mercury_7099103 Mercury_7207620 NCEOGA_2013_5_43 Mercury_7166180 Mercury_7168123 MCAS_2012_8_23636 MCAS_2013_8_29421 Mercury_400397 Mercury_184013 MDSA_2007_8_15 Mercury_SC_401714 Mercury_7246925 Mercury_400905 Mercury_7131828 Mercury_7166530 Mercury_7074865 Mercury_7246995 TIMSS_2011_8_pg63 Mercury_SC_400612
+llama,arc,32,9,11,MEA_2016_5_7 ACTAAP_2011_5_3 Mercury_7264023 Mercury_SC_400050 MCAS_2003_5_31 Mercury_LBS10399 Mercury_7090598 OHAT_2007_5_24 Mercury_SC_402239 Mercury_7245088 Mercury_7082145
+llama,obqa,1,0,1,10-1005
+llama,obqa,1,1,1,10-1009
+llama,obqa,1,2,1,10-1018
+llama,obqa,1,3,1,10-1026
+llama,obqa,1,4,1,10-1027
+llama,obqa,1,5,1,10-1035
+llama,obqa,1,6,1,10-1044
+llama,obqa,1,7,1,10-1062
+llama,obqa,1,8,1,10-1063
+llama,obqa,1,9,1,10-1068
+llama,obqa,1,10,1,10-1074
+llama,obqa,1,11,1,10-1085
+llama,obqa,1,12,1,10-1095
+llama,obqa,1,13,1,10-1120
+llama,obqa,1,14,1,10-114
+llama,obqa,1,15,1,10-1142
+llama,obqa,1,16,1,10-1152
+llama,obqa,1,17,1,10-1171
+llama,obqa,1,18,1,10-1179
+llama,obqa,1,19,1,10-1186
+llama,obqa,1,20,1,10-1190
+llama,obqa,1,21,1,10-1196
+llama,obqa,1,22,1,10-1217
+llama,obqa,1,23,1,10-128
+llama,obqa,1,24,1,10-160
+llama,obqa,1,25,1,10-165
+llama,obqa,1,26,1,10-170
+llama,obqa,1,27,1,10-176
+llama,obqa,1,28,1,10-18
+llama,obqa,1,29,1,10-184
+llama,obqa,1,30,1,10-186
+llama,obqa,1,31,1,10-198
+llama,obqa,1,32,1,10-2
+llama,obqa,1,33,1,10-217
+llama,obqa,1,34,1,10-232
+llama,obqa,1,35,1,10-233
+llama,obqa,1,36,1,10-240
+llama,obqa,1,37,1,10-255
+llama,obqa,1,38,1,10-293
+llama,obqa,1,39,1,10-298
+llama,obqa,1,40,1,10-299
+llama,obqa,1,41,1,10-300
+llama,obqa,1,42,1,10-306
+llama,obqa,1,43,1,10-329
+llama,obqa,1,44,1,10-336
+llama,obqa,1,45,1,10-347
+llama,obqa,1,46,1,10-351
+llama,obqa,1,47,1,10-352
+llama,obqa,1,48,1,10-353
+llama,obqa,1,49,1,10-354
+llama,obqa,1,50,1,10-366
+llama,obqa,1,51,1,10-375
+llama,obqa,1,52,1,10-380
+llama,obqa,1,53,1,10-386
+llama,obqa,1,54,1,10-389
+llama,obqa,1,55,1,10-391
+llama,obqa,1,56,1,10-399
+llama,obqa,1,57,1,10-415
+llama,obqa,1,58,1,10-416
+llama,obqa,1,59,1,10-419
+llama,obqa,1,60,1,10-441
+llama,obqa,1,61,1,10-443
+llama,obqa,1,62,1,10-453
+llama,obqa,1,63,1,10-489
+llama,obqa,1,64,1,10-500
+llama,obqa,1,65,1,10-516
+llama,obqa,1,66,1,10-525
+llama,obqa,1,67,1,10-527
+llama,obqa,1,68,1,10-528
+llama,obqa,1,69,1,10-53
+llama,obqa,1,70,1,10-55
+llama,obqa,1,71,1,10-555
+llama,obqa,1,72,1,10-570
+llama,obqa,1,73,1,10-571
+llama,obqa,1,74,1,10-58
+llama,obqa,1,75,1,10-580
+llama,obqa,1,76,1,10-596
+llama,obqa,1,77,1,10-598
+llama,obqa,1,78,1,10-616
+llama,obqa,1,79,1,10-639
+llama,obqa,1,80,1,10-640
+llama,obqa,1,81,1,10-648
+llama,obqa,1,82,1,10-651
+llama,obqa,1,83,1,10-677
+llama,obqa,1,84,1,10-681
+llama,obqa,1,85,1,10-684
+llama,obqa,1,86,1,10-688
+llama,obqa,1,87,1,10-700
+llama,obqa,1,88,1,10-702
+llama,obqa,1,89,1,10-724
+llama,obqa,1,90,1,10-729
+llama,obqa,1,91,1,10-735
+llama,obqa,1,92,1,10-739
+llama,obqa,1,93,1,10-741
+llama,obqa,1,94,1,10-748
+llama,obqa,1,95,1,10-749
+llama,obqa,1,96,1,10-75
+llama,obqa,1,97,1,10-752
+llama,obqa,1,98,1,10-757
+llama,obqa,1,99,1,10-768
+llama,obqa,1,100,1,10-780
+llama,obqa,1,101,1,10-783
+llama,obqa,1,102,1,10-789
+llama,obqa,1,103,1,10-797
+llama,obqa,1,104,1,10-815
+llama,obqa,1,105,1,10-820
+llama,obqa,1,106,1,10-823
+llama,obqa,1,107,1,10-852
+llama,obqa,1,108,1,10-864
+llama,obqa,1,109,1,10-875
+llama,obqa,1,110,1,10-876
+llama,obqa,1,111,1,10-877
+llama,obqa,1,112,1,10-882
+llama,obqa,1,113,1,10-894
+llama,obqa,1,114,1,10-916
+llama,obqa,1,115,1,10-92
+llama,obqa,1,116,1,10-921
+llama,obqa,1,117,1,10-93
+llama,obqa,1,118,1,10-959
+llama,obqa,1,119,1,10-963
+llama,obqa,1,120,1,10-973
+llama,obqa,1,121,1,10-997
+llama,obqa,1,122,1,1033
+llama,obqa,1,123,1,1043
+llama,obqa,1,124,1,1046
+llama,obqa,1,125,1,11-110
+llama,obqa,1,126,1,11-131
+llama,obqa,1,127,1,11-141
+llama,obqa,1,128,1,11-149
+llama,obqa,1,129,1,11-174
+llama,obqa,1,130,1,11-176
+llama,obqa,1,131,1,11-199
+llama,obqa,1,132,1,11-200
+llama,obqa,1,133,1,11-206
+llama,obqa,1,134,1,11-208
+llama,obqa,1,135,1,11-222
+llama,obqa,1,136,1,11-240
+llama,obqa,1,137,1,11-247
+llama,obqa,1,138,1,11-251
+llama,obqa,1,139,1,11-275
+llama,obqa,1,140,1,11-281
+llama,obqa,1,141,1,11-282
+llama,obqa,1,142,1,11-284
+llama,obqa,1,143,1,11-302
+llama,obqa,1,144,1,11-324
+llama,obqa,1,145,1,11-347
+llama,obqa,1,146,1,11-349
+llama,obqa,1,147,1,11-35
+llama,obqa,1,148,1,11-358
+llama,obqa,1,149,1,11-37
+llama,obqa,1,150,1,11-370
+llama,obqa,1,151,1,11-371
+llama,obqa,1,152,1,11-389
+llama,obqa,1,153,1,11-397
+llama,obqa,1,154,1,11-4
+llama,obqa,1,155,1,11-404
+llama,obqa,1,156,1,11-406
+llama,obqa,1,157,1,11-415
+llama,obqa,1,158,1,11-417
+llama,obqa,1,159,1,11-430
+llama,obqa,1,160,1,11-431
+llama,obqa,1,161,1,11-442
+llama,obqa,1,162,1,11-444
+llama,obqa,1,163,1,11-454
+llama,obqa,1,164,1,11-481
+llama,obqa,1,165,1,11-486
+llama,obqa,1,166,1,11-506
+llama,obqa,1,167,1,11-515
+llama,obqa,1,168,1,11-521
+llama,obqa,1,169,1,11-523
+llama,obqa,1,170,1,11-552
+llama,obqa,1,171,1,11-559
+llama,obqa,1,172,1,11-561
+llama,obqa,1,173,1,11-564
+llama,obqa,1,174,1,11-57
+llama,obqa,1,175,1,11-599
+llama,obqa,1,176,1,11-603
+llama,obqa,1,177,1,11-606
+llama,obqa,1,178,1,11-629
+llama,obqa,1,179,1,11-642
+llama,obqa,1,180,1,11-646
+llama,obqa,1,181,1,11-648
+llama,obqa,1,182,1,11-652
+llama,obqa,1,183,1,11-655
+llama,obqa,1,184,1,11-656
+llama,obqa,1,185,1,11-663
+llama,obqa,1,186,1,11-665
+llama,obqa,1,187,1,11-666
+llama,obqa,1,188,1,11-669
+llama,obqa,1,189,1,11-671
+llama,obqa,1,190,1,11-678
+llama,obqa,1,191,1,11-679
+llama,obqa,1,192,1,11-681
+llama,obqa,1,193,1,11-686
+llama,obqa,1,194,1,11-692
+llama,obqa,1,195,1,11-693
+llama,obqa,1,196,1,11-694
+llama,obqa,1,197,1,11-705
+llama,obqa,1,198,1,11-731
+llama,obqa,1,199,1,11-737
+llama,obqa,1,200,1,11-742
+llama,obqa,1,201,1,11-744
+llama,obqa,1,202,1,11-747
+llama,obqa,1,203,1,1107
+llama,obqa,1,204,1,1118
+llama,obqa,1,205,1,112
+llama,obqa,1,206,1,1122
+llama,obqa,1,207,1,1124
+llama,obqa,1,208,1,1144
+llama,obqa,1,209,1,115
+llama,obqa,1,210,1,1171
+llama,obqa,1,211,1,1195
+llama,obqa,1,212,1,12-1
+llama,obqa,1,213,1,12-100
+llama,obqa,1,214,1,12-1011
+llama,obqa,1,215,1,12-1021
+llama,obqa,1,216,1,12-1045
+llama,obqa,1,217,1,12-1046
+llama,obqa,1,218,1,12-105
+llama,obqa,1,219,1,12-1052
+llama,obqa,1,220,1,12-1057
+llama,obqa,1,221,1,12-1066
+llama,obqa,1,222,1,12-1078
+llama,obqa,1,223,1,12-1083
+llama,obqa,1,224,1,12-1090
+llama,obqa,1,225,1,12-1108
+llama,obqa,1,226,1,12-111
+llama,obqa,1,227,1,12-1130
+llama,obqa,1,228,1,12-1132
+llama,obqa,1,229,1,12-1134
+llama,obqa,1,230,1,12-1146
+llama,obqa,1,231,1,12-1159
+llama,obqa,1,232,1,12-116
+llama,obqa,1,233,1,12-1163
+llama,obqa,1,234,1,12-1170
+llama,obqa,1,235,1,12-1177
+llama,obqa,1,236,1,12-1202
+llama,obqa,1,237,1,12-1206
+llama,obqa,1,238,1,12-1208
+llama,obqa,1,239,1,12-132
+llama,obqa,1,240,1,12-166
+llama,obqa,1,241,1,12-17
+llama,obqa,1,242,1,12-175
+llama,obqa,1,243,1,12-200
+llama,obqa,1,244,1,12-208
+llama,obqa,1,245,1,12-22
+llama,obqa,1,246,1,12-221
+llama,obqa,1,247,1,12-242
+llama,obqa,1,248,1,12-251
+llama,obqa,1,249,1,12-264
+llama,obqa,1,250,1,12-271
+llama,obqa,1,251,1,12-275
+llama,obqa,1,252,1,12-281
+llama,obqa,1,253,1,12-282
+llama,obqa,1,254,1,12-291
+llama,obqa,1,255,1,12-301
+llama,obqa,1,256,1,12-306
+llama,obqa,1,257,1,12-310
+llama,obqa,1,258,1,12-318
+llama,obqa,1,259,1,12-321
+llama,obqa,1,260,1,12-324
+llama,obqa,1,261,1,12-333
+llama,obqa,1,262,1,12-342
+llama,obqa,1,263,1,12-352
+llama,obqa,1,264,1,12-368
+llama,obqa,1,265,1,12-397
+llama,obqa,1,266,1,12-401
+llama,obqa,1,267,1,12-416
+llama,obqa,1,268,1,12-425
+llama,obqa,1,269,1,12-426
+llama,obqa,1,270,1,12-428
+llama,obqa,1,271,1,12-443
+llama,obqa,1,272,1,12-45
+llama,obqa,1,273,1,12-462
+llama,obqa,1,274,1,12-468
+llama,obqa,1,275,1,12-470
+llama,obqa,1,276,1,12-478
+llama,obqa,1,277,1,12-488
+llama,obqa,1,278,1,12-494
+llama,obqa,1,279,1,12-496
+llama,obqa,1,280,1,12-541
+llama,obqa,1,281,1,12-545
+llama,obqa,1,282,1,12-561
+llama,obqa,1,283,1,12-577
+llama,obqa,1,284,1,12-584
+llama,obqa,1,285,1,12-587
+llama,obqa,1,286,1,12-605
+llama,obqa,1,287,1,12-645
+llama,obqa,1,288,1,12-669
+llama,obqa,1,289,1,12-674
+llama,obqa,1,290,1,12-68
+llama,obqa,1,291,1,12-680
+llama,obqa,1,292,1,12-693
+llama,obqa,1,293,1,12-702
+llama,obqa,1,294,1,12-704
+llama,obqa,1,295,1,12-706
+llama,obqa,1,296,1,12-721
+llama,obqa,1,297,1,12-722
+llama,obqa,1,298,1,12-745
+llama,obqa,1,299,1,12-768
+llama,obqa,1,300,1,12-77
+llama,obqa,1,301,1,12-773
+llama,obqa,1,302,1,12-777
+llama,obqa,1,303,1,12-783
+llama,obqa,1,304,1,12-792
+llama,obqa,1,305,1,12-817
+llama,obqa,1,306,1,12-824
+llama,obqa,1,307,1,12-829
+llama,obqa,1,308,1,12-834
+llama,obqa,1,309,1,12-835
+llama,obqa,1,310,1,12-84
+llama,obqa,1,311,1,12-845
+llama,obqa,1,312,1,12-859
+llama,obqa,1,313,1,12-907
+llama,obqa,1,314,1,12-911
+llama,obqa,1,315,1,12-914
+llama,obqa,1,316,1,12-92
+llama,obqa,1,317,1,12-923
+llama,obqa,1,318,1,12-928
+llama,obqa,1,319,1,12-931
+llama,obqa,1,320,1,12-936
+llama,obqa,1,321,1,12-950
+llama,obqa,1,322,1,12-958
+llama,obqa,1,323,1,12-961
+llama,obqa,1,324,1,12-964
+llama,obqa,1,325,1,12-981
+llama,obqa,1,326,1,12-983
+llama,obqa,1,327,1,1219
+llama,obqa,1,328,1,1230
+llama,obqa,1,329,1,1232
+llama,obqa,1,330,1,1286
+llama,obqa,1,331,1,13-1001
+llama,obqa,1,332,1,13-1007
+llama,obqa,1,333,1,13-1012
+llama,obqa,1,334,1,13-1019
+llama,obqa,1,335,1,13-1023
+llama,obqa,1,336,1,13-1038
+llama,obqa,1,337,1,13-104
+llama,obqa,1,338,1,13-1051
+llama,obqa,1,339,1,13-1054
+llama,obqa,1,340,1,13-128
+llama,obqa,1,341,1,13-148
+llama,obqa,1,342,1,13-152
+llama,obqa,1,343,1,13-160
+llama,obqa,1,344,1,13-168
+llama,obqa,1,345,1,13-181
+llama,obqa,1,346,1,13-190
+llama,obqa,1,347,1,13-216
+llama,obqa,1,348,1,13-245
+llama,obqa,1,349,1,13-266
+llama,obqa,1,350,1,13-271
+llama,obqa,1,351,1,13-276
+llama,obqa,1,352,1,13-278
+llama,obqa,1,353,1,13-286
+llama,obqa,1,354,1,13-312
+llama,obqa,1,355,1,13-32
+llama,obqa,1,356,1,13-324
+llama,obqa,1,357,1,13-331
+llama,obqa,1,358,1,13-332
+llama,obqa,1,359,1,13-349
+llama,obqa,1,360,1,13-355
+llama,obqa,1,361,1,13-365
+llama,obqa,1,362,1,13-367
+llama,obqa,1,363,1,13-372
+llama,obqa,1,364,1,13-374
+llama,obqa,1,365,1,13-376
+llama,obqa,1,366,1,13-407
+llama,obqa,1,367,1,13-409
+llama,obqa,1,368,1,13-42
+llama,obqa,1,369,1,13-424
+llama,obqa,1,370,1,13-438
+llama,obqa,1,371,1,13-441
+llama,obqa,1,372,1,13-446
+llama,obqa,1,373,1,13-450
+llama,obqa,1,374,1,13-460
+llama,obqa,1,375,1,13-462
+llama,obqa,1,376,1,13-463
+llama,obqa,1,377,1,13-484
+llama,obqa,1,378,1,13-490
+llama,obqa,1,379,1,13-492
+llama,obqa,1,380,1,13-501
+llama,obqa,1,381,1,13-504
+llama,obqa,1,382,1,13-516
+llama,obqa,1,383,1,13-518
+llama,obqa,1,384,1,13-525
+llama,obqa,1,385,1,13-53
+llama,obqa,1,386,1,13-548
+llama,obqa,1,387,1,13-550
+llama,obqa,1,388,1,13-554
+llama,obqa,1,389,1,13-60
+llama,obqa,1,390,1,13-618
+llama,obqa,1,391,1,13-631
+llama,obqa,1,392,1,13-635
+llama,obqa,1,393,1,13-638
+llama,obqa,1,394,1,13-655
+llama,obqa,1,395,1,13-660
+llama,obqa,1,396,1,13-677
+llama,obqa,1,397,1,13-709
+llama,obqa,1,398,1,13-71
+llama,obqa,1,399,1,13-720
+llama,obqa,1,400,1,13-721
+llama,obqa,1,401,1,13-761
+llama,obqa,1,402,1,13-762
+llama,obqa,1,403,1,13-802
+llama,obqa,1,404,1,13-804
+llama,obqa,1,405,1,13-816
+llama,obqa,1,406,1,13-819
+llama,obqa,1,407,1,13-823
+llama,obqa,1,408,1,13-836
+llama,obqa,1,409,1,13-898
+llama,obqa,1,410,1,13-9
+llama,obqa,1,411,1,13-907
+llama,obqa,1,412,1,13-944
+llama,obqa,1,413,1,13-954
+llama,obqa,1,414,1,13-963
+llama,obqa,1,415,1,13-987
+llama,obqa,1,416,1,1320
+llama,obqa,1,417,1,1341
+llama,obqa,1,418,1,14-1004
+llama,obqa,1,419,1,14-103
+llama,obqa,1,420,1,14-1031
+llama,obqa,1,421,1,14-1038
+llama,obqa,1,422,1,14-1048
+llama,obqa,1,423,1,14-1056
+llama,obqa,1,424,1,14-1068
+llama,obqa,1,425,1,14-1073
+llama,obqa,1,426,1,14-1084
+llama,obqa,1,427,1,14-109
+llama,obqa,1,428,1,14-1093
+llama,obqa,1,429,1,14-1100
+llama,obqa,1,430,1,14-1101
+llama,obqa,1,431,1,14-1112
+llama,obqa,1,432,1,14-1115
+llama,obqa,1,433,1,14-1123
+llama,obqa,1,434,1,14-1124
+llama,obqa,1,435,1,14-1139
+llama,obqa,1,436,1,14-1155
+llama,obqa,1,437,1,14-1168
+llama,obqa,1,438,1,14-1170
+llama,obqa,1,439,1,14-1171
+llama,obqa,1,440,1,14-1210
+llama,obqa,1,441,1,14-1215
+llama,obqa,1,442,1,14-1230
+llama,obqa,1,443,1,14-1233
+llama,obqa,1,444,1,14-1253
+llama,obqa,1,445,1,14-127
+llama,obqa,1,446,1,14-1272
+llama,obqa,1,447,1,14-1277
+llama,obqa,1,448,1,14-129
+llama,obqa,1,449,1,14-1296
+llama,obqa,1,450,1,14-1299
+llama,obqa,1,451,1,14-1303
+llama,obqa,1,452,1,14-1312
+llama,obqa,1,453,1,14-1328
+llama,obqa,1,454,1,14-1329
+llama,obqa,1,455,1,14-1338
+llama,obqa,1,456,1,14-1339
+llama,obqa,1,457,1,14-1360
+llama,obqa,1,458,1,14-1362
+llama,obqa,1,459,1,14-1387
+llama,obqa,1,460,1,14-1404
+llama,obqa,1,461,1,14-1409
+llama,obqa,1,462,1,14-1415
+llama,obqa,1,463,1,14-1422
+llama,obqa,1,464,1,14-1432
+llama,obqa,1,465,1,14-1443
+llama,obqa,1,466,1,14-1445
+llama,obqa,1,467,1,14-1447
+llama,obqa,1,468,1,14-1451
+llama,obqa,1,469,1,14-1459
+llama,obqa,1,470,1,14-1462
+llama,obqa,1,471,1,14-1467
+llama,obqa,1,472,1,14-1481
+llama,obqa,1,473,1,14-1504
+llama,obqa,1,474,1,14-155
+llama,obqa,1,475,1,14-167
+llama,obqa,1,476,1,14-173
+llama,obqa,1,477,1,14-18
+llama,obqa,1,478,1,14-181
+llama,obqa,1,479,1,14-186
+llama,obqa,1,480,1,14-200
+llama,obqa,1,481,1,14-216
+llama,obqa,1,482,1,14-218
+llama,obqa,1,483,1,14-221
+llama,obqa,1,484,1,14-222
+llama,obqa,1,485,1,14-223
+llama,obqa,1,486,1,14-245
+llama,obqa,1,487,1,14-251
+llama,obqa,1,488,1,14-261
+llama,obqa,1,489,1,14-264
+llama,obqa,1,490,1,14-269
+llama,obqa,1,491,1,14-279
+llama,obqa,1,492,1,14-290
+llama,obqa,1,493,1,14-311
+llama,obqa,1,494,1,14-314
+llama,obqa,1,495,1,14-316
+llama,obqa,1,496,1,14-342
+llama,obqa,1,497,1,14-347
+llama,obqa,1,498,1,14-349
+llama,obqa,1,499,1,14-352
+llama,obqa,1,500,1,14-357
+llama,obqa,1,501,1,14-362
+llama,obqa,1,502,1,14-372
+llama,obqa,1,503,1,14-378
+llama,obqa,1,504,1,14-380
+llama,obqa,1,505,1,14-386
+llama,obqa,1,506,1,14-4
+llama,obqa,1,507,1,14-409
+llama,obqa,1,508,1,14-411
+llama,obqa,1,509,1,14-425
+llama,obqa,1,510,1,14-432
+llama,obqa,1,511,1,14-443
+llama,obqa,1,512,1,14-448
+llama,obqa,1,513,1,14-45
+llama,obqa,1,514,1,14-450
+llama,obqa,1,515,1,14-456
+llama,obqa,1,516,1,14-457
+llama,obqa,1,517,1,14-458
+llama,obqa,1,518,1,14-467
+llama,obqa,1,519,1,14-472
+llama,obqa,1,520,1,14-489
+llama,obqa,1,521,1,14-491
+llama,obqa,1,522,1,14-529
+llama,obqa,1,523,1,14-537
+llama,obqa,1,524,1,14-574
+llama,obqa,1,525,1,14-585
+llama,obqa,1,526,1,14-587
+llama,obqa,1,527,1,14-595
+llama,obqa,1,528,1,14-60
+llama,obqa,1,529,1,14-61
+llama,obqa,1,530,1,14-624
+llama,obqa,1,531,1,14-628
+llama,obqa,1,532,1,14-629
+llama,obqa,1,533,1,14-64
+llama,obqa,1,534,1,14-647
+llama,obqa,1,535,1,14-655
+llama,obqa,1,536,1,14-668
+llama,obqa,1,537,1,14-67
+llama,obqa,1,538,1,14-671
+llama,obqa,1,539,1,14-676
+llama,obqa,1,540,1,14-683
+llama,obqa,1,541,1,14-720
+llama,obqa,1,542,1,14-745
+llama,obqa,1,543,1,14-747
+llama,obqa,1,544,1,14-752
+llama,obqa,1,545,1,14-754
+llama,obqa,1,546,1,14-756
+llama,obqa,1,547,1,14-757
+llama,obqa,1,548,1,14-782
+llama,obqa,1,549,1,14-790
+llama,obqa,1,550,1,14-797
+llama,obqa,1,551,1,14-807
+llama,obqa,1,552,1,14-824
+llama,obqa,1,553,1,14-835
+llama,obqa,1,554,1,14-854
+llama,obqa,1,555,1,14-859
+llama,obqa,1,556,1,14-868
+llama,obqa,1,557,1,14-877
+llama,obqa,1,558,1,14-885
+llama,obqa,1,559,1,14-888
+llama,obqa,1,560,1,14-89
+llama,obqa,1,561,1,14-897
+llama,obqa,1,562,1,14-903
+llama,obqa,1,563,1,14-927
+llama,obqa,1,564,1,14-930
+llama,obqa,1,565,1,14-948
+llama,obqa,1,566,1,14-949
+llama,obqa,1,567,1,14-96
+llama,obqa,1,568,1,14-977
+llama,obqa,1,569,1,14-979
+llama,obqa,1,570,1,14-984
+llama,obqa,1,571,1,14-988
+llama,obqa,1,572,1,14-994
+llama,obqa,1,573,1,1430
+llama,obqa,1,574,1,1455
+llama,obqa,1,575,1,154
+llama,obqa,1,576,1,1547
+llama,obqa,1,577,1,1558
+llama,obqa,1,578,1,1652
+llama,obqa,1,579,1,1655
+llama,obqa,1,580,1,1683
+llama,obqa,1,581,1,1789
+llama,obqa,1,582,1,1832
+llama,obqa,1,583,1,1834
+llama,obqa,1,584,1,1845
+llama,obqa,1,585,1,1851
+llama,obqa,1,586,1,1894
+llama,obqa,1,587,1,19
+llama,obqa,1,588,1,1927
+llama,obqa,1,589,1,241
+llama,obqa,1,590,1,291
+llama,obqa,1,591,1,38
+llama,obqa,1,592,1,383
+llama,obqa,1,593,1,499
+llama,obqa,1,594,1,544
+llama,obqa,1,595,1,612
+llama,obqa,1,596,1,617
+llama,obqa,1,597,1,7-1006
+llama,obqa,1,598,1,7-1025
+llama,obqa,1,599,1,7-104
+llama,obqa,1,600,1,7-1076
+llama,obqa,1,601,1,7-1080
+llama,obqa,1,602,1,7-115
+llama,obqa,1,603,1,7-1160
+llama,obqa,1,604,1,7-124
+llama,obqa,1,605,1,7-164
+llama,obqa,1,606,1,7-166
+llama,obqa,1,607,1,7-172
+llama,obqa,1,608,1,7-194
+llama,obqa,1,609,1,7-197
+llama,obqa,1,610,1,7-220
+llama,obqa,1,611,1,7-229
+llama,obqa,1,612,1,7-253
+llama,obqa,1,613,1,7-256
+llama,obqa,1,614,1,7-26
+llama,obqa,1,615,1,7-277
+llama,obqa,1,616,1,7-319
+llama,obqa,1,617,1,7-321
+llama,obqa,1,618,1,7-329
+llama,obqa,1,619,1,7-338
+llama,obqa,1,620,1,7-347
+llama,obqa,1,621,1,7-359
+llama,obqa,1,622,1,7-40
+llama,obqa,1,623,1,7-43
+llama,obqa,1,624,1,7-434
+llama,obqa,1,625,1,7-455
+llama,obqa,1,626,1,7-500
+llama,obqa,1,627,1,7-557
+llama,obqa,1,628,1,7-590
+llama,obqa,1,629,1,7-647
+llama,obqa,1,630,1,7-650
+llama,obqa,1,631,1,7-697
+llama,obqa,1,632,1,7-703
+llama,obqa,1,633,1,7-763
+llama,obqa,1,634,1,7-776
+llama,obqa,1,635,1,7-813
+llama,obqa,1,636,1,7-858
+llama,obqa,1,637,1,7-860
+llama,obqa,1,638,1,7-870
+llama,obqa,1,639,1,7-876
+llama,obqa,1,640,1,7-899
+llama,obqa,1,641,1,7-908
+llama,obqa,1,642,1,7-912
+llama,obqa,1,643,1,7-936
+llama,obqa,1,644,1,7-969
+llama,obqa,1,645,1,71
+llama,obqa,1,646,1,751
+llama,obqa,1,647,1,789
+llama,obqa,1,648,1,8-10
+llama,obqa,1,649,1,8-126
+llama,obqa,1,650,1,8-133
+llama,obqa,1,651,1,8-180
+llama,obqa,1,652,1,8-221
+llama,obqa,1,653,1,8-23
+llama,obqa,1,654,1,8-244
+llama,obqa,1,655,1,8-248
+llama,obqa,1,656,1,8-262
+llama,obqa,1,657,1,8-291
+llama,obqa,1,658,1,8-306
+llama,obqa,1,659,1,8-32
+llama,obqa,1,660,1,8-323
+llama,obqa,1,661,1,8-337
+llama,obqa,1,662,1,8-34
+llama,obqa,1,663,1,8-385
+llama,obqa,1,664,1,8-387
+llama,obqa,1,665,1,8-408
+llama,obqa,1,666,1,8-420
+llama,obqa,1,667,1,8-437
+llama,obqa,1,668,1,8-495
+llama,obqa,1,669,1,8-76
+llama,obqa,1,670,1,853
+llama,obqa,1,671,1,870
+llama,obqa,1,672,1,89
+llama,obqa,1,673,1,899
+llama,obqa,1,674,1,9-1036
+llama,obqa,1,675,1,9-1040
+llama,obqa,1,676,1,9-1063
+llama,obqa,1,677,1,9-1064
+llama,obqa,1,678,1,9-1077
+llama,obqa,1,679,1,9-1079
+llama,obqa,1,680,1,9-1118
+llama,obqa,1,681,1,9-1120
+llama,obqa,1,682,1,9-113
+llama,obqa,1,683,1,9-1162
+llama,obqa,1,684,1,9-1184
+llama,obqa,1,685,1,9-1193
+llama,obqa,1,686,1,9-122
+llama,obqa,1,687,1,9-134
+llama,obqa,1,688,1,9-150
+llama,obqa,1,689,1,9-17
+llama,obqa,1,690,1,9-196
+llama,obqa,1,691,1,9-202
+llama,obqa,1,692,1,9-21
+llama,obqa,1,693,1,9-218
+llama,obqa,1,694,1,9-237
+llama,obqa,1,695,1,9-246
+llama,obqa,1,696,1,9-255
+llama,obqa,1,697,1,9-326
+llama,obqa,1,698,1,9-335
+llama,obqa,1,699,1,9-380
+llama,obqa,1,700,1,9-383
+llama,obqa,1,701,1,9-400
+llama,obqa,1,702,1,9-419
+llama,obqa,1,703,1,9-423
+llama,obqa,1,704,1,9-427
+llama,obqa,1,705,1,9-449
+llama,obqa,1,706,1,9-460
+llama,obqa,1,707,1,9-530
+llama,obqa,1,708,1,9-538
+llama,obqa,1,709,1,9-551
+llama,obqa,1,710,1,9-565
+llama,obqa,1,711,1,9-592
+llama,obqa,1,712,1,9-6
+llama,obqa,1,713,1,9-603
+llama,obqa,1,714,1,9-607
+llama,obqa,1,715,1,9-626
+llama,obqa,1,716,1,9-628
+llama,obqa,1,717,1,9-691
+llama,obqa,1,718,1,9-695
+llama,obqa,1,719,1,9-697
+llama,obqa,1,720,1,9-739
+llama,obqa,1,721,1,9-74
+llama,obqa,1,722,1,9-744
+llama,obqa,1,723,1,9-750
+llama,obqa,1,724,1,9-778
+llama,obqa,1,725,1,9-782
+llama,obqa,1,726,1,9-795
+llama,obqa,1,727,1,9-820
+llama,obqa,1,728,1,9-831
+llama,obqa,1,729,1,9-844
+llama,obqa,1,730,1,9-855
+llama,obqa,1,731,1,9-863
+llama,obqa,1,732,1,9-879
+llama,obqa,1,733,1,9-884
+llama,obqa,1,734,1,9-892
+llama,obqa,1,735,1,9-927
+llama,obqa,1,736,1,9-945
+llama,obqa,1,737,1,9-967
+llama,obqa,1,738,1,9-972
+llama,obqa,1,739,1,9-973
+llama,obqa,1,740,1,9-985
+llama,obqa,1,741,1,919
+llama,obqa,8,0,8,10-1005 10-1009 10-1018 10-1026 10-1027 10-1035 10-1044 10-1062
+llama,obqa,8,1,8,10-1063 10-1068 10-1074 10-1085 10-1095 10-1120 10-114 10-1142
+llama,obqa,8,2,8,10-1152 10-1171 10-1179 10-1186 10-1190 10-1196 10-1217 10-128
+llama,obqa,8,3,8,10-160 10-165 10-170 10-176 10-18 10-184 10-186 10-198
+llama,obqa,8,4,8,10-2 10-217 10-232 10-233 10-240 10-255 10-293 10-298
+llama,obqa,8,5,8,10-299 10-300 10-306 10-329 10-336 10-347 10-351 10-352
+llama,obqa,8,6,8,10-353 10-354 10-366 10-375 10-380 10-386 10-389 10-391
+llama,obqa,8,7,8,10-399 10-415 10-416 10-419 10-441 10-443 10-453 10-489
+llama,obqa,8,8,8,10-500 10-516 10-525 10-527 10-528 10-53 10-55 10-555
+llama,obqa,8,9,8,10-570 10-571 10-58 10-580 10-596 10-598 10-616 10-639
+llama,obqa,8,10,8,10-640 10-648 10-651 10-677 10-681 10-684 10-688 10-700
+llama,obqa,8,11,8,10-702 10-724 10-729 10-735 10-739 10-741 10-748 10-749
+llama,obqa,8,12,8,10-75 10-752 10-757 10-768 10-780 10-783 10-789 10-797
+llama,obqa,8,13,8,10-815 10-820 10-823 10-852 10-864 10-875 10-876 10-877
+llama,obqa,8,14,8,10-882 10-894 10-916 10-92 10-921 10-93 10-959 10-963
+llama,obqa,8,15,8,10-973 10-997 1033 1043 1046 11-110 11-131 11-141
+llama,obqa,8,16,8,11-149 11-174 11-176 11-199 11-200 11-206 11-208 11-222
+llama,obqa,8,17,8,11-240 11-247 11-251 11-275 11-281 11-282 11-284 11-302
+llama,obqa,8,18,8,11-324 11-347 11-349 11-35 11-358 11-37 11-370 11-371
+llama,obqa,8,19,8,11-389 11-397 11-4 11-404 11-406 11-415 11-417 11-430
+llama,obqa,8,20,8,11-431 11-442 11-444 11-454 11-481 11-486 11-506 11-515
+llama,obqa,8,21,8,11-521 11-523 11-552 11-559 11-561 11-564 11-57 11-599
+llama,obqa,8,22,8,11-603 11-606 11-629 11-642 11-646 11-648 11-652 11-655
+llama,obqa,8,23,8,11-656 11-663 11-665 11-666 11-669 11-671 11-678 11-679
+llama,obqa,8,24,8,11-681 11-686 11-692 11-693 11-694 11-705 11-731 11-737
+llama,obqa,8,25,8,11-742 11-744 11-747 1107 1118 112 1122 1124
+llama,obqa,8,26,8,1144 115 1171 1195 12-1 12-100 12-1011 12-1021
+llama,obqa,8,27,8,12-1045 12-1046 12-105 12-1052 12-1057 12-1066 12-1078 12-1083
+llama,obqa,8,28,8,12-1090 12-1108 12-111 12-1130 12-1132 12-1134 12-1146 12-1159
+llama,obqa,8,29,8,12-116 12-1163 12-1170 12-1177 12-1202 12-1206 12-1208 12-132
+llama,obqa,8,30,8,12-166 12-17 12-175 12-200 12-208 12-22 12-221 12-242
+llama,obqa,8,31,8,12-251 12-264 12-271 12-275 12-281 12-282 12-291 12-301
+llama,obqa,8,32,8,12-306 12-310 12-318 12-321 12-324 12-333 12-342 12-352
+llama,obqa,8,33,8,12-368 12-397 12-401 12-416 12-425 12-426 12-428 12-443
+llama,obqa,8,34,8,12-45 12-462 12-468 12-470 12-478 12-488 12-494 12-496
+llama,obqa,8,35,8,12-541 12-545 12-561 12-577 12-584 12-587 12-605 12-645
+llama,obqa,8,36,8,12-669 12-674 12-68 12-680 12-693 12-702 12-704 12-706
+llama,obqa,8,37,8,12-721 12-722 12-745 12-768 12-77 12-773 12-777 12-783
+llama,obqa,8,38,8,12-792 12-817 12-824 12-829 12-834 12-835 12-84 12-845
+llama,obqa,8,39,8,12-859 12-907 12-911 12-914 12-92 12-923 12-928 12-931
+llama,obqa,8,40,8,12-936 12-950 12-958 12-961 12-964 12-981 12-983 1219
+llama,obqa,8,41,8,1230 1232 1286 13-1001 13-1007 13-1012 13-1019 13-1023
+llama,obqa,8,42,8,13-1038 13-104 13-1051 13-1054 13-128 13-148 13-152 13-160
+llama,obqa,8,43,8,13-168 13-181 13-190 13-216 13-245 13-266 13-271 13-276
+llama,obqa,8,44,8,13-278 13-286 13-312 13-32 13-324 13-331 13-332 13-349
+llama,obqa,8,45,8,13-355 13-365 13-367 13-372 13-374 13-376 13-407 13-409
+llama,obqa,8,46,8,13-42 13-424 13-438 13-441 13-446 13-450 13-460 13-462
+llama,obqa,8,47,8,13-463 13-484 13-490 13-492 13-501 13-504 13-516 13-518
+llama,obqa,8,48,8,13-525 13-53 13-548 13-550 13-554 13-60 13-618 13-631
+llama,obqa,8,49,8,13-635 13-638 13-655 13-660 13-677 13-709 13-71 13-720
+llama,obqa,8,50,8,13-721 13-761 13-762 13-802 13-804 13-816 13-819 13-823
+llama,obqa,8,51,8,13-836 13-898 13-9 13-907 13-944 13-954 13-963 13-987
+llama,obqa,8,52,8,1320 1341 14-1004 14-103 14-1031 14-1038 14-1048 14-1056
+llama,obqa,8,53,8,14-1068 14-1073 14-1084 14-109 14-1093 14-1100 14-1101 14-1112
+llama,obqa,8,54,8,14-1115 14-1123 14-1124 14-1139 14-1155 14-1168 14-1170 14-1171
+llama,obqa,8,55,8,14-1210 14-1215 14-1230 14-1233 14-1253 14-127 14-1272 14-1277
+llama,obqa,8,56,8,14-129 14-1296 14-1299 14-1303 14-1312 14-1328 14-1329 14-1338
+llama,obqa,8,57,8,14-1339 14-1360 14-1362 14-1387 14-1404 14-1409 14-1415 14-1422
+llama,obqa,8,58,8,14-1432 14-1443 14-1445 14-1447 14-1451 14-1459 14-1462 14-1467
+llama,obqa,8,59,8,14-1481 14-1504 14-155 14-167 14-173 14-18 14-181 14-186
+llama,obqa,8,60,8,14-200 14-216 14-218 14-221 14-222 14-223 14-245 14-251
+llama,obqa,8,61,8,14-261 14-264 14-269 14-279 14-290 14-311 14-314 14-316
+llama,obqa,8,62,8,14-342 14-347 14-349 14-352 14-357 14-362 14-372 14-378
+llama,obqa,8,63,8,14-380 14-386 14-4 14-409 14-411 14-425 14-432 14-443
+llama,obqa,8,64,8,14-448 14-45 14-450 14-456 14-457 14-458 14-467 14-472
+llama,obqa,8,65,8,14-489 14-491 14-529 14-537 14-574 14-585 14-587 14-595
+llama,obqa,8,66,8,14-60 14-61 14-624 14-628 14-629 14-64 14-647 14-655
+llama,obqa,8,67,8,14-668 14-67 14-671 14-676 14-683 14-720 14-745 14-747
+llama,obqa,8,68,8,14-752 14-754 14-756 14-757 14-782 14-790 14-797 14-807
+llama,obqa,8,69,8,14-824 14-835 14-854 14-859 14-868 14-877 14-885 14-888
+llama,obqa,8,70,8,14-89 14-897 14-903 14-927 14-930 14-948 14-949 14-96
+llama,obqa,8,71,8,14-977 14-979 14-984 14-988 14-994 1430 1455 154
+llama,obqa,8,72,8,1547 1558 1652 1655 1683 1789 1832 1834
+llama,obqa,8,73,8,1845 1851 1894 19 1927 241 291 38
+llama,obqa,8,74,8,383 499 544 612 617 7-1006 7-1025 7-104
+llama,obqa,8,75,8,7-1076 7-1080 7-115 7-1160 7-124 7-164 7-166 7-172
+llama,obqa,8,76,8,7-194 7-197 7-220 7-229 7-253 7-256 7-26 7-277
+llama,obqa,8,77,8,7-319 7-321 7-329 7-338 7-347 7-359 7-40 7-43
+llama,obqa,8,78,8,7-434 7-455 7-500 7-557 7-590 7-647 7-650 7-697
+llama,obqa,8,79,8,7-703 7-763 7-776 7-813 7-858 7-860 7-870 7-876
+llama,obqa,8,80,8,7-899 7-908 7-912 7-936 7-969 71 751 789
+llama,obqa,8,81,8,8-10 8-126 8-133 8-180 8-221 8-23 8-244 8-248
+llama,obqa,8,82,8,8-262 8-291 8-306 8-32 8-323 8-337 8-34 8-385
+llama,obqa,8,83,8,8-387 8-408 8-420 8-437 8-495 8-76 853 870
+llama,obqa,8,84,8,89 899 9-1036 9-1040 9-1063 9-1064 9-1077 9-1079
+llama,obqa,8,85,8,9-1118 9-1120 9-113 9-1162 9-1184 9-1193 9-122 9-134
+llama,obqa,8,86,8,9-150 9-17 9-196 9-202 9-21 9-218 9-237 9-246
+llama,obqa,8,87,8,9-255 9-326 9-335 9-380 9-383 9-400 9-419 9-423
+llama,obqa,8,88,8,9-427 9-449 9-460 9-530 9-538 9-551 9-565 9-592
+llama,obqa,8,89,8,9-6 9-603 9-607 9-626 9-628 9-691 9-695 9-697
+llama,obqa,8,90,8,9-739 9-74 9-744 9-750 9-778 9-782 9-795 9-820
+llama,obqa,8,91,8,9-831 9-844 9-855 9-863 9-879 9-884 9-892 9-927
+llama,obqa,8,92,6,9-945 9-967 9-972 9-973 9-985 919
+llama,obqa,32,0,32,10-1005 10-1009 10-1018 10-1026 10-1027 10-1035 10-1044 10-1062 10-1063 10-1068 10-1074 10-1085 10-1095 10-1120 10-114 10-1142 10-1152 10-1171 10-1179 10-1186 10-1190 10-1196 10-1217 10-128 10-160 10-165 10-170 10-176 10-18 10-184 10-186 10-198
+llama,obqa,32,1,32,10-2 10-217 10-232 10-233 10-240 10-255 10-293 10-298 10-299 10-300 10-306 10-329 10-336 10-347 10-351 10-352 10-353 10-354 10-366 10-375 10-380 10-386 10-389 10-391 10-399 10-415 10-416 10-419 10-441 10-443 10-453 10-489
+llama,obqa,32,2,32,10-500 10-516 10-525 10-527 10-528 10-53 10-55 10-555 10-570 10-571 10-58 10-580 10-596 10-598 10-616 10-639 10-640 10-648 10-651 10-677 10-681 10-684 10-688 10-700 10-702 10-724 10-729 10-735 10-739 10-741 10-748 10-749
+llama,obqa,32,3,32,10-75 10-752 10-757 10-768 10-780 10-783 10-789 10-797 10-815 10-820 10-823 10-852 10-864 10-875 10-876 10-877 10-882 10-894 10-916 10-92 10-921 10-93 10-959 10-963 10-973 10-997 1033 1043 1046 11-110 11-131 11-141
+llama,obqa,32,4,32,11-149 11-174 11-176 11-199 11-200 11-206 11-208 11-222 11-240 11-247 11-251 11-275 11-281 11-282 11-284 11-302 11-324 11-347 11-349 11-35 11-358 11-37 11-370 11-371 11-389 11-397 11-4 11-404 11-406 11-415 11-417 11-430
+llama,obqa,32,5,32,11-431 11-442 11-444 11-454 11-481 11-486 11-506 11-515 11-521 11-523 11-552 11-559 11-561 11-564 11-57 11-599 11-603 11-606 11-629 11-642 11-646 11-648 11-652 11-655 11-656 11-663 11-665 11-666 11-669 11-671 11-678 11-679
+llama,obqa,32,6,32,11-681 11-686 11-692 11-693 11-694 11-705 11-731 11-737 11-742 11-744 11-747 1107 1118 112 1122 1124 1144 115 1171 1195 12-1 12-100 12-1011 12-1021 12-1045 12-1046 12-105 12-1052 12-1057 12-1066 12-1078 12-1083
+llama,obqa,32,7,32,12-1090 12-1108 12-111 12-1130 12-1132 12-1134 12-1146 12-1159 12-116 12-1163 12-1170 12-1177 12-1202 12-1206 12-1208 12-132 12-166 12-17 12-175 12-200 12-208 12-22 12-221 12-242 12-251 12-264 12-271 12-275 12-281 12-282 12-291 12-301
+llama,obqa,32,8,32,12-306 12-310 12-318 12-321 12-324 12-333 12-342 12-352 12-368 12-397 12-401 12-416 12-425 12-426 12-428 12-443 12-45 12-462 12-468 12-470 12-478 12-488 12-494 12-496 12-541 12-545 12-561 12-577 12-584 12-587 12-605 12-645
+llama,obqa,32,9,32,12-669 12-674 12-68 12-680 12-693 12-702 12-704 12-706 12-721 12-722 12-745 12-768 12-77 12-773 12-777 12-783 12-792 12-817 12-824 12-829 12-834 12-835 12-84 12-845 12-859 12-907 12-911 12-914 12-92 12-923 12-928 12-931
+llama,obqa,32,10,32,12-936 12-950 12-958 12-961 12-964 12-981 12-983 1219 1230 1232 1286 13-1001 13-1007 13-1012 13-1019 13-1023 13-1038 13-104 13-1051 13-1054 13-128 13-148 13-152 13-160 13-168 13-181 13-190 13-216 13-245 13-266 13-271 13-276
+llama,obqa,32,11,32,13-278 13-286 13-312 13-32 13-324 13-331 13-332 13-349 13-355 13-365 13-367 13-372 13-374 13-376 13-407 13-409 13-42 13-424 13-438 13-441 13-446 13-450 13-460 13-462 13-463 13-484 13-490 13-492 13-501 13-504 13-516 13-518
+llama,obqa,32,12,32,13-525 13-53 13-548 13-550 13-554 13-60 13-618 13-631 13-635 13-638 13-655 13-660 13-677 13-709 13-71 13-720 13-721 13-761 13-762 13-802 13-804 13-816 13-819 13-823 13-836 13-898 13-9 13-907 13-944 13-954 13-963 13-987
+llama,obqa,32,13,32,1320 1341 14-1004 14-103 14-1031 14-1038 14-1048 14-1056 14-1068 14-1073 14-1084 14-109 14-1093 14-1100 14-1101 14-1112 14-1115 14-1123 14-1124 14-1139 14-1155 14-1168 14-1170 14-1171 14-1210 14-1215 14-1230 14-1233 14-1253 14-127 14-1272 14-1277
+llama,obqa,32,14,32,14-129 14-1296 14-1299 14-1303 14-1312 14-1328 14-1329 14-1338 14-1339 14-1360 14-1362 14-1387 14-1404 14-1409 14-1415 14-1422 14-1432 14-1443 14-1445 14-1447 14-1451 14-1459 14-1462 14-1467 14-1481 14-1504 14-155 14-167 14-173 14-18 14-181 14-186
+llama,obqa,32,15,32,14-200 14-216 14-218 14-221 14-222 14-223 14-245 14-251 14-261 14-264 14-269 14-279 14-290 14-311 14-314 14-316 14-342 14-347 14-349 14-352 14-357 14-362 14-372 14-378 14-380 14-386 14-4 14-409 14-411 14-425 14-432 14-443
+llama,obqa,32,16,32,14-448 14-45 14-450 14-456 14-457 14-458 14-467 14-472 14-489 14-491 14-529 14-537 14-574 14-585 14-587 14-595 14-60 14-61 14-624 14-628 14-629 14-64 14-647 14-655 14-668 14-67 14-671 14-676 14-683 14-720 14-745 14-747
+llama,obqa,32,17,32,14-752 14-754 14-756 14-757 14-782 14-790 14-797 14-807 14-824 14-835 14-854 14-859 14-868 14-877 14-885 14-888 14-89 14-897 14-903 14-927 14-930 14-948 14-949 14-96 14-977 14-979 14-984 14-988 14-994 1430 1455 154
+llama,obqa,32,18,32,1547 1558 1652 1655 1683 1789 1832 1834 1845 1851 1894 19 1927 241 291 38 383 499 544 612 617 7-1006 7-1025 7-104 7-1076 7-1080 7-115 7-1160 7-124 7-164 7-166 7-172
+llama,obqa,32,19,32,7-194 7-197 7-220 7-229 7-253 7-256 7-26 7-277 7-319 7-321 7-329 7-338 7-347 7-359 7-40 7-43 7-434 7-455 7-500 7-557 7-590 7-647 7-650 7-697 7-703 7-763 7-776 7-813 7-858 7-860 7-870 7-876
+llama,obqa,32,20,32,7-899 7-908 7-912 7-936 7-969 71 751 789 8-10 8-126 8-133 8-180 8-221 8-23 8-244 8-248 8-262 8-291 8-306 8-32 8-323 8-337 8-34 8-385 8-387 8-408 8-420 8-437 8-495 8-76 853 870
+llama,obqa,32,21,32,89 899 9-1036 9-1040 9-1063 9-1064 9-1077 9-1079 9-1118 9-1120 9-113 9-1162 9-1184 9-1193 9-122 9-134 9-150 9-17 9-196 9-202 9-21 9-218 9-237 9-246 9-255 9-326 9-335 9-380 9-383 9-400 9-419 9-423
+llama,obqa,32,22,32,9-427 9-449 9-460 9-530 9-538 9-551 9-565 9-592 9-6 9-603 9-607 9-626 9-628 9-691 9-695 9-697 9-739 9-74 9-744 9-750 9-778 9-782 9-795 9-820 9-831 9-844 9-855 9-863 9-879 9-884 9-892 9-927
+llama,obqa,32,23,6,9-945 9-967 9-972 9-973 9-985 919

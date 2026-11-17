@@ -1,4 +1,4 @@
-Expected output of the three CPU checks (verify/run_all.sh).
+Expected output of the four CPU checks (verify/run_all.sh).
 Identical on Python 3.10, 3.11, 3.12 and 3.13 with the versions pinned in requirements.txt.
 Wall time: about 1 second.
 
@@ -39,7 +39,27 @@ Verification (c) - Table 4 row, large/ARC/Text (mode=selective, q=0.95)
 
 RESULT: PASS - 95.0% skipped and 9/284 changed reproduced
 
-All three checks ran. Expected RESULT lines:
+--- verify_d_three_agent
+Verification (d) - prospective three-agent test (QASC)
+
+  calibration questions: 3000   fit questions: 2000
+  label-free        j=11  (expected 11)   calibration skip 53.7%   PASS
+  joint, eps=0.01   j=8   (expected 8)   calibration skip 39.0%   PASS
+  joint, eps=0.02   j=10  (expected 10)   calibration skip 48.2%   PASS
+  gold labels used by the rule: 40   (expected 40)
+
+  sealed test, primary policy (joint, eps = 0.01):
+  questions            : 2000   (expected 2000)
+  skipped              : 798 = 39.9%   (expected 798)
+  changed among skipped: 5/798   (expected 5/798)
+  lost corrections     : 5   (expected 5)
+  accuracy A+C / A+B+C / policy: 63.80 / 76.60 / 76.35%
+  gain of B: 12.80 points   gain kept by the policy: 12.55 points
+
+RESULT: PASS - three policies, 40 labels and 798 / 5 / 5 / 12.55 reproduced
+
+All four checks ran. Expected RESULT lines:
   RESULT: PASS - all three deployed q reproduced from the released ledgers
   RESULT: PASS - 0.547 reproduced from released records
   RESULT: PASS - 95.0% skipped and 9/284 changed reproduced
+  RESULT: PASS - three policies, 40 labels and 798 / 5 / 5 / 12.55 reproduced

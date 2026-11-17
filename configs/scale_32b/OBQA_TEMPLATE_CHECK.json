@@ -1,0 +1,19 @@
+{
+ "status": "EXACT_BYTE_IDENTICAL",
+ "counts": {
+  "fit": 2100,
+  "cal": 1366,
+  "dev": 742,
+  "heldout": 744
+ },
+ "total": 4952,
+ "file_sha256": {
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/dev_e2e_replay/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/confidence_boundaries/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+ },
+ "native_OBQA_template": "code/pipeline/native_action_runtime/protocol_min.py:format_openbook(use_template=True)",
+ "schema_adaptation": "choice_text -> choices.text; no text or order change",
+ "archived_freeze": "results/boundaries_large_small/IMPLEMENTATION_FREEZE.json",
+ "GPU_forward": false,
+ "gold_read": false
+}

@@ -1,0 +1,53 @@
+{
+ "note": "Probe of agent C (Qwen3-8B tokenizer): the prefix is encoded separately and appended after the generation prompt; each label probability is the sum over its token set, renormalised over A-H. Copied from e1_config.json.",
+ "prefix": "The correct answer is",
+ "prefix_ids": [
+  785,
+  4396,
+  4226,
+  374
+ ],
+ "label_token_sets": {
+  "A": [
+   32,
+   362,
+   22985
+  ],
+  "B": [
+   33,
+   425,
+   12791
+  ],
+  "C": [
+   34,
+   356,
+   6258
+  ],
+  "D": [
+   35,
+   422,
+   10957
+  ],
+  "E": [
+   36,
+   468,
+   22784
+  ],
+  "F": [
+   37,
+   434,
+   12727
+  ],
+  "G": [
+   38,
+   479,
+   9600
+  ],
+  "H": [
+   39,
+   472,
+   13292
+  ]
+ },
+ "score": "FP32 logits; per label logsumexp over its token set; log_softmax over A-H; u = logsumexp of the seven non-top labels' log-probabilities (log non-top mass, PROTOCOL.md section 4); non-finite -> u = None, always waits for B; 1 - max p kept as u_1mp_diag (diagnostic only)"
+}

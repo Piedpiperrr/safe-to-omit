@@ -1,0 +1,23 @@
+{
+ "note": "Models of the 32B pair. Weights are not redistributed; obtain them from the Hugging Face Hub at these revisions. The helper's 27 repository files were verified at this revision (helper_download_verified.json).",
+ "models": [
+  {
+   "role": "helper",
+   "repo_id": "Qwen/Qwen2.5-32B-Instruct",
+   "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd"
+  },
+  {
+   "role": "receiver (thinking disabled)",
+   "repo_id": "Qwen/Qwen3-32B",
+   "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+  }
+ ],
+ "runtime": "HF transformers only; bfloat16, SDPA, greedy, batch size 1, TF32 off, seed 0; helper background at most 256 new tokens, answers at most 64; explicit layer sharding (no tensor parallelism, no quantization, no offload)",
+ "device_map": "helper embedding and layers 0-31 on GPU 0, layers 32-63, final norm and LM head on GPU 1; receiver the same on GPUs 2 and 3",
+ "software": {
+  "torch": "2.6.0",
+  "transformers": "4.52.4",
+  "accelerate": "1.9.0"
+ },
+ "hardware": "one exclusive node with 4x NVIDIA A100-SXM4-40GB per job"
+}

@@ -1,0 +1,38 @@
+{
+ "note": "Models of the three-agent system. Weights are not redistributed; obtain them from the Hugging Face Hub at these revisions. File hashes of the checkpoints used are in e1_config.json (models.*.files).",
+ "models": [
+  {
+   "agent": "A (background note)",
+   "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+   "agent": "B (verifier; reads fact1, fact2 and A's note)",
+   "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+   "agent": "C (answerer; thinking disabled) and the probe",
+   "repo_id": "Qwen/Qwen3-8B",
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  }
+ ],
+ "runtime": {
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "decoding": "greedy (do_sample=False)",
+  "batch_size": 1,
+  "thinking": false,
+  "tf32": false,
+  "seed": 0,
+  "helper_device": "cuda:0",
+  "receiver_device": "cuda:1"
+ },
+ "max_new_tokens": {
+  "A": 256,
+  "B": 256,
+  "C": 64
+ },
+ "software": "torch 2.6.0+cu124, transformers 4.52.4 (recorded in every shard status file)",
+ "hardware": "NVIDIA A100-SXM4-40GB. Generation: A, B and C on one GPU (single-GPU shards). Timing panel: two GPUs of one exclusive node, A and B on cuda:0, C and the probe on cuda:1."
+}

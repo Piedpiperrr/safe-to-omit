@@ -1,0 +1,142 @@
+Rendered at release time from the frozen prompt code (receiver_prompt.py, legacy_methods.BACKGROUND_PROMPT) and the two tokenizers at the frozen revisions, with apply_chat_template(add_generation_prompt=True, enable_thinking=False). Not a stored run artefact; each rendering is checked against the stored record.
+
+==================== helper background message (H) | question 14-1371 | helper model | 111 input tokens
+<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+In one clear sentence, describe the most essential background knowledge needed to answer the question:
+
+Which relationship is true?
+
+Choices:
+A. wind is renewable; metal is nonrenewable
+B. wind is recyclable, metal is other
+C. wind is happy, metal is other
+D. wind is nonrenewable; metal is renewable
+
+
+Do NOT directly solve or give answer to the question.<|im_end|>
+<|im_start|>assistant
+
+
+==================== receiver alone (R) | question 14-1371 | receiver model | 132 input tokens
+<|im_start|>user
+Accurately answer the following question:
+
+Which relationship is true?
+
+Choices:
+A. wind is renewable; metal is nonrenewable
+B. wind is recyclable, metal is other
+C. wind is happy, metal is other
+D. wind is nonrenewable; metal is renewable
+
+
+Instructions:
+- Carefully read the question and all options.
+- Select the single most correct answer.
+- Respond ONLY in the following format: "The correct answer is A/B/C/D".
+- Do not include any explanations, additional text, or punctuation besides the answer.
+
+The correct answer is<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+
+==================== Text: receiver reads the helper message (T) | question 14-1371 | receiver model | 247 input tokens
+<|im_start|>user
+In one clear sentence, describe the most essential background knowledge needed to answer the question:
+
+Which relationship is true?
+
+Choices:
+A. wind is renewable; metal is nonrenewable
+B. wind is recyclable, metal is other
+C. wind is happy, metal is other
+D. wind is nonrenewable; metal is renewable
+
+
+Do NOT directly solve or give answer to the question.<|im_end|>
+<|im_start|>assistant
+The most essential background knowledge needed to answer the question is understanding the concepts of renewable and nonrenewable resources.<|im_end|>
+<|im_start|>user
+Accurately answer the following question:
+
+Which relationship is true?
+
+Choices:
+A. wind is renewable; metal is nonrenewable
+B. wind is recyclable, metal is other
+C. wind is happy, metal is other
+D. wind is nonrenewable; metal is renewable
+
+
+Instructions:
+- Carefully read the question and all options.
+- Select the single most correct answer.
+- Respond ONLY in the following format: "The correct answer is A/B/C/D".
+- Do not include any explanations, additional text, or punctuation besides the answer.
+
+The correct answer is<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+
+==================== probe (R prompt + "The correct answer is" prefix ids [785, 4396, 4226, 374]) | question 14-1371 | receiver model | 136 input tokens
+<|im_start|>user
+Accurately answer the following question:
+
+Which relationship is true?
+
+Choices:
+A. wind is renewable; metal is nonrenewable
+B. wind is recyclable, metal is other
+C. wind is happy, metal is other
+D. wind is nonrenewable; metal is renewable
+
+
+Instructions:
+- Carefully read the question and all options.
+- Select the single most correct answer.
+- Respond ONLY in the following format: "The correct answer is A/B/C/D".
+- Do not include any explanations, additional text, or punctuation besides the answer.
+
+The correct answer is<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+The correct answer is
+
+==================== helper alone (development/held-out only) | question 10-1005 | helper model | 141 input tokens
+<|im_start|>system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>
+<|im_start|>user
+Accurately answer the following question:
+
+Soil is produced naturally when, over a period of many years
+
+Choices:
+A. stones are rock solid
+B. stones are blown up
+C. stones are vaporized by storms
+D. stones are worn down
+
+
+Instructions:
+- Carefully read the question and all options.
+- Select the single most correct answer.
+- Respond ONLY in the following format: "The correct answer is A/B/C/D".
+- Do not include any explanations, additional text, or punctuation besides the answer.
+
+The correct answer is<|im_end|>
+<|im_start|>assistant
+
+

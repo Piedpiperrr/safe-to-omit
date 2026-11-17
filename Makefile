@@ -3,7 +3,7 @@
 #   make setup     create .venv and install the pinned CPU environment
 #   make figures   regenerate every figure in the paper (no download); fails on any difference
 #   make data      download the released records from Hugging Face and check every file's hash
-#   make verify    re-derive three published results from the per-question records
+#   make verify    re-derive four published results from the per-question records
 #   make reproduce figures + data + verify
 #
 # Nothing here loads a model or needs a GPU.

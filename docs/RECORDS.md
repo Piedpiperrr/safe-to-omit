@@ -3,7 +3,7 @@
 Each row is an item the paper says is released, and where it is. Paths are relative to the root of
 the dataset [AgentsSci/ICLR2027-SafeToOmit](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit)
 (`make data` puts it in `data/`); `configs/`, `splits/` and `code/` are also in this repository.
-Nothing here was recomputed: every entry points at a stored record.
+Nothing in version 1 was recomputed: every entry points at a stored record. Version 2 adds the folders `three_agent_qasc`, `scale_32b`, `batched_serving` and `cpu_reanalysis`; the few files or columns it derived after the runs from stored records are listed, with how they were produced and checked, in each folder's `DERIVED.md`.
 
 | # | item | path(s) | notes |
 |---|---|---|---|
@@ -22,6 +22,8 @@ Nothing here was recomputed: every entry points at a stored record.
 | 13 | Fully rendered prompt examples per receiver and benchmark, plus prompt-code hashes | `results/e13/PROMPTS_AND_PARSER.md` (OBQA and MMLU-Pro, helper / Text-reading / receiver-only / probe / Text+fact, with the token-count and saved-id checks); SQuAD in `results/e20_pilot/PROMPTS_E20.md`; GSM8K and the Qwen3-8B, Llama-3.1-8B and OLMo-2 receivers in `results/e19/PROMPTS_FOR_APPENDIX.md`; rendered examples also in `results/e01_e02_e04/results/e1/prompts/*.json` and `results/e01_e02_e04/results/e4/prompts_*.json` | |
 | 14 | Parser regexes and cue-word lists; released parser SHA-256 must equal `d05978f4…bfcc2f9` | `code/pipeline/answer_scoring_v2/scoring_v2.py` — **computed SHA-256 `d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9`, matches.** Rules prose in `results/e13/PROMPTS_AND_PARSER.md`; freeze in `configs/answer_scoring_v2/RULE_FREEZE_V2.json` | see note below |
 | 15 | Per-question ProbeMax scores and routes, raw action outputs, per-request timing records, hash manifests | `records/**/*_probes.jsonl.gz` (25 files, `ProbeMax` and `p_labels`); routes (87 `*_routes.jsonl` files, e.g. `records/boundaries_large_small/records/*_routes.jsonl`); raw action outputs and requests; timing records (`e2e_requests.jsonl.gz` and others: `latency_ms`, `parts_ms`, component timings); hash lists (`SHA256SUMS`, `*.sha256`) | |
+| 16 | Full deviation records of the two prospective tests, with the timing of each entry; frozen protocols and freeze records | `results/three_agent_qasc/DEVIATIONS.md` (13 entries, with `DEVIATIONS_TIMELINE.md`) and `results/scale_32b/DEVIATIONS.md` (the protocol revisions before the freeze, then the five entries the paper summarizes); protocols `results/three_agent_qasc/PROTOCOL.md`, `results/scale_32b/PROTOCOL_E2.md` and `results/batched_serving/E2A_V2_PROTOCOL.md`, each with its `.sha256` and the folder's `FREEZE.md` | The three-agent `PROTOCOL.md` is byte-identical to the time-stamped frozen file. The two other protocols are released with redactions listed in `REDACTIONS.json`; their `.sha256` files hold the hash of the frozen original, and `FREEZE.md` explains this |
+| 17 | Fully rendered prompt examples for the three-agent agents and the 32B receiver; the verifier instruction | `configs/three_agent_qasc/rendered_examples/` (one fit question through every agent and path, and the 36 rendered inputs logged during the runs), `configs/three_agent_qasc/prompts/B_prompt_v2.json` (verifier instruction, frozen by `FROZEN_B_PROMPT.json`); `configs/scale_32b/rendered_examples/` | the 32B examples were rendered after the run from the frozen code (`results/scale_32b/DERIVED.md`) |
 
 ## Note on item 14
 

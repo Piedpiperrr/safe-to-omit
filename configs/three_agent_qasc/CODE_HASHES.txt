@@ -1,0 +1,10 @@
+# Source files that build the A, B, C(A) [skip], C(A,B) [reference] and probe inputs and compute u.
+# Paths are relative to the repository root; sha256 of each copied file.
+91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf  code/pipeline/native_action_runtime/legacy_methods.py  -- frozen paper code: T2THelperBundle (A: BACKGROUND_PROMPT, chat template, greedy 256), T2TReceiverBundle.consume (C on the skip path A+C)
+23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35  code/pipeline/native_action_runtime/protocol_min.py  -- frozen paper code: generation config, receiver call helpers
+868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66  code/pipeline/confidence_boundaries/receiver_prompt.py  -- frozen paper code: receiver template (receiver_prompt) and helper question body (build_prompt)
+d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9  code/pipeline/answer_scoring_v2/scoring_v2.py  -- frozen paper code: answer parser v2 (ans_* columns)
+6417a0a728dbf05317f00b355ccde9657c1e974c686ae226cbec8adb44349c04  rebuttal/e1/code/e1lib.py  -- E1: a_user_message, b_user_message, c_messages (all paths), Models.run_A/run_B/run_C/probe, score_from_label_logits (u), candidate_thresholds, skip
+da06d5edc7b7c96321b34262076c792b52a565eb257e0760a6d42e02662cb0e1  rebuttal/e1/code/e1_generate.py  -- E1: per-question order of the steps and which messages feed which path
+2294d1a6f2a4ed5d22d1d20519369a5dff9c5226bfc7b2c269579583c7b9f7f5  rebuttal/e1/configs/e1_config.json  -- E1: model paths/hashes, max_new_tokens, probe prefix ids and label token sets
+9a9653c687d1745d574b85042930060b32495e5f5b162d6043b3a04e6a9ebf37  rebuttal/e1/prompts/B_prompt_v2.json  -- E1: B's frozen prompt v2

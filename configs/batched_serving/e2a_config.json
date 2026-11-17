@@ -1,0 +1,361 @@
+{
+ "source_root": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2",
+ "base_commit": "199be1a46c2c68f913e78502d00889a52db8541c",
+ "batch_sizes": [
+  1,
+  8,
+  32
+ ],
+ "datasets": [
+  "obqa",
+  "arc"
+ ],
+ "dtype": "bfloat16",
+ "attention": "sdpa",
+ "prefix": "The correct answer is",
+ "helper_max_new_tokens": 256,
+ "receiver_max_new_tokens": 64,
+ "seed": 0,
+ "bootstrap_replicates": 20000,
+ "warmup": 0,
+ "model_pairs": {
+  "large": {
+   "models": {
+    "helper": {
+     "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+     "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+     "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+     "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+     "shard_count": 4,
+     "generation_pad_token_id": 151643
+    },
+    "receiver": {
+     "repo_id": "Qwen/Qwen3-8B",
+     "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+     "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+     "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+     "shard_count": 5,
+     "generation_pad_token_id": 151643
+    }
+   },
+   "deployments": {
+    "obqa": {
+     "q": 0.8,
+     "threshold": 0.001170039176940918,
+     "mode": "selective",
+     "source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/configs/confidence_boundaries/deployments/large_obqa_T.json"
+    },
+    "arc": {
+     "q": 0.95,
+     "threshold": 0.01800704002380371,
+     "mode": "selective",
+     "source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/configs/confidence_boundaries/deployments/large_arc_T.json"
+    }
+   },
+   "label_token_sets": {
+    "A": [
+     32,
+     362,
+     22985
+    ],
+    "B": [
+     33,
+     425,
+     12791
+    ],
+    "C": [
+     34,
+     356,
+     6258
+    ],
+    "D": [
+     35,
+     422,
+     10957
+    ],
+    "E": [
+     36,
+     468,
+     22784
+    ]
+   },
+   "receiver_generation_config": {
+    "max_length": 20,
+    "max_new_tokens": 64,
+    "min_length": 0,
+    "min_new_tokens": null,
+    "early_stopping": false,
+    "max_time": null,
+    "stop_strings": null,
+    "do_sample": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "penalty_alpha": null,
+    "dola_layers": null,
+    "use_cache": true,
+    "cache_implementation": null,
+    "cache_config": null,
+    "return_legacy_cache": null,
+    "prefill_chunk_size": null,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "min_p": null,
+    "typical_p": 1.0,
+    "epsilon_cutoff": 0.0,
+    "eta_cutoff": 0.0,
+    "diversity_penalty": 0.0,
+    "repetition_penalty": null,
+    "encoder_repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "force_words_ids": null,
+    "renormalize_logits": false,
+    "constraints": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "forced_decoder_ids": null,
+    "sequence_bias": null,
+    "token_healing": false,
+    "guidance_scale": null,
+    "low_memory": null,
+    "watermarking_config": null,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "output_logits": null,
+    "return_dict_in_generate": false,
+    "pad_token_id": 151643,
+    "bos_token_id": 151643,
+    "eos_token_id": [
+     151645,
+     151643
+    ],
+    "encoder_no_repeat_ngram_size": 0,
+    "decoder_start_token_id": null,
+    "is_assistant": false,
+    "num_assistant_tokens": 20,
+    "num_assistant_tokens_schedule": "constant",
+    "assistant_confidence_threshold": 0.4,
+    "prompt_lookup_num_tokens": null,
+    "max_matching_ngram_size": null,
+    "assistant_early_exit": null,
+    "assistant_lookbehind": 10,
+    "target_lookbehind": 10,
+    "disable_compile": false,
+    "generation_kwargs": {},
+    "_from_model_config": false,
+    "transformers_version": "4.52.4"
+   }
+  },
+  "llama": {
+   "models": {
+    "helper": {
+     "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+     "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+     "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+     "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+     "shard_count": 4,
+     "generation_pad_token_id": 151643
+    },
+    "receiver": {
+     "repo_id": "meta-llama/Llama-3.1-8B-Instruct",
+     "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+     "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+     "path": "$DATA_DIR/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+     "shard_count": 4,
+     "generation_pad_token_id": 128009
+    }
+   },
+   "deployments": {
+    "obqa": {
+     "q": 0.6,
+     "threshold": 0.009371757507324219,
+     "mode": "selective",
+     "source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/protocol/large_obqa_T_deployment.json"
+    },
+    "arc": {
+     "q": 0.7,
+     "threshold": 0.014996349811553955,
+     "mode": "selective",
+     "source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/protocol/large_arc_T_deployment.json"
+    }
+   },
+   "label_token_sets": {
+    "A": [
+     32,
+     362,
+     23845,
+     118586
+    ],
+    "B": [
+     33,
+     426,
+     13083,
+     108693
+    ],
+    "C": [
+     34,
+     356,
+     6391,
+     116545
+    ],
+    "D": [
+     35,
+     423,
+     11198,
+     113661
+    ],
+    "E": [
+     36,
+     469,
+     23626,
+     124813
+    ],
+    "F": [
+     37,
+     435,
+     13017,
+     117899
+    ],
+    "G": [
+     38,
+     480,
+     9796,
+     121890
+    ],
+    "H": [
+     39,
+     473,
+     13595,
+     119493
+    ],
+    "I": [
+     40,
+     358,
+     25494
+    ],
+    "J": [
+     41,
+     622,
+     17538
+    ]
+   },
+   "receiver_generation_config": {
+    "max_length": 20,
+    "max_new_tokens": 64,
+    "min_length": 0,
+    "min_new_tokens": null,
+    "early_stopping": false,
+    "max_time": null,
+    "stop_strings": null,
+    "do_sample": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "penalty_alpha": null,
+    "dola_layers": null,
+    "use_cache": true,
+    "cache_implementation": null,
+    "cache_config": null,
+    "return_legacy_cache": null,
+    "prefill_chunk_size": null,
+    "temperature": null,
+    "top_k": null,
+    "top_p": null,
+    "min_p": null,
+    "typical_p": 1.0,
+    "epsilon_cutoff": 0.0,
+    "eta_cutoff": 0.0,
+    "diversity_penalty": 0.0,
+    "repetition_penalty": null,
+    "encoder_repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "force_words_ids": null,
+    "renormalize_logits": false,
+    "constraints": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "forced_decoder_ids": null,
+    "sequence_bias": null,
+    "token_healing": false,
+    "guidance_scale": null,
+    "low_memory": null,
+    "watermarking_config": null,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "output_logits": null,
+    "return_dict_in_generate": false,
+    "pad_token_id": null,
+    "bos_token_id": 128000,
+    "eos_token_id": [
+     128001,
+     128008,
+     128009
+    ],
+    "encoder_no_repeat_ngram_size": 0,
+    "decoder_start_token_id": null,
+    "is_assistant": false,
+    "num_assistant_tokens": 20,
+    "num_assistant_tokens_schedule": "constant",
+    "assistant_confidence_threshold": 0.4,
+    "prompt_lookup_num_tokens": null,
+    "max_matching_ngram_size": null,
+    "assistant_early_exit": null,
+    "assistant_lookbehind": 10,
+    "target_lookbehind": 10,
+    "disable_compile": false,
+    "generation_kwargs": {},
+    "_from_model_config": false,
+    "transformers_version": "4.52.4"
+   }
+  }
+ },
+ "panels": {
+  "obqa": {
+   "queries": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/e16/replay_llama/inputs/obqa_queries.jsonl",
+   "ids": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/obqa_dev_panel_ids_e2e_replay.json",
+   "N": 128
+  },
+  "arc": {
+   "queries": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/e16/replay_llama/inputs/arc_queries.jsonl",
+   "ids": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/arc_dev_panel_ids_e2e_replay.json",
+   "N": 128
+  }
+ },
+ "timing": "synchronized batch start to end including tokenize/probe/route/helper/receiver/decode/v2 parse; excludes disk I/O and model loading",
+ "source_sha256": {
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/native_action_runtime/legacy_methods.py": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/native_action_runtime/protocol_min.py": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/dev_e2e_replay/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/dev_e2e_replay/native_adapter.py": "3bb4d94ff23a7db4d9ea5a7f0021316a307d3e6496a71912b783875f0b5c1c89",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/answer_scoring_v2/scoring_v2.py": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/dev_e2e_replay/inputs/obqa_queries.jsonl": "7250332e2f7f3ea952ea66a6615ceceeb8cdf43f9a0d1f14a4e4134f43f94057",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/obqa_dev_panel_ids_e2e_replay.json": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/e16/replay_llama/inputs/obqa_queries.jsonl": "7250332e2f7f3ea952ea66a6615ceceeb8cdf43f9a0d1f14a4e4134f43f94057",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/dev_e2e_replay/inputs/arc_queries.jsonl": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/arc_dev_panel_ids_e2e_replay.json": "1fdb3fccdfa12769fe99d1a34da154881d877b6efcaf74902f0c73cd88473232",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/e16/replay_llama/inputs/arc_queries.jsonl": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/dev_e2e_replay/frozen_config.json": "308c93ccc263c04ce94a6d7247d6b65a65a50c6408428911a264229b21e0dae6",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/dev_e2e_replay/protocol/label_token_sets.json": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/configs/confidence_boundaries/deployments/large_obqa_T.json": "6f4f7baa8054e9e6e50397d07492408d0e381bdee3c45a526a8a877b7441814b",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/configs/confidence_boundaries/deployments/large_arc_T.json": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/frozen_config.json": "2b53923d788cf97bbba956d743ac334467add5687465db8020ee08635a1163a7",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/protocol/label_token_sets.json": "6f97580ca72c53ee751ed9ca54150bd6549391d3bb93caffb66f67f452d35605",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/protocol/large_obqa_T_deployment.json": "7a293d7c4173cc6baf4d45928df565a2aeb3e97cfe2e224c5398f375ca63612d",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e16/replay_llama/protocol/large_arc_T_deployment.json": "c70a009aa298190acfe37bf0e2776ae0bfb520330a768eedca9992224dca6152"
+ }
+}

@@ -69,9 +69,9 @@ Everything here runs on a CPU; nothing loads a model.
 | Command | What it does | Time | Needs |
 |---|---|---|---|
 | `make figures` | regenerates Figure 2 and appendix Figures 3–11 into `figures/`, byte for byte; each script also checks every plotted number against the paper's tables and the stored results | ~1–2 min | nothing to download |
-| `make data` | downloads the [records](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit) into `data/`, checks every file's SHA-256 against `MANIFEST.json`, and links `records/` | minutes | ~240 MB |
-| `make verify` | re-derives three published results from the per-question records (below) | ~1 s | `make data` |
-| `make reproduce` | all three | | |
+| `make data` | downloads the [records](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit) into `data/`, checks every file's SHA-256 against `MANIFEST.json`, and links `records/` | minutes | ~250 MB |
+| `make verify` | re-derives four published results from the per-question records (below) | ~1 s | `make data` |
+| `make reproduce` | all three commands | | |
 
 ```bash
 git clone https://github.com/Piedpiperrr/safe-to-omit.git
@@ -81,12 +81,12 @@ make reproduce
 ```
 
 Use `make setup PYTHON=/path/to/python3.x` if `python3` is another version. `make data` fetches
-about 3,300 files; the Hub may rate-limit the download for a few minutes, and the client waits and
+about 3,500 files; the Hub may rate-limit the download for a few minutes, and the client waits and
 resumes on its own (if it stops, run `make data` again: finished files are kept). `make figures`
 fixes the PDF timestamp (`SOURCE_DATE_EPOCH`) and ends with `git diff --exit-code figures/`, so it
 fails if any figure differs from the committed one. Figure 1 is a schematic.
 
-`make verify` runs three checks ([`verify/`](verify/); expected output in
+`make verify` runs four checks ([`verify/`](verify/); expected output in
 [`verify/EXPECTED_OUTPUT.txt`](verify/EXPECTED_OUTPUT.txt)):
 
 | Check | Re-derives | From |
@@ -94,6 +94,7 @@ fails if any figure differs from the committed one. Figure 1 is a schematic.
 | `verify_a_certification.py` | the certification test at all 20 grid points and the deployed threshold for large/OBQA/Text, large/ARC/Text and medium/OBQA/C2C | calibration ledgers |
 | `verify_b_e22_ratio.py` | the null/real gain ratio 0.547 of the rate-matched null, large/OBQA/Text (Table 1) | per-question answers of the real and null inputs |
 | `verify_c_table4_row.py` | Table 4, large/ARC/Text: 95.0% skipped and 9 of 284 skipped answers changed | per-question confidence scores and parsed labels |
+| `verify_d_three_agent.py` | the prospective three-agent test (Table 3): the three calibrated policies with the 40 labels the rule queries, and the primary policy's sealed-test row (798 skipped, 5 changed, 5 lost corrections, 12.55 of 12.80 points kept) | per-question scores, answers and queried labels of the fit, calibration and sealed splits |
 
 Every other table and figure has its stored results in the dataset: each experiment's protocol
 (`PREREG*.md` with its SHA-256), `SUMMARY.md`, `DEVIATIONS.md` and result tables.
@@ -111,6 +112,13 @@ Every other table and figure has its stored results in the dataset: each experim
   official [C2C repository](https://github.com/thu-nics/C2C) at commit `113c3a9`, which is not
   included: `export C2C_ROOT=/path/to/C2C`.
 
+The code of the four experiments added in version 2 is in `code/pipeline/<folder>/` (generation and
+timed replays) and `code/analysis/<folder>/` (calibration, evaluation and reports), for `three_agent_qasc`,
+`scale_32b`, `batched_serving` and `cpu_reanalysis` (analysis only); each folder's README says how it was
+run, and [`docs/FILES_V2.md`](docs/FILES_V2.md) lists every file with the paper element it belongs to.
+Their frozen configurations, rendered prompt examples and split IDs are in `configs/<folder>/` and
+`splits/<folder>/`; the per-question records and results are in the dataset under the same folder names.
+
 The frozen configurations (probe protocols, label tokens, chat templates, thresholds and deployed
 policies) are in [`configs/`](configs/), the question IDs of every split in [`splits/`](splits/),
 and the model and dataset revisions in [`configs/model_identities.json`](configs/model_identities.json)
@@ -120,7 +128,7 @@ scheduled the runs on our cluster are not included.
 ## What is released
 
 - **This repository:** the method code, frozen configurations, split IDs, the figure scripts with
-  the stored results they read, and the three checks.
+  the stored results they read, and the four checks.
 - **[The dataset](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit):** per-question
   confidence scores and routes, raw outputs of every action, per-request timing records, and
   every calibration test, including rejected grid points and the settings that fell back.
@@ -130,14 +138,15 @@ scheduled the runs on our cluster are not included.
 ## Repository layout
 
 ```
-code/pipeline/     method code: answer parser, receiver prompt, Text and C2C actions, timed request
-code/analysis/     the null model and helpers of the analysis code, reused unchanged by the checks
+code/pipeline/     method code: answer parser, receiver prompt, Text and C2C actions, timed request;
+                   the three-agent, 32B and batched-serving pipelines (version 2)
+code/analysis/     the null model and helpers reused by the checks; analysis code of the version-2 folders
 code/figures/      figure scripts (Figure 2; appendix Figures 3-11 in appendix/)
 configs/           frozen configurations, model and dataset identities
-splits/            question IDs: fit / calibration / development, sealed ARC test, timing panels
+splits/            question IDs: fit / calibration / development, sealed ARC and QASC tests, timing panels
 results/           the stored results the figures and checks read (a subset of the dataset)
 figures/           the paper's figures, as regenerated
-verify/            the three checks and their expected output
+verify/            the four checks and their expected output
 scripts/           check_data.py: check the download and link records/
 docs/              paper map, released records, details the appendix leaves out
 ```
@@ -148,8 +157,11 @@ docs/              paper map, released records, details the appendix leaves out
 - [Released records](docs/RECORDS.md): every record the paper says is released, and where it is
 - [Appendix details](docs/APPENDIX_DETAILS.md): details the appendix leaves out for length
 - [Appendix figures](code/figures/appendix/README.md): what each figure script reads and checks
+- [Version-2 files](docs/FILES_V2.md): every code, configuration and split file added in version 2
 
-Experiment folders keep the IDs used during the research (E3 … E22, X1 … X4).
+Experiment folders keep the IDs used during the research (E3 … E22, X1 … X4). The four folders added
+in version 2 of the dataset are named by content: `three_agent_qasc`, `scale_32b`, `batched_serving`
+and `cpu_reanalysis`.
 
 ## Citation
 

@@ -1,0 +1,25 @@
+{
+ "alpha": 0.05,
+ "delta_per_candidate": 0.001,
+ "delta_per_candidate_bonferroni_14_disciplines": 7.142857142857143e-05,
+ "q_grid": "j/20, j = 1..20",
+ "threshold_rule": "fit order statistic ceil(j * N_fit / 20); skip iff u <= tau; ties kept; q = 1 is a fixed R",
+ "lost_correction_test": {
+  "epsilons": [
+   0.01,
+   0.02
+  ],
+  "N_cal": 1366,
+  "rule": "P[Bin(N_cal, eps) <= k_L] <= 0.001, k_L = skipped with Text correct and R wrong"
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "rng": "numpy.random.default_rng(0)",
+  "interval": "percentile 95%",
+  "paired": "over questions"
+ },
+ "clopper_pearson": "two-sided 95%",
+ "risk_py_sha256": "ff70ae8735a191e347a7d7117d3baadf591989fe73f172524aacbed3b2f371e7",
+ "risk_py_sha256_note": "risk.py as run; the copy in the code repository has the Chinese text of its docstring translated (SHA-256 d75d61d6749c63d43af9c411103a614f0a386276075c8585378b2758b25f770d), with the code unchanged",
+ "parser_v2_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9"
+}

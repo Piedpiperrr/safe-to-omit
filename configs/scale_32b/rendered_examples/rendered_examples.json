@@ -1,0 +1,48 @@
+{
+ "note": "Rendered at release time from the frozen prompt code (receiver_prompt.py, legacy_methods.BACKGROUND_PROMPT) and the two tokenizers at the frozen revisions, with apply_chat_template(add_generation_prompt=True, enable_thinking=False). Not a stored run artefact; each rendering is checked against the stored record.",
+ "examples": [
+  {
+   "path": "helper background message (H)",
+   "question_id": "14-1371",
+   "model_role": "helper",
+   "input_tokens": 111,
+   "rendered": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\n"
+  },
+  {
+   "path": "receiver alone (R)",
+   "question_id": "14-1371",
+   "model_role": "receiver",
+   "input_tokens": 132,
+   "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+   "path": "Text: receiver reads the helper message (T)",
+   "question_id": "14-1371",
+   "model_role": "receiver",
+   "input_tokens": 247,
+   "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nThe most essential background knowledge needed to answer the question is understanding the concepts of renewable and nonrenewable resources.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+   "path": "probe (R prompt + \"The correct answer is\" prefix ids [785, 4396, 4226, 374])",
+   "question_id": "14-1371",
+   "model_role": "receiver",
+   "input_tokens": 136,
+   "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nThe correct answer is"
+  },
+  {
+   "path": "helper alone (development/held-out only)",
+   "question_id": "10-1005",
+   "model_role": "helper",
+   "input_tokens": 141,
+   "rendered": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n"
+  }
+ ],
+ "checks": {
+  "helper_input_tokens": true,
+  "R_input_tokens": true,
+  "T_input_tokens": true,
+  "probe_input_tokens": true,
+  "probe_ids_sha256": true,
+  "helper_alone_input_tokens": true
+ }
+}

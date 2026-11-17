@@ -1,0 +1,31 @@
+{
+ "note": "The two frozen 8B Text settings replayed in batches. Weights are not redistributed.",
+ "models": [
+  {
+   "pair": "large",
+   "role": "helper",
+   "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+   "pair": "large",
+   "role": "receiver",
+   "repo_id": "Qwen/Qwen3-8B",
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+   "pair": "llama",
+   "role": "helper",
+   "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+   "pair": "llama",
+   "role": "receiver",
+   "repo_id": "meta-llama/Llama-3.1-8B-Instruct",
+   "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+  }
+ ],
+ "runtime": "bfloat16, SDPA, greedy, left padding, helper at most 256 new tokens, receiver at most 64; prefix and cross-request caches disabled",
+ "hardware": "one exclusive node, NVIDIA A100-SXM4-40GB, helper on GPU 0 and receiver on GPU 1"
+}

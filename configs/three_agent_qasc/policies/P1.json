@@ -1,0 +1,9 @@
+{
+ "frozen": true,
+ "name": "P1",
+ "tau": -23.526840209960938,
+ "q": 0.4,
+ "j": 8,
+ "policy": "skip B when u <= tau",
+ "b_prompt_sha256": "9a9653c687d1745d574b85042930060b32495e5f5b162d6043b3a04e6a9ebf37"
+}

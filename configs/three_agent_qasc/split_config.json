@@ -1,0 +1,27 @@
+{
+  "written_utc": "2026-11-09T20:34:00Z",
+  "written_before_data_download": true,
+  "dataset": {
+    "repo_id": "allenai/qasc",
+    "revision": "a34ba204eb9a33b919c10cc08f4f1c8dae5ec070",
+    "source_splits_used": ["train", "validation"],
+    "source_split_not_used": "test (no answerKey/facts in the public release)",
+    "fields_used_in_prompts": ["question", "choices", "fact1", "fact2"],
+    "fields_never_in_prompts": ["answerKey", "combinedfact", "formatted_question"]
+  },
+  "dedup": {
+    "step1": "drop repeated question ids (keep the first occurrence; train rows before validation rows, file order)",
+    "step2": "drop repeated normalized (stem + choices) text; key = norm(stem) + ' || ' + ' | '.join(sorted(norm(choice_text))) so that a re-ordered copy of the same question is also a duplicate; keep the first occurrence in the same order",
+    "norm": "unicode NFKC, casefold, collapse every whitespace run to one space, strip"
+  },
+  "split": {
+    "id_order_before_shuffle": "lexicographic sort of the surviving question ids",
+    "shuffle": "numpy.random.default_rng(seed).permutation(n)",
+    "seed": 20261109,
+    "targets_in_order": {"fit": 2000, "cal": 3000, "dev": 1000, "test_sealed": 2000},
+    "shortfall_rule": "if n < 8000: cut fit first, but not below 1500; then cut dev, but not below 800; if still short, stop with an error (no other split changes)",
+    "slice_order": ["fit", "cal", "dev", "test_sealed"],
+    "leftover_rule": "questions beyond the four targets are listed in unused_ids.json and not used",
+    "gold_read_during_split": false
+  }
+}

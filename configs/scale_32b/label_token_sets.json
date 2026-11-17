@@ -1,0 +1,32 @@
+{
+ "note": "Probe of the receiver (Qwen3-32B tokenizer); OBQA has four labels A-D. Copied from e2b_formal_config.json.",
+ "prefix": "The correct answer is",
+ "prefix_ids": [
+  785,
+  4396,
+  4226,
+  374
+ ],
+ "label_token_sets": {
+  "A": [
+   32,
+   362,
+   22985
+  ],
+  "B": [
+   33,
+   425,
+   12791
+  ],
+  "C": [
+   34,
+   356,
+   6258
+  ],
+  "D": [
+   35,
+   422,
+   10957
+  ]
+ }
+}

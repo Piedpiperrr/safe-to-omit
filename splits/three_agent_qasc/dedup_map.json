@@ -1,0 +1,63 @@
+{
+ "rule": {
+  "step1": "drop repeated question ids (keep the first occurrence; train rows before validation rows, file order)",
+  "step2": "drop repeated normalized (stem + choices) text; key = norm(stem) + ' || ' + ' | '.join(sorted(norm(choice_text))) so that a re-ordered copy of the same question is also a duplicate; keep the first occurrence in the same order",
+  "norm": "unicode NFKC, casefold, collapse every whitespace run to one space, strip"
+ },
+ "counts": {
+  "n_raw_train_plus_validation": 9060,
+  "n_after_id_dedup": 9060,
+  "n_dropped_repeated_id": 0,
+  "n_after_text_dedup": 9051,
+  "n_dropped_repeated_text_sorted_choices": 9,
+  "n_repeated_text_if_choice_order_kept": 0
+ },
+ "dropped_to_kept": [
+  {
+   "dropped": "3YJ6NA41JBFOIXB0NZSRRBI14R7PJ5",
+   "kept": "3LO69W1SU3CO0A61N1EHDHH17AJLGZ",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3TDXMTX3CBTKDG9PQL8I9ACKYPZ6ID",
+   "kept": "3LO69W1SU3CO0A61N1EHDHH17AJLGZ",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3AZHRG4CU4JA925R3TLEW3043SN30T",
+   "kept": "39JEC7537U0EF32QZJK4AZUO0TJVCY",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3H8DHMCCW9AA4KES0B18SW1P9OPDKL",
+   "kept": "3JC6VJ2SABI9OUQD9E6006A1KTC5AU",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "384PI804XS0ETJQ6T8MF4B8GUF9S0A",
+   "kept": "36DSNE9QZ5X6XXZZ8ZFC2BDBVPTOJC",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "39U1BHVTDLQBPB2I1V9OGE29WWBT34",
+   "kept": "3UN61F00HWO1NBCUBPSMVWZBJ3O5R1",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3HYA4D452RICLOOY2BQUG0IG3IKF2A",
+   "kept": "3BDCF01OGXTOM1R1H70NKHO5C21LYH",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3M81GAB8A0I30QE3ZKUZTSPYXADBQ6",
+   "kept": "3OUYGIZWR7XHGRAE1RIL96351ZQ0PS",
+   "dropped_source": "train"
+  },
+  {
+   "dropped": "3YWRV122CSYCQLNDDHUUCRWMYMBU88",
+   "kept": "3LEIZ60CDJYTQP0XOWZGTF6CJS29ZU",
+   "dropped_source": "train"
+  }
+ ],
+ "source": "data check written before any model output (CPU data preparation)"
+}

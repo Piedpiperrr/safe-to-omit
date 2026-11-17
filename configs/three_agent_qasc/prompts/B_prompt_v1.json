@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "status": "draft, written 2026-11-09 before any model output was seen",
+  "base": "In at most three clear sentences, state the background knowledge needed to answer the question below.",
+  "note_clause": " Another assistant has already written a background note for this question: check that note, correct anything in it that is wrong, and add the knowledge it is missing.",
+  "facts_clause": " Use the two reference facts given below as your source.",
+  "facts_header": "Reference facts:",
+  "note_header": "Background note from another assistant:",
+  "rules": "Do NOT directly solve or give answer to the question, and do NOT mention any option letter."
+}

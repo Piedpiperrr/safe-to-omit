@@ -1,0 +1,247 @@
+{
+ "source": {
+  "model_index": "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/MODEL_SOURCE_INDEX.json",
+  "label_sets": "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/protocol/label_token_sets.json"
+ },
+ "agents": {
+  "A": {
+   "model": "helper",
+   "prompt": "paper Appendix L helper prompt (legacy_methods.BACKGROUND_PROMPT)",
+   "max_new_tokens": 256
+  },
+  "B": {
+   "model": "helper",
+   "prompt": "prompts/B_prompt_<version>.json (draft; frozen after author approval)",
+   "max_new_tokens": 256
+  },
+  "C": {
+   "model": "receiver",
+   "prompt": "paper receiver template, thinking off",
+   "max_new_tokens": 64
+  }
+ },
+ "max_new_tokens": {
+  "A": 256,
+  "B": 256,
+  "C": 64
+ },
+ "runtime": {
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "decoding": "greedy (do_sample=False)",
+  "batch_size": 1,
+  "thinking": false,
+  "tf32": false,
+  "seed": 0,
+  "helper_device": "cuda:0",
+  "receiver_device": "cuda:1"
+ },
+ "models": {
+  "helper": {
+   "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+   "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+   "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+   "aggregate_sha256": "baa5817884f95989990a5c2be02e50488f690e087fb47c2af0de06f2ab17affb",
+   "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+   "files": [
+    {
+     "name": "config.json",
+     "bytes": 663,
+     "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+    },
+    {
+     "name": "generation_config.json",
+     "bytes": 243,
+     "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+    },
+    {
+     "name": "merges.txt",
+     "bytes": 1671839,
+     "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    {
+     "name": "model-00001-of-00004.safetensors",
+     "bytes": 3945441440,
+     "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+    },
+    {
+     "name": "model-00002-of-00004.safetensors",
+     "bytes": 3864726352,
+     "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+    },
+    {
+     "name": "model-00003-of-00004.safetensors",
+     "bytes": 3864726424,
+     "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+    },
+    {
+     "name": "model-00004-of-00004.safetensors",
+     "bytes": 3556377672,
+     "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+    },
+    {
+     "name": "model.safetensors.index.json",
+     "bytes": 27752,
+     "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+    },
+    {
+     "name": "tokenizer.json",
+     "bytes": 7031645,
+     "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    {
+     "name": "tokenizer_config.json",
+     "bytes": 7305,
+     "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    {
+     "name": "vocab.json",
+     "bytes": 2776833,
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+   ]
+  },
+  "receiver": {
+   "repo_id": "Qwen/Qwen3-8B",
+   "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+   "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+   "aggregate_sha256": "3c2a639fb8fd70d88a7e96e86fe0d9fb96b84985858a254d413e52f1dbfa713b",
+   "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+   "files": [
+    {
+     "name": "config.json",
+     "bytes": 728,
+     "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+    },
+    {
+     "name": "generation_config.json",
+     "bytes": 239,
+     "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    {
+     "name": "merges.txt",
+     "bytes": 1671853,
+     "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+     "name": "model-00001-of-00005.safetensors",
+     "bytes": 3996250744,
+     "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+    },
+    {
+     "name": "model-00002-of-00005.safetensors",
+     "bytes": 3993160032,
+     "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+    },
+    {
+     "name": "model-00003-of-00005.safetensors",
+     "bytes": 3959604768,
+     "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+    },
+    {
+     "name": "model-00004-of-00005.safetensors",
+     "bytes": 3187841392,
+     "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+    },
+    {
+     "name": "model-00005-of-00005.safetensors",
+     "bytes": 1244659840,
+     "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+    },
+    {
+     "name": "model.safetensors.index.json",
+     "bytes": 32878,
+     "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+    },
+    {
+     "name": "tokenizer.json",
+     "bytes": 11422654,
+     "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    {
+     "name": "tokenizer_config.json",
+     "bytes": 9732,
+     "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+    },
+    {
+     "name": "vocab.json",
+     "bytes": 2776833,
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+   ]
+  }
+ },
+ "probe": {
+  "name": "ProbeMax on the A+C prompt",
+  "input": "C reads A (paper Text-reading conversation), add_generation_prompt, thinking off, then the separately encoded prefix",
+  "prefix": "The correct answer is",
+  "prefix_ids": [
+   785,
+   4396,
+   4226,
+   374
+  ],
+  "label_token_sets": {
+   "A": [
+    32,
+    362,
+    22985
+   ],
+   "B": [
+    33,
+    425,
+    12791
+   ],
+   "C": [
+    34,
+    356,
+    6258
+   ],
+   "D": [
+    35,
+    422,
+    10957
+   ],
+   "E": [
+    36,
+    468,
+    22784
+   ],
+   "F": [
+    37,
+    434,
+    12727
+   ],
+   "G": [
+    38,
+    479,
+    9600
+   ],
+   "H": [
+    39,
+    472,
+    13292
+   ]
+  },
+  "score": "FP32 logits; per label logsumexp over its token set; log_softmax over A-H; u = logsumexp of the seven non-top labels' log-probabilities (log non-top mass, PROTOCOL.md section 4); non-finite -> u = None, always waits for B; 1 - max p kept as u_1mp_diag (diagnostic only)"
+ },
+ "parser": {
+  "file": "code/pipeline/answer_scoring_v2/scoring_v2.py",
+  "sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "labels": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "INVALID": "its own answer value; never equal to gold; INVALID vs a letter counts as a change"
+ },
+ "thresholds": {
+  "candidates": "j = 1..19: ceil(j*N_fit/20)-th smallest fit u (ties kept, non-finite ranked last); j = 20 (q = 1): always skip",
+  "rule": "skip B when u <= tau; a non-finite score never skips (except the constant always-skip policy j = 20)"
+ }
+}

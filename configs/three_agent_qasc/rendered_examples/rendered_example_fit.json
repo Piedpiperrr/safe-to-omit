@@ -1,0 +1,49 @@
+{
+ "id": "3KGTPGBS6XK146LOX0LT20JJEGS2UC",
+ "split": "fit",
+ "checks": {
+  "C_AC_rendered_equals_stored_run_rendering": true,
+  "C_ABC_rendered_equals_stored_run_rendering": true,
+  "C_AC_sha256_equals_record": true,
+  "C_ABC_sha256_equals_record": true,
+  "probe_text_sha256_equals_record": true,
+  "probe_token_ids_sha256_equals_record": true,
+  "probe_n_in_equals_record": true,
+  "A_user_equals_stored": true,
+  "B_user_equals_stored": true,
+  "A_n_in_equals_record": true,
+  "B_n_in_equals_record": true,
+  "B_user_sha256_equals_record": true
+ },
+ "skip_path_C_input (A+C)": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nUnderstanding hydrogen bonds is the most essential background knowledge needed to answer the question.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "reference_path_C_input (A+B+C)": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nUnderstanding hydrogen bonds is the most essential background knowledge needed to answer the question.<|im_end|>\n<|im_start|>user\nIn at most three clear sentences, state the background knowledge needed to answer the question below.\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nDo NOT directly solve or give answer to the question: do not say which choice is correct, do not discuss or rule out any of the choices, and do NOT mention any option letter.<|im_end|>\n<|im_start|>assistant\nThe background knowledge needed to answer the question includes understanding that water freezes into ice when cooled, and that hydrogen bonds are responsible for causing water to expand when it transitions from a liquid to a solid state.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+ "probe_input (A+C rendering + prefix token ids)": {
+  "text": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nUnderstanding hydrogen bonds is the most essential background knowledge needed to answer the question.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nThe correct answer is",
+  "prefix_ids": [
+   785,
+   4396,
+   4226,
+   374
+  ],
+  "n_tokens": 235
+ },
+ "A_input": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\n",
+ "B_input": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn at most three clear sentences, state the background knowledge needed to answer the question below. Another assistant has already written a background note for this question: check that note, correct anything in it that is wrong, and add the knowledge it is missing. Use the two reference facts given below as your source.\n\nWhat causes water to expand as it becomes ice?\n\nChoices:\nA. evaporation\nB. wind\nC. Weathering\nD. heat\nE. gasoline\nF. Generating heat\nG. friction\nH. hydrogen bonds\n\nReference facts:\n1. Hydrogen bonds cause water to expand when it freezes.\n2. Water freezes into ice when cooled.\n\nBackground note from another assistant:\nUnderstanding hydrogen bonds is the most essential background knowledge needed to answer the question.\n\n\nDo NOT directly solve or give answer to the question: do not say which choice is correct, do not discuss or rule out any of the choices, and do NOT mention any option letter.<|im_end|>\n<|im_start|>assistant\n",
+ "outputs": {
+  "A": "Understanding hydrogen bonds is the most essential background knowledge needed to answer the question.",
+  "B": "The background knowledge needed to answer the question includes understanding that water freezes into ice when cooled, and that hydrogen bonds are responsible for causing water to expand when it transitions from a liquid to a solid state.",
+  "C_AC_raw": "H",
+  "C_ABC_raw": "The correct answer is H.",
+  "u": -32.35526657104492,
+  "logp_labels": {
+   "A": -36.0,
+   "B": -33.5,
+   "C": -36.875,
+   "D": -33.625,
+   "E": -36.5,
+   "F": -35.875,
+   "G": -33.5,
+   "H": 0.0
+  }
+ }
+}

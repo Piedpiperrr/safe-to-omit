@@ -1,0 +1,396 @@
+{
+ "status": "PREPARED_INPUTS_NOT_EXECUTION_AUTHORIZATION",
+ "source_root": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2",
+ "python": "$DATA_DIR/software/envs/c2c_official/bin/python",
+ "versions": {
+  "torch": "2.6.0",
+  "transformers": "4.52.4",
+  "accelerate": "1.9.0"
+ },
+ "backend": "HF transformers only; no vLLM; no quantization or CPU/disk weight offload",
+ "dtype": "bfloat16",
+ "attention": "sdpa",
+ "do_sample": false,
+ "batch_size": 1,
+ "helper_max_new_tokens": 256,
+ "answer_max_new_tokens": 64,
+ "prefix": "The correct answer is",
+ "seed": 0,
+ "alpha": 0.05,
+ "delta_per_candidate": 0.001,
+ "q_grid": [
+  0.05,
+  0.1,
+  0.15,
+  0.2,
+  0.25,
+  0.3,
+  0.35,
+  0.4,
+  0.45,
+  0.5,
+  0.55,
+  0.6,
+  0.65,
+  0.7,
+  0.75,
+  0.8,
+  0.85,
+  0.9,
+  0.95,
+  1.0
+ ],
+ "epsilons": [
+  0.01,
+  0.02
+ ],
+ "bootstrap_replicates": 2000,
+ "bootstrap_seed": 0,
+ "pilot_size": 300,
+ "pilot_min_gain_pp": 2.0,
+ "smoke_size": 16,
+ "full_stage_shards": 4,
+ "inputs": {
+  "fit": {
+   "path": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_fit_queries_formal.jsonl",
+   "N": 2100,
+   "sha256": "da7d21ded53a1917bdce8c4cd88ecbfed771cf3d3000627b3d066d6ae8823ef0",
+   "ids_source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_fit_ids.json"
+  },
+  "cal": {
+   "path": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_cal_queries.jsonl",
+   "N": 1366,
+   "sha256": "6d3a4b535f23fff3afc75226c8aa43368ec51d673db6c04198885ea7a877c9f0",
+   "ids_source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_cal_ids.json"
+  },
+  "dev": {
+   "path": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_dev_queries_formal.jsonl",
+   "N": 742,
+   "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094",
+   "ids_source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_dev_ids.json"
+  },
+  "heldout": {
+   "path": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_heldout_queries.jsonl",
+   "N": 744,
+   "sha256": "4091d96094024616bd17a0a38196465dec7d3b2c9b774448b4cd3db764120b82",
+   "ids_source": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e09b_e09c/inputs/holdout_744_ids.json"
+  }
+ },
+ "models": {
+  "helper": {
+   "repo": "Qwen/Qwen2.5-32B-Instruct",
+   "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+   "path": "$DATA_DIR/cache/huggingface/hub/models--Qwen--Qwen2.5-32B-Instruct/snapshots/5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+   "gpus": [
+    0,
+    1
+   ],
+   "device_map": {
+    "model.embed_tokens": 0,
+    "model.norm": 1,
+    "lm_head": 1,
+    "model.layers.0": 0,
+    "model.layers.1": 0,
+    "model.layers.2": 0,
+    "model.layers.3": 0,
+    "model.layers.4": 0,
+    "model.layers.5": 0,
+    "model.layers.6": 0,
+    "model.layers.7": 0,
+    "model.layers.8": 0,
+    "model.layers.9": 0,
+    "model.layers.10": 0,
+    "model.layers.11": 0,
+    "model.layers.12": 0,
+    "model.layers.13": 0,
+    "model.layers.14": 0,
+    "model.layers.15": 0,
+    "model.layers.16": 0,
+    "model.layers.17": 0,
+    "model.layers.18": 0,
+    "model.layers.19": 0,
+    "model.layers.20": 0,
+    "model.layers.21": 0,
+    "model.layers.22": 0,
+    "model.layers.23": 0,
+    "model.layers.24": 0,
+    "model.layers.25": 0,
+    "model.layers.26": 0,
+    "model.layers.27": 0,
+    "model.layers.28": 0,
+    "model.layers.29": 0,
+    "model.layers.30": 0,
+    "model.layers.31": 0,
+    "model.layers.32": 1,
+    "model.layers.33": 1,
+    "model.layers.34": 1,
+    "model.layers.35": 1,
+    "model.layers.36": 1,
+    "model.layers.37": 1,
+    "model.layers.38": 1,
+    "model.layers.39": 1,
+    "model.layers.40": 1,
+    "model.layers.41": 1,
+    "model.layers.42": 1,
+    "model.layers.43": 1,
+    "model.layers.44": 1,
+    "model.layers.45": 1,
+    "model.layers.46": 1,
+    "model.layers.47": 1,
+    "model.layers.48": 1,
+    "model.layers.49": 1,
+    "model.layers.50": 1,
+    "model.layers.51": 1,
+    "model.layers.52": 1,
+    "model.layers.53": 1,
+    "model.layers.54": 1,
+    "model.layers.55": 1,
+    "model.layers.56": 1,
+    "model.layers.57": 1,
+    "model.layers.58": 1,
+    "model.layers.59": 1,
+    "model.layers.60": 1,
+    "model.layers.61": 1,
+    "model.layers.62": 1,
+    "model.layers.63": 1
+   },
+   "pad_token_id": 151643,
+   "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+   "config_sha256": "9c6772f138ef9e5b3d1c18f2c87e451bbc01f5f1a4eabb36f9bf4f53829b903e",
+   "index_sha256": "0183543f2e6e40d3d1e863ed0b2a8c9cdaf2ee4045ce724a45cea30e9995a0af"
+  },
+  "receiver": {
+   "repo": "Qwen/Qwen3-32B",
+   "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+   "path": "$DATA_DIR/cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137",
+   "gpus": [
+    2,
+    3
+   ],
+   "device_map": {
+    "model.embed_tokens": 2,
+    "model.norm": 3,
+    "lm_head": 3,
+    "model.layers.0": 2,
+    "model.layers.1": 2,
+    "model.layers.2": 2,
+    "model.layers.3": 2,
+    "model.layers.4": 2,
+    "model.layers.5": 2,
+    "model.layers.6": 2,
+    "model.layers.7": 2,
+    "model.layers.8": 2,
+    "model.layers.9": 2,
+    "model.layers.10": 2,
+    "model.layers.11": 2,
+    "model.layers.12": 2,
+    "model.layers.13": 2,
+    "model.layers.14": 2,
+    "model.layers.15": 2,
+    "model.layers.16": 2,
+    "model.layers.17": 2,
+    "model.layers.18": 2,
+    "model.layers.19": 2,
+    "model.layers.20": 2,
+    "model.layers.21": 2,
+    "model.layers.22": 2,
+    "model.layers.23": 2,
+    "model.layers.24": 2,
+    "model.layers.25": 2,
+    "model.layers.26": 2,
+    "model.layers.27": 2,
+    "model.layers.28": 2,
+    "model.layers.29": 2,
+    "model.layers.30": 2,
+    "model.layers.31": 2,
+    "model.layers.32": 3,
+    "model.layers.33": 3,
+    "model.layers.34": 3,
+    "model.layers.35": 3,
+    "model.layers.36": 3,
+    "model.layers.37": 3,
+    "model.layers.38": 3,
+    "model.layers.39": 3,
+    "model.layers.40": 3,
+    "model.layers.41": 3,
+    "model.layers.42": 3,
+    "model.layers.43": 3,
+    "model.layers.44": 3,
+    "model.layers.45": 3,
+    "model.layers.46": 3,
+    "model.layers.47": 3,
+    "model.layers.48": 3,
+    "model.layers.49": 3,
+    "model.layers.50": 3,
+    "model.layers.51": 3,
+    "model.layers.52": 3,
+    "model.layers.53": 3,
+    "model.layers.54": 3,
+    "model.layers.55": 3,
+    "model.layers.56": 3,
+    "model.layers.57": 3,
+    "model.layers.58": 3,
+    "model.layers.59": 3,
+    "model.layers.60": 3,
+    "model.layers.61": 3,
+    "model.layers.62": 3,
+    "model.layers.63": 3
+   },
+   "pad_token_id": 151643,
+   "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+   "config_sha256": "97e295b63283935788fac5e4f8860862a56d4089538cafc93f0431f2ebe483bb",
+   "index_sha256": "bed42c6c55274bc08a1f616bceb3bcb84b3f02cb6584c573bd18c6519291ecd0"
+  }
+ },
+ "prefix_ids": [
+  785,
+  4396,
+  4226,
+  374
+ ],
+ "label_token_sets": {
+  "A": [
+   32,
+   362,
+   22985
+  ],
+  "B": [
+   33,
+   425,
+   12791
+  ],
+  "C": [
+   34,
+   356,
+   6258
+  ],
+  "D": [
+   35,
+   422,
+   10957
+  ]
+ },
+ "source_sha256": {
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/boundaries_large_small/inputs/obqa_train_queries.jsonl.gz": "c67e12536c1672216efe20a6182e76cc52d7dcc8e94b3a9b19d0966677b03418",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/boundaries_large_small/inputs/obqa_dev_queries.jsonl": "c46027a00f0932f27af43bbcc0c3ed1e05a63ddc5fcf4151e16bd6ec7bdb1cb4",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/records/e09b_e09c/inputs/holdout_744_queries.jsonl": "b0c6dd2c1696a89b5d7f88213b38a4b70a64e1025916841ebcf650a9919e2b25",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_fit_ids.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_cal_ids.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/development_and_calibration/obqa_dev_ids.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/results/e09b_e09c/inputs/holdout_744_ids.json": "5129d91c60e6d9656520face24e09f470cb61271a996681338530c22d2147249",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/dev_e2e_replay/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/native_action_runtime/protocol_min.py": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/native_action_runtime/legacy_methods.py": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/answer_scoring_v2/scoring_v2.py": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/pipeline/confidence_boundaries/run_boundaries.py": "19f0959718323799fedce71ec47990b82b6b490468bda6df37854767087b5728",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/analysis/e15/scripts/e15_1.py": "d6bfc055f3db73af06e8c8e61bfcc9d277c54125ae74c5ed6db622c3e26ab485",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/analysis/e21/scripts/e21_1_cert.py": "b4eedf0220b4be47d83a237ef78a41f2fc2423234c9e401cb8e268b05243d151",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/code/analysis/e16/replay_llama/src/execute.py": "5154685e9b47a1ea1938405f9b567c7d11ab0cfd98e8de08250d2dd6e9094107",
+  "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/obqa_dev_panel_ids_e2e_replay.json": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac"
+ },
+ "panel_ids": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/splits/timing_panels/obqa_dev_panel_ids_e2e_replay.json",
+ "score": "logsumexp_nonmax_label_logprob",
+ "diagnostic_score": "1-max(p)",
+ "nonfinite_route": "Text",
+ "primary_policy": "joint_eps001",
+ "heldout_cp_upper_quantile": 0.975,
+ "pilot_min_net_correct": 6,
+ "pilot_gate_purpose": "gain-retention analysis priority only",
+ "familywise_bonferroni_bound": 0.06,
+ "full_stage_nodes": 4,
+ "deadline_utc": "2026-11-16T18:00:00+00:00",
+ "below_gate_resource_decision_cutoff_utc": "2026-11-15T06:00:00+00:00",
+ "resource_plan_status": "MEASURED_REVIEWED",
+ "walltime_hours": {
+  "pilot": 2,
+  "fit_rest": 2,
+  "cal": 2,
+  "dev": 2,
+  "heldout": 2,
+  "replay": 3
+ },
+ "score_labels": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "score_nonmax_labels": 3,
+ "timing_arms": [
+  "policy",
+  "reference",
+  "receiver_alone"
+ ],
+ "timing_policy_order": [
+  "joint_eps001",
+  "behavior",
+  "joint_eps002"
+ ],
+ "timing_arm_rotation": "left by (panel_ordinal+fixed_policy_index) modulo 3",
+ "scope_claim": "model-scale extension on previously exposed benchmarks",
+ "resource_estimate_sha256": "ffc8e0a0dda13ecc794bf5c80d6d7bc5a9bc260f9cd6fd05932d81365dac54ba",
+ "gold_source": {
+  "path": "$DATA_DIR/c2c_reproduction_assets/datasets/allenai--openbookqa/main/train-00000-of-00001.parquet",
+  "sha256": "98148f8a54e62eb862346a75192d5fb824d6cbb68f2f59aecd793d39ecb5cd8b",
+  "format": "parquet",
+  "id_column": "id",
+  "label_column": "answerKey",
+  "access": "CPU analysis only, filter to requested IDs; calibration queries only frozen-mask disagreements",
+  "label_free_query_check": {
+   "counts": {
+    "fit": 2100,
+    "cal": 1366,
+    "dev": 742,
+    "heldout": 744
+   },
+   "question_and_choice_text_order": "exact source match",
+   "answerKey_read": false
+  }
+ },
+ "analysis_scripts_and_dependencies": [
+  "e2b_analyze.py",
+  "e2b_gate.py",
+  "e2b_formal_gate.py"
+ ],
+ "analysis_commit_rule": "all production CPU analysis committed before any consumed formal output",
+ "recheck_export_root": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/e2b_recheck",
+ "formal_input_repairs": {
+  "reason": "restore original paper option text altered by release path anonymization before any formal E2b output",
+  "smoke_inputs_unchanged": true,
+  "pilot_300_unchanged": true,
+  "repairs": [
+   {
+    "split": "fit",
+    "reviewed_input": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_fit_queries.jsonl",
+    "reviewed_sha256": "2d507749acc72e3c997a2f29363abc2b182c3b59cb56e4433a4fbb8c9efbba6c",
+    "original_paper_input": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_train_queries.jsonl",
+    "original_paper_sha256": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767",
+    "changes": [
+     {
+      "id": "14-1424",
+      "ordinal_zero_based": 900,
+      "label": "D",
+      "before": "sharedfs",
+      "after": "eagle"
+     }
+    ]
+   },
+   {
+    "split": "dev",
+    "reviewed_input": "$DATA_DIR/release/p2_anon_20260922T213824Z/repo-rebuttal-e2/rebuttal/e2/inputs/obqa_dev_queries.jsonl",
+    "reviewed_sha256": "c46027a00f0932f27af43bbcc0c3ed1e05a63ddc5fcf4151e16bd6ec7bdb1cb4",
+    "original_paper_input": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_dev_queries.jsonl",
+    "original_paper_sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094",
+    "changes": [
+     {
+      "id": "12-577",
+      "ordinal_zero_based": 283,
+      "label": "C",
+      "before": "sharedfs",
+      "after": "Eagle"
+     }
+    ]
+   }
+  ]
+ }
+}

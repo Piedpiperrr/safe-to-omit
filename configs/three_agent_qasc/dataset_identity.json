@@ -1,0 +1,48 @@
+{
+ "dataset": "QASC (Question Answering via Sentence Composition)",
+ "source": "https://huggingface.co/datasets/allenai/qasc",
+ "repo_id": "allenai/qasc",
+ "revision": "a34ba204eb9a33b919c10cc08f4f1c8dae5ec070",
+ "licence": "CC BY 4.0 (dataset card at the official page https://allenai.org/data/qasc, which links to the Hub card; the authors' repository https://github.com/allenai/qasc says \"We release the data under CC BY license\")",
+ "files": {
+  "train": {
+   "file": "train-00000-of-00001.parquet",
+   "sha256": "b9a297b5ab55f1605c7682ffbb7042c26d7ecb9ff1e1aa5a820d4e791c8302d1",
+   "bytes": 1967904
+  },
+  "validation": {
+   "file": "validation-00000-of-00001.parquet",
+   "sha256": "d1ae34ae13c5fce2c55305372c203c6cdb789728d0d7e5ea2956d55bc33f40ae",
+   "bytes": 223553
+  },
+  "test": {
+   "file": "test-00000-of-00001.parquet",
+   "sha256": "495cfbd17abc1720b54785cdce68825104aaf60d7b8bdb2acac62157a31eb517",
+   "bytes": 158241
+  }
+ },
+ "rows": {
+  "train": 8134,
+  "validation": 926,
+  "test": 920
+ },
+ "splits_used": "train (8,134) and validation (926) = 9,060; the official test split has no answers or facts and is not used",
+ "fields_in_prompts": [
+  "question",
+  "choices",
+  "fact1",
+  "fact2"
+ ],
+ "fields_never_in_prompts": [
+  "answerKey",
+  "combinedfact",
+  "formatted_question"
+ ],
+ "deduplication": {
+  "step1": "drop repeated question ids (keep the first occurrence; train rows before validation rows, file order)",
+  "step2": "drop repeated normalized (stem + choices) text; key = norm(stem) + ' || ' + ' | '.join(sorted(norm(choice_text))) so that a re-ordered copy of the same question is also a duplicate; keep the first occurrence in the same order",
+  "norm": "unicode NFKC, casefold, collapse every whitespace run to one space, strip"
+ },
+ "after_deduplication": 9051,
+ "deduplication_map": "splits/three_agent_qasc/dedup_map.json"
+}

@@ -19,7 +19,7 @@ Experiment folders keep the experiment IDs used during the research (E3 … E22,
 | Table 1 | oracle headroom and the rate-matched null | `results/e09a/`, `results/e22/` | stored results |
 | Table 2 | gain retention on unseen questions: the four helpful Text policies | `results/cpu_reanalysis/` | stored results |
 | Table 3 | prospective tests: every policy of the three-agent system (QASC, sealed test) and of the 32B pair (OBQA, held out) | `results/three_agent_qasc/`, `results/scale_32b/` | make verify: three-agent policies and primary sealed-test row (`verify/verify_d_three_agent.py`) |
-| Fig. 2 | certification boundary over all settings | values transcribed from Tables 6 and 9 and Appendices G.2–G.3 | make figures |
+| Fig. 2 | certification boundary over all settings and the two prospective tests | values transcribed from Tables 6 and 9 and Appendices G.2–G.3; the two prospective tests recomputed from `results/scale_32b/recheck/dev.csv` and `results/three_agent_qasc/recheck/sealed.csv` (also in this repository) | make figures |
 | Table 4 | every deployed policy: skipped share, development and unseen changes, level, delta-accuracy, G, kept, saving | `results/frozen_pipeline/`, `results/sealed_arc_test/`, `results/e09b_e09c/`, `results/e16/`, `results/e20_full/`, `results/e21/` | make verify: row large/ARC/Text (`verify/verify_c_table4_row.py`) |
 | App. A | method and protocol | `configs/` (also in this repository), `code/pipeline/` | — |
 | App. B, Table 5 | provenance and exposure; parser exposure | `results/answer_parser_v2/` | stored results |

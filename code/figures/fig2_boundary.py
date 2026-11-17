@@ -1,5 +1,6 @@
-# Figure 2 (v3): development disagreement vs. probe AUROC for all 31 settings.
+# Figure 2 (v3): development disagreement vs. probe AUROC for all 31 settings and the two prospective tests.
 # Data transcribed from tab:dev_full, tab:mmlu_small_medium, Appendix G (informed/stronger helper, SQuAD).
+# The two prospective tests are recomputed below from the per-question records in results/ (ties count one half).
 # Labels: each names a model pair and benchmark (or, in panel b, what changed) and is tied by thin lines to its
 # own settings (blue Text, orange C2C); label positions are fixed coordinates chosen so that no label, line,
 # or point overlaps and every line is 7 to 30 pt long.
@@ -34,11 +35,25 @@ ext=[
  ("L8B","T",100*86/742,0.874,1),("L8B","T",100*37/299,0.880,1),
  ("fact","T",10.2,0.889,1),("strong","T",21.2,0.792,0),("strong","T",13.4,0.800,0),
  ("squad","T",15.4,0.811,1)]
+# the two prospective tests (Section 4.2), drawn as diamonds in panel (b): the 32B pair on its 742 OBQA development
+# questions and the three-agent system on its 2,000 sealed QASC test questions (its only unseen split with scores)
+prosp=[("32B","T",100*37/742,0.915,1),("3ag","T",100*328/2000,0.858,1)]
+import csv
+ROOT=Path(__file__).resolve().parents[2]
+def check_prospective(rel,n_dis,n,auc):
+    """Recompute disagreement count and AUROC of u (higher u = disagreement more likely) from the released CSV."""
+    rows=list(csv.DictReader(open(ROOT/rel,newline="")))
+    u=np.array([float(r["u"]) for r in rows]); d=np.array([r["ans_s"]!=r["ans_b"] for r in rows])
+    up,un=u[d],u[~d]
+    a=((up[:,None]>un[None,:]).sum()+0.5*(up[:,None]==un[None,:]).sum())/(len(up)*len(un))
+    assert (len(rows),int(d.sum()),round(a,3))==(n,n_dis,auc),(rel,len(rows),int(d.sum()),a)
+check_prospective("results/scale_32b/recheck/dev.csv",37,742,0.915)
+check_prospective("results/three_agent_qasc/recheck/sealed.csv",328,2000,0.858)
 assert len(qwen)+len(ext)==31
-dep=[p for p in qwen+ext if p[4]]; fb=[p for p in qwen+ext if not p[4]]
-assert len(dep)==12 and min(p[3] for p in dep)>=0.81 and max(p[3] for p in fb)<=0.80
+dep=[p for p in qwen+ext+prosp if p[4]]; fb=[p for p in qwen+ext if not p[4]]
+assert len(dep)==14 and min(p[3] for p in dep)>=0.81 and max(p[3] for p in fb)<=0.80
 fig,axes=plt.subplots(1,2,figsize=(5.5,2.3),sharey=True,gridspec_kw=dict(width_ratios=[1.3,1]))
-for ax,data,title in [(axes[0],qwen,"(a) Qwen pairs (18 main settings)"),(axes[1],ext,"(b) Other receivers, helpers, and tasks (13)")]:
+for ax,data,title in [(axes[0],qwen,"(a) Qwen pairs (18 main settings)"),(axes[1],ext,"(b) Other settings (13) and prospective tests (2)")]:
     ax.set_xscale("log"); ax.set_xlim(3.3,100); ax.set_ylim(0.57,0.985)
     ax.axhspan(0.805,0.985,color=BAND,zorder=0,lw=0)
     ax.axhline(0.805,color="#7cc49a",lw=0.6,ls=(0,(3,2)),zorder=1)
@@ -56,8 +71,9 @@ handles=[Line2D([],[],marker="o",ls="",markerfacecolor=TEXT,markeredgecolor=TEXT
          Line2D([],[],marker="o",ls="",markerfacecolor=C2C,markeredgecolor=C2C,ms=4.5,label="C2C"),
          Line2D([],[],marker="o",ls="",markerfacecolor="#555",markeredgecolor="#555",ms=4.5,label="certified"),
          Line2D([],[],marker="o",ls="",markerfacecolor="white",markeredgecolor="#555",ms=4.5,label="falls back"),
-         Patch(facecolor=BAND,edgecolor="#7cc49a",lw=0.5,ls="--",label="AUROC $\\geq$ 0.81: all 12 certified settings")]
-fig.legend(handles=handles,loc="upper center",ncol=5,frameon=False,fontsize=7,bbox_to_anchor=(0.5,1.02),handlelength=1.0,handleheight=0.9,handletextpad=0.5,columnspacing=1.8)
+         Line2D([],[],marker="D",ls="",markerfacecolor="#555",markeredgecolor="#555",ms=3.6,label="prospective test"),
+         Patch(facecolor=BAND,edgecolor="#7cc49a",lw=0.5,ls="--",label="AUROC $\\geq$ 0.81: every certified setting")]
+fig.legend(handles=handles,loc="upper center",ncol=6,frameon=False,fontsize=7,bbox_to_anchor=(0.5,1.02),handlelength=1.0,handleheight=0.9,handletextpad=0.5,columnspacing=1.3)
 fig.tight_layout(rect=(0,0,1,0.93),w_pad=1.0)   # layout is fixed before the labels are added
 a,b=axes
 LEAD="#8a8a8a"
@@ -109,21 +125,25 @@ lab(b,"OLMo receiver",[(P(172,742),0.790),(P(67,299),0.749)],(54.26,0.781))
 lab(b,"OLMo/\nMMLU-Pro",[(P(1112,2641),0.633)],(68.0,0.700))
 lab(b,"Llama-3.2-1B helper",[(P(191,742),0.693),(P(88,299),0.678)],(18.0,0.638))
 lab(b,"Llama-3.2-1B helper",[((P(427,742)+P(174,299))/2,0.6165)],(22.7,0.590))   # the two C2C points overlap
+for g,pth,x,y,d in prosp:
+    b.scatter([x],[y],s=22,marker="D",facecolor=TEXT,edgecolor=TEXT,lw=1.1,zorder=3)
+lab(b,"32B/OBQA",[(100*37/742,0.915)],(5.6,0.955))
+lab(b,"three-agent/QASC",[(100*328/2000,0.858)],(36.0,0.822))
 # zoom inset: Text+fact and the two Llama-8B settings lie too close to separate at this scale
 zx=[p for p in ext if p[0] in ("fact","L8B")]
-axins=b.inset_axes([0.50,0.655,0.49,0.325])
+axins=b.inset_axes([0.57,0.665,0.42,0.315])
 axins.set_xscale("log"); axins.set_xlim(9.4,13.2); axins.set_ylim(0.861,0.895)
 axins.set_facecolor(BAND); axins.minorticks_off(); axins.set_xticks([]); axins.set_yticks([])
 for sp in axins.spines.values(): sp.set_linewidth(0.5); sp.set_color(MUTED)
 for g,pth,x,y,d in zx:
     axins.scatter([x],[y],s=26,marker="o",facecolor=TEXT,edgecolor=TEXT,lw=1.1,zorder=3)
 kw=dict(fontsize=6.5,color=INK,va="center")
-axins.text(10.2*1.028,0.889,"Text+fact",ha="left",**kw)
-axins.text(P(37,299)/1.028,0.880,"Llama-8B/ARC",ha="right",**kw)
+axins.text(10.2*1.036,0.889,"Text+fact",ha="left",**kw)
+axins.text(P(37,299)/1.036,0.880,"Llama-8B/ARC",ha="right",**kw)
 axins.text(9.55,0.8655,"Llama-8B/OBQA",ha="left",**kw)
 from matplotlib.patches import Rectangle, ConnectionPatch
 b.add_patch(Rectangle((9.4,0.861),13.2-9.4,0.895-0.861,fill=False,edgecolor=MUTED,lw=0.5,zorder=4))
-for yd,ya in [(0.895,1.0),(0.861,0.0)]:
+for yd,ya in [(0.895,1.0)]:   # one connector: a lower one would cross the three-agent diamond
     b.add_artist(ConnectionPatch(xyA=(13.2,yd),coordsA=b.transData,xyB=(0.0,ya),coordsB=axins.transAxes,color=MUTED,lw=0.45,zorder=4))
 draw_leaders()
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[2] / "figures" / "figure2_boundary.pdf"

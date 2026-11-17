@@ -1,4 +1,4 @@
-"""Verification (c): rebuild one Table 2 row - large/ARC/Text - from the released
+"""Verification (c): rebuild one Table 4 row - large/ARC/Text - from the released
 per-question development records, and check it gives 95.0% skipped and 9/284 changed.
 
 Routing rule (configs/confidence_boundaries/frozen_config.json, mode "selective"):
@@ -13,7 +13,7 @@ Inputs (records/ comes from the dataset: run `make data` first):
   records/boundaries_large_small/records/large_arc_dev_probes.jsonl.gz   ProbeMax
   records/answer_parser_v2/labels/full_development_P2_SCORING_V2.jsonl.gz  o_R, o_T
 
-Run from the repository root:  python3 verify/verify_c_table2_row.py
+Run from the repository root:  python3 verify/verify_c_table4_row.py
 """
 import json, gzip, os
 
@@ -69,7 +69,7 @@ for i in ids:
 
 N = len(ids)
 cov = n_R / N
-print("Verification (c) - Table 2 row, large/ARC/Text (mode=%s, q=%s)\n" % (mode, q))
+print("Verification (c) - Table 4 row, large/ARC/Text (mode=%s, q=%s)\n" % (mode, q))
 print("  threshold (frozen)   : %r" % thr)
 print("  N dev questions      : %d   (expected %d)" % (N, EXP_N))
 print("  skipped (receiver only): %d   (expected %d)" % (n_R, EXP_NR))

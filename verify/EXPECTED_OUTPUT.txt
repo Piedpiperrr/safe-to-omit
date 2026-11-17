@@ -27,8 +27,8 @@ Verification (b) - E22-1 per-reference unstratified ratio, large/OBQA/Text
 
 RESULT: PASS - 0.547 reproduced from released records
 
---- verify_c_table2_row
-Verification (c) - Table 2 row, large/ARC/Text (mode=selective, q=0.95)
+--- verify_c_table4_row
+Verification (c) - Table 4 row, large/ARC/Text (mode=selective, q=0.95)
 
   threshold (frozen)   : 0.01800704002380371
   N dev questions      : 299   (expected 299)

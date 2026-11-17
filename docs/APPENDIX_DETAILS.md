@@ -23,7 +23,7 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
   and INVALID decompositions, and paired uncertainty for accuracy and cost differences.
   Record: `results/boundaries_large_small/summary/` (`panel_cost.csv`, `ranking.csv`,
   `invalid_decomposition.csv`, `paired_bootstrap.csv`).
-- **Clopper–Pearson 0.999 bound** for the calibration statistics of Table 5, in its row order: 0.232,
+- **Clopper–Pearson 0.999 bound** for the calibration statistics of Table 7, in its row order: 0.232,
   0.161, 0.419, 0.296; 0.096, 0.049, 0.102, 0.031; 0.033, 0.038, 0.035, 0.048, 0.041, 0.045. Record:
   `results/r1_cpu_prep/results/item2_calibration_table.csv`.
 - **MMLU-Pro.** "Both references accept q=0.40 (threshold u≤3.8385×10⁻⁵) … Text changes 67 answers

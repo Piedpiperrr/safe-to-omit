@@ -7,12 +7,12 @@ per setting in both panels, named once under (b).
     uncertainty (u = 0; light bars) and among the others (u > 0; dark bars),
     with two-sided Clopper--Pearson 95% intervals as whiskers, for every
     certified Qwen-receiver threshold and the q = 0.50 sensitivity threshold
-    (Table 26, tab:zero_u); square-root axis.
+    (Table 36, tab:zero_u); square-root axis.
 (b) Share of the replayed saving on skipped questions that comes from u > 0
-    questions, as 100% stacked bars (Table 29, tab:u0saving).
+    questions, as 100% stacked bars (Table 39, tab:u0saving).
 
-Checks: counts and intervals are recomputed from Table 26; shares are
-recomputed from the u = 0 and u > 0 parts of Table 29; the ranges stated in
+Checks: counts and intervals are recomputed from Table 36; shares are
+recomputed from the u = 0 and u > 0 parts of Table 39; the ranges stated in
 Appendix J (0 to 2.2%, 3.8 to 20.0%, 7.3 to 41.3%, lower bound above 5% for
 large/ARC/Text and both MMLU-Pro policies) are asserted.
 """

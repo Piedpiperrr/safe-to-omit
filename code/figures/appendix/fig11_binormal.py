@@ -7,7 +7,7 @@ Regenerated from the released E17-5 records (results/e17/results/) at 8 pt;
 replaces the earlier code/figures/figure_binormal_grid.py (P(certify) as a single-hue green ramp, the colour
 of the certified region elsewhere).
 Checks: the model's prediction agrees with every observed outcome, with the
-development and the calibration AUROC; observed outcomes agree with Table 4
+development and the calibration AUROC; observed outcomes agree with Table 6
 (tab:dev_full, new_app_D.tex); the ranges stated in Appendix D (AUROC needed 0.63 to 0.996;
 certified probabilities 0.61 to 1; no fallback above 0.05) are asserted.
 """
@@ -32,7 +32,7 @@ D = open(TEX / "new_app_D.tex").read()
 assert len(pts) == 28
 for r in pts:
     assert r["agree_devAUROC"] == "True" and r["agree_calAUROC"] == "True", r["setting"]
-# observed outcomes against Table 7
+# observed outcomes against Table 9
 t7 = D[D.index("\\label{tab:dev_full}"):D.index("\\end{table}", D.index("\\label{tab:dev_full}"))]
 dev = {}
 for l in t7.split("\\\\"):

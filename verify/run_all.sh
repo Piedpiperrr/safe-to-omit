@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 PY="${PYTHON:-python3}"
 export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-1}"
 fail=0
-for s in verify_a_certification verify_b_e22_ratio verify_c_table2_row; do
+for s in verify_a_certification verify_b_e22_ratio verify_c_table4_row; do
     echo "--- $s"
     if ! "$PY" "verify/$s.py"; then fail=1; fi
     echo

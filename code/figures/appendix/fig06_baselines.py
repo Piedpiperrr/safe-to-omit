@@ -19,9 +19,9 @@ Figure 4 (Appendix C, fig:baselines): same-target baselines (post hoc, descripti
 Data: the same-target baseline table (record_tables/baselines.tex; records in
 results/e00_baselines/) and the learned-predictor sentences of Appendix C.
 Checks: p-values recomputed from the counts; policy and reference correct
-counts, deployed q, and coverage agree with Table 4 (tab:dev_full,
+counts, deployed q, and coverage agree with Table 6 (tab:dev_full,
 new_app_D.tex); receiver-alone correct counts agree with Table 1 of the main
-text; the random expected counts are recomputed from Table 4's coverage; the
+text; the random expected counts are recomputed from Table 6's coverage; the
 claims stated in Appendix C are asserted; and the per-grid-point probability
 that a random subset passes the test is recomputed for the large and small
 pairs from the released calibration records.
@@ -59,7 +59,7 @@ for m in re.finditer(r"(\w+/[\w-]+/\w+) & ([0-9.]+) & ([0-9.]+) & (--|[0-9.]+) &
              lat_rnd=None if m.group(5) == "--" else float(m.group(5)))
 assert len(base) == 14 and all("lat_ref" in b for b in base.values())
 
-# ---- Table 4 (tab:dev_full, development record) ----
+# ---- Table 6 (tab:dev_full, development record) ----
 t7 = D[D.index("\\label{tab:dev_full}"):D.index("\\end{table}", D.index("\\label{tab:dev_full}"))]
 dev = {}
 for l in t7.split("\\\\"):
@@ -86,7 +86,7 @@ for s, b in base.items():
     p = binom.cdf(b["k"], b["N"], 0.05)
     assert (b["p"] == "$>0.99$" and p > 0.99) or abs(p - float(b["p"])) < 5e-4, (s, p, b["p"])
     assert p > 0.001, s                                             # fixed R fails everywhere
-    assert (b["pol"], b["ref"]) == (d["pol"], d["ref"]), (s, b, d)  # Table 4 Correct P/B
+    assert (b["pol"], b["ref"]) == (d["pol"], d["ref"]), (s, b, d)  # Table 6 Correct P/B
     assert b["R"] == Rt1[pop], (s, b["R"], Rt1[pop])                # Table 1 receiver alone
     assert b["fb"] == (d["q"] == 0) == (b["rnd"] is None) == (b["lat_pol"] is None), s
     if d["q"]:

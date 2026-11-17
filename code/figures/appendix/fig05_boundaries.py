@@ -10,7 +10,7 @@ text element at 8 pt. Inputs:
   configs/confidence_boundaries/deployments/all.json                (deployed q; 0 = fallback)
 Checks: every Clopper--Pearson bound and p-value is recomputed from its counts;
 the accepted flag equals p <= 0.001; the deployed q is the largest accepted
-grid point; and the deployed and fallback rows agree with Tables 4 and 5 of
+grid point; and the deployed and fallback rows agree with Tables 6 and 7 of
 the appendix (tab:dev_full and tab:calstats, new_app_D.tex).
 """
 import csv, json, re, sys, os
@@ -57,7 +57,7 @@ for pair in ("large", "small"):
                 assert (r["accepted"] == "True") == (p <= 0.001) == (ub < 0.05), (pair, ds, b, r["q"])
             acc = [float(r["q"]) for r in cal if r["accepted"] == "True"]
             assert q == (max(acc) if acc else 0.0), (pair, ds, b)
-            # Table 4 (tab:dev_full): deployed q, coverage, changed/skipped, smallest calibration bound
+            # Table 6 (tab:dev_full): deployed q, coverage, changed/skipped, smallest calibration bound
             row = t7[(pair, DS[ds], REF[b])]
             assert (0.0 if row[6] == "fallback" else float(row[6])) == q, (pair, ds, b, row[6])
             assert f"{min(float(r['CP_upper_0_999']) for r in cal):.3f}" == row[5], (pair, ds, b, row[5])
@@ -68,7 +68,7 @@ for pair in ("large", "small"):
             else:
                 assert row[8] == "--"
                 c = min(cal, key=lambda r: (float(r["p_value"]), float(r["q"])))
-            # Table 5 (tab:calstats): calibration n and k at the deployed (or best fallback) grid point
+            # Table 7 (tab:calstats): calibration n and k at the deployed (or best fallback) grid point
             r8 = t8[(pair, DS[ds], REF[b])]
             assert (int(r8[5]), int(r8[6])) == (int(c["n_R"]), int(c["changed"])), (pair, ds, b, r8[5:7])
             curves[(pair, ds, b)] = (q, cal, dev)

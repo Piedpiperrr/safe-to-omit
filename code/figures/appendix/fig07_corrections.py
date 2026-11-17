@@ -3,19 +3,19 @@
 Figure 6 (Appendix E, fig:corrections): how much of a helpful reference's gain skipping keeps.
 
 (a) Share of the reference's gain over the receiver that the policy keeps, at
-    each tolerance alpha (Table 10, tab:retention); missing points fall back.
+    each tolerance alpha (Table 13, tab:retention); missing points fall back.
 (b) Reference corrections (questions the reference answers correctly and the
     receiver alone does not) that each deployed Qwen-pair policy loses by
     skipping or keeps by running the reference, with the net change in correct
     answers (development; descriptive and gold-dependent).
 
-Data: Table 10 (new_app_F.tex) and the released correction record
+Data: Table 13 (new_app_F.tex) and the released correction record
 (record_tables/omit_keep.tex). Checks: skipped counts and the net change
-equal Table 4 (tab:dev_full; skipped questions; policy minus reference correct answers);
+equal Table 6 (tab:dev_full; skipped questions; policy minus reference correct answers);
 lost + kept equals the reference corrections counted from the correctness
 patterns (record_tables/patterns.tex); gained - lost = net; kappa*alpha in
-Table 10 is coverage x alpha; the retained share at alpha = 0.05 is recomputed
-from Table 4's correct counts; and the claims made in Appendix E are asserted.
+Table 13 is coverage x alpha; the retained share at alpha = 0.05 is recomputed
+from Table 6's correct counts; and the claims made in Appendix E are asserted.
 """
 import re, sys, os
 from decimal import Decimal, ROUND_HALF_UP
@@ -37,7 +37,7 @@ OK = open(REC / "omit_keep.tex").read()
 PAT = open(REC / "patterns.tex").read()
 def r2(x): return float(Decimal(str(x)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
-# ---- Table 10 (tab:retention) ----
+# ---- Table 13 (tab:retention) ----
 t = F[F.index("\\label{tab:retention}"):F.index("\\end{table}", F.index("\\label{tab:retention}"))]
 blocks = t.split("\\midrule")
 names = [("large/OBQA/Text", "large/ARC/Text"), ("large/MMLU-Pro/Text", "large/OBQA/Text+fact")]
@@ -56,7 +56,7 @@ for blk, (left, right) in zip(blocks[1:3], names):
                     assert abs(float(cov) * a - float(ka)) <= 0.0051, (nm, a, cov, ka)   # coverage is printed rounded
                     ret.setdefault(nm, {})[a] = dict(q=float(q), cov=float(cov), kept=float(kept))
 assert all(len(v) == 5 for v in ret.values()) and len(ret) == 4
-# Table 4 correct counts reproduce the retained share at alpha = 0.05
+# Table 6 correct counts reproduce the retained share at alpha = 0.05
 t7 = D[D.index("\\label{tab:dev_full}"):D.index("\\end{table}", D.index("\\label{tab:dev_full}"))]
 dev = {}
 for l in t7.split("\\\\"):
@@ -71,7 +71,7 @@ Rc = {"large/OBQA": 617, "large/ARC": 268, "large/MMLU-Pro": 1282}   # receiver 
 for nm in ("large/OBQA/Text", "large/ARC/Text", "large/MMLU-Pro/Text"):
     d = dev[nm]; R = Rc[nm.rsplit("/", 1)[0]]
     assert f"{(d['pol'] - R) / (d['ref'] - R):.3f}" == f"{ret[nm][0.05]['kept']:.3f}", nm
-# claims in Appendix E about Table 10
+# claims in Appendix E about Table 13
 assert all(ret[n][0.01] is None for n in ret) and ret["large/MMLU-Pro/Text"][0.02] is None
 for n in ("large/OBQA/Text", "large/ARC/Text", "large/OBQA/Text+fact"):
     assert ret[n][0.03]["kept"] > ret[n][0.05]["kept"], n
@@ -88,7 +88,7 @@ for m in re.finditer(r"(\w+/[\w-]+/\w+) & (\d+)/(\d+) & (\d+)/(\d+) & (\d+)/(\d+
     n, N, lost, tot, kept, tot2, gained, net, other, un_o, un_k = g
     assert tot == tot2 and lost + kept == tot and gained - lost == net, s
     d = dev[s]
-    assert d["chg"].split("/")[1] == str(n), (s, d["chg"], n)          # skipped count, Table 4
+    assert d["chg"].split("/")[1] == str(n), (s, d["chg"], n)          # skipped count, Table 6
     assert d["pol"] - d["ref"] == net, (s, d["pol"] - d["ref"], net)     # identity: policy - reference
     corr[s] = dict(n=n, N=N, lost=lost, tot=tot, kept=kept, gained=gained, net=net, un_o=un_o, un_k=un_k)
 assert len(corr) == 8

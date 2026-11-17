@@ -1,6 +1,6 @@
 \section{Extensions}
 
-The same pattern holds across all extensions: messages that rarely and predictably change the receiver's answer are certified (the Llama-8B receiver, Text+fact nominally, SQuAD, and sampled answers, on OBQA nominally). A stronger helper for the medium receiver falls back because its calibration splits are too small, while the remaining settings fall back (the OLMo and Llama pairs, GSM8K). Each ran under a protocol fixed before its outputs (Appendix~\ref{app:medium}).
+The same pattern holds across all extensions: messages that rarely and predictably change the receiver's answer are certified (the Llama-8B receiver, Text+fact nominally, SQuAD, and sampled answers, on OBQA nominally). A stronger helper for the medium receiver falls back because its calibration splits are too small, while the remaining settings fall back (the OLMo and Llama pairs, GSM8K). Each ran under a protocol fixed before its outputs (Appendix~\ref{app:medium}). Two prospective tests of the label-light certificate, on a three-agent system and on a 32B pair, close this appendix (Appendix~\ref{app:prospective}).
 
 \subsection{Cross-family receivers and helpers}\label{app:xfam}
 
@@ -66,3 +66,154 @@ A prespecified check (large pair, Text) used 400 fit, 1,000 calibration, and 400
 \subsection{Sampled receiver answers}\label{app:sampling}
 
 Post hoc, under a protocol fixed before its outputs, the large pair's OBQA and ARC Text settings were rerun with receiver answers sampled on both paths (the Qwen3 model card's settings with thinking disabled: temperature 0.7, top-$p$ 0.8, top-$k$ 20, min-$p$ 0; one sample per question and path, seeded independently), with messages, scores, thresholds, and the test unchanged in a 40-test family (OBQA stays nominal). Both settings deploy at the greedy thresholds ($q=0.80$: 19 of 1,064, $p=3.4\times10^{-8}$; $q=0.95$: 4 of 422, $p=4.8\times10^{-6}$) and in all 200 re-drawn splits, and 3.32\% [2.01, 5.14] and 2.82\% [1.22, 5.47] of skipped development answers change. Sampled disagreement is 9.4 and 4.7\% (AUROC 0.867 and 0.956; greedy: 9.7 and 5.0\%), most skipped questions still have zero uncertainty (354 of 572 and 217 of 284), and accuracy is 617 and 646 of 742 (receiver alone, Text) and 268 and 275 of 299. Sampling changes few of this receiver's labels (6 of 742 receiver-only and 2 Text answers on OBQA, 0 and 1 of 299 on ARC), so this check says nothing about receivers whose samples vary more or that generate reasoning tokens.
+
+\subsection{Prospective tests: a three-agent system and a 32B pair}\label{app:prospective}\label{app:e1}\label{app:e2b}
+
+The label-light certificate of Appendix~\ref{app:accuracy} was analyzed post hoc. Two tests apply it prospectively: one on a three-agent system and a dataset used nowhere else in this work, and one on the Text path with both agents scaled to 32B parameters (OBQA is used throughout this paper, so the second test extends model scale, not data). For each test, the protocol (models, prompts, score, candidate thresholds, tests, label rule, policies, and pass rules) was committed before any calibration, development, or unseen-question output of its models existed (for the three-agent system, committed and time-stamped), and the unseen questions were evaluated once. Both primary policies meet every pass rule (Table~\ref{tab:prospective}).
+
+\paragraph{Three-agent system.} Agents A and B are Qwen2.5-7B-Instruct, and the receiver C is Qwen3-8B with thinking disabled. A (background) reads the question and choices under the helper instruction of Appendix~\ref{app:prompts} and writes one background message (at most 256 new tokens). B (verifier) reads the question and choices, the two QASC facts, and A's message, and writes a checked and extended background (256). C answers (64) from A's turn on the cheap path, or from A's and B's turns on the reference path. The reference $b$ runs all three agents; the cheap path, which takes the place of $R$, omits B. One decision is made per question: after A's message, the probe on C's cheap-path input decides whether C waits for B. C sees only the agents' turns, in the receiver template of Appendix~\ref{app:prompts}: A's turn (helper instruction, then A's message) and, on the reference path, B's turn, whose user content is B's instruction without the two facts, A's note, and the clauses that introduce them, followed by B's message. As for the Text+fact receiver (Appendix~\ref{app:informed}), the facts reach C only through B's message. B's user message is the first line below, the question block of Appendix~\ref{app:prompts}, the two facts, A's note, and the closing rule; in C's view of B's turn, the two bracketed clauses, the facts, and the note are absent.
+{\fontsize{6.3}{7.0}\selectfont
+\begin{verbatim}
+In at most three clear sentences, state the background knowledge needed to answer the question below.
+[ Another assistant has already written a background note for this question: check that note, correct
+anything in it that is wrong, and add the knowledge it is missing.] [ Use the two reference facts given
+below as your source.]
+
+{question}
+
+Reference facts:
+1. {fact1}
+2. {fact2}
+
+Background note from another assistant:
+{A's message}
+
+Do NOT directly solve or give answer to the question: do not say which choice is correct, do not discuss
+or rule out any of the choices, and do NOT mention any option letter.
+\end{verbatim}}
+\noindent Each question's A and B messages are generated once and shared by both paths and the probe. All models run in bfloat16 with SDPA attention, greedy decoding, and batch size one; the parser (version 2) is extended to labels A to H. QASC's training and development splits contain 9,060 eight-option questions, each with two supporting facts; the official test split has neither answers nor facts and is not used. Deduplicating by question id and then by normalized question and choices leaves 9,051 questions. A fixed-seed shuffle assigns 2,000 to fit, 3,000 to calibration, 1,000 to development, and 2,000 to the sealed test; the remaining 1,051 were never processed by any model. QASC is public, so the split is independent of our design process, not of the models' pretraining data.
+
+\paragraph{32B pair.} The helper agent is Qwen2.5-32B-Instruct and the receiver agent is Qwen3-32B with thinking disabled. The reference is the Text path and the cheap path is the receiver agent alone, with the prompts, decoding, and parser of the main experiments (Appendices~\ref{app:protocol} and~\ref{app:prompts}). Both models run in bfloat16 in Hugging Face Transformers with greedy decoding and batch size one, each across two A100-SXM4-40GB GPUs of one node, and the same backend is used from fit to evaluation. The splits are those of the main OBQA experiments: 2,100 fit, 1,366 calibration, 742 development, and 744 held-out questions. A pilot on the first 300 fit questions was to decide only whether gain retention would be emphasized (at least 6 more correct answers with Text): Text answered 276 and the receiver agent alone 271. The full protocol was committed to run in either case before the pilot result.
+
+\paragraph{Score.} Each label's probability sums the next-token probabilities over its token set and is renormalized over the labels (A to H on QASC, A to D on OBQA). The score is the log of the non-top mass, $u=\log\sum_{l\ne l^\ast}p_l$, computed as a log-sum-exp in FP32; it orders questions as $1-\max_l p_l$ does wherever that is nonzero. On the QASC fit split, $1-\max_l p_l$ is exactly zero in FP32 for 1,143 of 2,000 questions (57.15\%), which would merge the first 11 candidate thresholds, whereas $u$ takes 1,928 distinct values. This is the tie-breaking score of Appendix~\ref{app:restson}, chosen from the fit-split score distribution before any calibration output existed. A non-finite score routes to the reference (none occurred in either test).
+
+\paragraph{Tests, labels, and pass rules.} The 20 candidates and the change-rate test are those of Appendix~\ref{app:protocol}, applied to $u$ (a candidate that skips no question fails), and the lost-correction test is that of Appendix~\ref{app:accuracy}, with all $N$ calibration questions as its denominator (notation and $p$-values: Table~\ref{tab:prospective_cal}). Gold labels are queried in increasing $\tau$, only for newly skipped disagreements; a candidate is decided after all its disagreements are labeled; for each $\varepsilon$ the scan stops at the first candidate that fails the lost-correction test; $\varepsilon=0.02$ runs first, and no label is queried beyond the largest candidate that passes the change-rate test. The label-free policy is the largest candidate passing the change-rate test, and the joint policies are the largest passing both tests at $\varepsilon=0.01$ (primary) and at $\varepsilon=0.02$. With 20 change-rate and 40 lost-correction tests at level 0.001, all calibration conclusions of a test hold jointly with probability at least 0.94 (Bonferroni). The pass rules on the unseen questions use the upper end of the two-sided 95\% Clopper--Pearson interval, as in the main text: R1, changes among skipped questions below 5\%; R2, lost corrections over all unseen questions below $\varepsilon$ (on 744 questions, at most 2 lost corrections at $\varepsilon=0.01$ and 7 at $\varepsilon=0.02$); the lower ends of the paired-bootstrap 95\% intervals (2,000 resamples) of the reference's gain $G$ and the policy's gain $G_\pi$, both over the cheap path, above zero; and a saving on the development timing panel whose lower end is above zero. ``Keeps at least half of the gain'' requires the lower end of $G_\pi-G/2$ to exceed zero.
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{Both prospective calibrations certify a joint threshold at each $\varepsilon$ with gold labels on 40 of 3,000 and 21 of 1,366 questions. Candidate $j$ skips the fit-split quantile $q=j/20$. $n$: skipped; $m$: answer changes among them; $p_{\rm change}=\Pr[\mathrm{Bin}(n,0.05)\le m]$; $l$: lost corrections; $p_{\varepsilon}=\Pr[\mathrm{Bin}(N,\varepsilon)\le l]$. A test passes at $p\le0.001$. --: beyond the largest candidate passing the change-rate test, so not labeled. Bold: the joint policy at $\varepsilon=0.01$, the joint policy at $\varepsilon=0.02$, and the label-free policy, at $j=8$, 10, and 11 in (a) and $j=14$, 16, and 17 in (b).}
+\label{tab:prospective_cal}\label{tab:e1_cal}\label{tab:e2b_cal}
+\renewcommand{\arraystretch}{1.1}\setlength{\tabcolsep}{1.3pt}
+\vspace{5pt}\begin{minipage}[t]{0.525\linewidth}\centering
+\textit{(a) Three agents, QASC ($N=3{,}000$)}\par\smallskip
+\fitbox{\begin{tabular}{@{}rrrrrrr@{}}\toprule
+$j$ & $n$ & $m$ & $p_{\rm change}$ & $l$ & $p_{0.01}$ & $p_{0.02}$\\\midrule
+1 & 141 & 1 & $6.09{\times}10^{-3}$ & 1 & $2.52{\times}10^{-12}$ & $2.97{\times}10^{-25}$\\
+2 & 293 & 1 & $4.88{\times}10^{-6}$ & 1 & $2.52{\times}10^{-12}$ & $2.97{\times}10^{-25}$\\
+3 & 464 & 1 & $1.17{\times}10^{-9}$ & 1 & $2.52{\times}10^{-12}$ & $2.97{\times}10^{-25}$\\
+4 & 600 & 1 & $1.40{\times}10^{-12}$ & 1 & $2.52{\times}10^{-12}$ & $2.97{\times}10^{-25}$\\
+5 & 744 & 2 & $2.15{\times}10^{-14}$ & 2 & $3.94{\times}10^{-11}$ & $9.23{\times}10^{-24}$\\
+6 & 884 & 2 & $2.29{\times}10^{-17}$ & 2 & $3.94{\times}10^{-11}$ & $9.23{\times}10^{-24}$\\
+7 & 1,053 & 5 & $1.65{\times}10^{-17}$ & 5 & $2.03{\times}10^{-8}$ & $3.70{\times}10^{-20}$\\
+\textbf{8} & 1,171 & 7 & $6.09{\times}10^{-18}$ & 7 & $4.78{\times}10^{-7}$ & $3.41{\times}10^{-18}$\\
+9 & 1,330 & 18 & $7.17{\times}10^{-13}$ & 18 & 0.0126 & $1.45{\times}10^{-10}$\\
+\textbf{10} & 1,446 & 24 & $1.70{\times}10^{-11}$ & 23 & 0.113 & $3.38{\times}10^{-8}$\\
+\textbf{11} & 1,612 & 40 & $2.45{\times}10^{-7}$ & 39 & 0.955 & 0.00235\\
+12 & 1,783 & 62 & 0.0012 & -- & -- & --\\
+13 & 1,964 & 96 & 0.436 & -- & -- & --\\
+14 & 2,131 & 137 & 0.998 & -- & -- & --\\
+15--20 & 2,257--3,000 & 169--488 & $\approx1$ & -- & -- & --\\\bottomrule
+\end{tabular}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.462\linewidth}\centering
+\textit{(b) 32B pair, OBQA ($N=1{,}366$)}\par\smallskip
+\fitbox{\begin{tabular}{@{}rrrrrrr@{}}\toprule
+$j$ & $n$ & $m$ & $p_{\rm change}$ & $l$ & $p_{0.01}$ & $p_{0.02}$\\\midrule
+1 & 72 & 0 & 0.0249 & 0 & $1.09{\times}10^{-6}$ & $1.03{\times}10^{-12}$\\
+2 & 139 & 0 & $8.01{\times}10^{-4}$ & 0 & $1.09{\times}10^{-6}$ & $1.03{\times}10^{-12}$\\
+3--11 & 187--722 & 0 & $\le6.83{\times}10^{-5}$ & 0 & $1.09{\times}10^{-6}$ & $1.03{\times}10^{-12}$\\
+12 & 789 & 1 & $1.13{\times}10^{-16}$ & 1 & $1.61{\times}10^{-5}$ & $2.99{\times}10^{-11}$\\
+13 & 866 & 2 & $5.54{\times}10^{-17}$ & 2 & $1.20{\times}10^{-4}$ & $4.32{\times}10^{-10}$\\
+\textbf{14} & 924 & 5 & $6.51{\times}10^{-15}$ & 3 & $5.96{\times}10^{-4}$ & $4.16{\times}10^{-9}$\\
+15 & 996 & 7 & $1.58{\times}10^{-14}$ & 5 & 0.00675 & $1.74{\times}10^{-7}$\\
+\textbf{16} & 1,079 & 12 & $2.57{\times}10^{-12}$ & 8 & 0.0722 & $1.27{\times}10^{-5}$\\
+\textbf{17} & 1,144 & 21 & $1.93{\times}10^{-8}$ & 13 & 0.501 & 0.00173\\
+18 & 1,229 & 39 & 0.00117 & -- & -- & --\\
+19 & 1,298 & 53 & 0.070 & -- & -- & --\\
+20 & 1,366 & 85 & 0.981 & -- & -- & --\\\bottomrule
+\end{tabular}}
+\end{minipage}
+\end{table}
+
+\paragraph{Calibration.} Table~\ref{tab:prospective_cal} lists every candidate. For the three-agent system, the label-free policy is $j=11$ (calibration coverage 53.7\%), the primary policy is $j=8$ (39.0\%), and the $\varepsilon=0.02$ policy is $j=10$ (48.2\%). The label rule queried 40 of the 3,000 calibration labels, all disagreements at $j\le11$: 39 were lost corrections and one was wrong on both paths. Before calibration, the label-free plug-in rule of Appendix~\ref{app:predict}, applied to fit counts, predicted the label-free policy at $j=12$; $j=12$ narrowly fails ($p=0.0012$). For the 32B pair, the label-free policy is $j=17$ (83.7\%), the primary policy is $j=14$ (67.6\%), and the $\varepsilon=0.02$ policy is $j=16$ (79.0\%). The label rule queried 21 of the 1,366 calibration labels, all disagreements at $j\le17$: 13 were lost corrections, 7 were questions the receiver agent alone answers correctly and Text does not, and one was wrong on both paths. On fit, Text answers 92.95\% and the receiver agent alone 90.29\%.
+
+\paragraph{Unseen questions.} Table~\ref{tab:prospective} gives every policy and both reference gains. On the 2,000 sealed QASC questions, all three policies pass R1, both joint policies pass R2 at their $\varepsilon$, and all three keep more than half of the gain: $G_\pi-G/2$ is 6.15 [5.40, 6.95], 5.70 [4.97, 6.50], and 5.15 [4.40, 5.93] points for the primary, $\varepsilon=0.02$, and label-free policies. B changes 16.4\% of C's answers (328 of 2,000), yet only 5 of these changes fall among the primary policy's 798 skipped questions. On the 744 held-out OBQA questions, Text changes the 32B receiver agent's answer on 45 questions (6.0\%). All three policies pass R1, both joint policies pass R2 at their $\varepsilon$, and all three keep a gain whose interval excludes zero. The primary policy's two changed answers are one lost correction and one question that only the receiver agent alone answers correctly, so its accuracy equals that of the reference. The joint policies keep at least half of the gain ($G_\pi-G/2$ of 1.28 [0.40, 2.15] and 1.01 [0.13, 1.88]); for the label-free policy the lower end is zero (0.87 [0.00, 1.75]), so we do not make that statement, and it does not pass R2 at $\varepsilon=0.01$.
+
+\paragraph{Development questions and single models (32B pair).} The development questions decide nothing and are reported descriptively. The primary, $\varepsilon=0.02$, and label-free policies skip 69.3, 80.6, and 85.4\% of the 742 questions, change 1 of 514, 5 of 598, and 10 of 634 skipped answers (upper bounds 1.08, 1.94, and 2.88\%), and lose 1, 2, and 6 corrections (upper bounds 0.75, 0.97, and 1.75\%). Text's gain is smaller there, $G=1.08$ points [$-0.54$, 2.70] (91.91\% for the receiver agent alone against 92.99\%), and neither it nor the policies' gains exclude zero: 0.94 [$-0.67$, 2.43], 1.21 [$-0.27$, 2.70], and 0.81 [$-0.54$, 2.16] points, at accuracies of 92.86, 93.13, and 92.72\%. The helper agent answering alone, with the same free-generation protocol as the other paths, reaches 91.26\% on the held-out questions and 91.91\% on development; the pair with Text is 1.61 points [$-0.27$, 3.63] above it on the held-out questions.
+
+\paragraph{Latency.} Latency is measured live at batch size one on 128-question development panels, on exclusively allocated nodes, and every policy saves time (Table~\ref{tab:prospective_latency}). For the three-agent system the panel is the first 128 development questions in a fixed pseudorandom order. A and B generate on one GPU and C and the probe run on another; the policy and the reference alternate per request in counterbalanced order; there is no warm-up, cold requests are kept, and each policy ran once. The replay reproduced the offline records (A's messages and both answers on all 256 requests, B's messages on all 205 requests that ran B, and $u$ on all 128 questions). Skipped queries avoid B (about 1.3~s each), whereas queries that wait for B pay the probe (about 40~ms), so 56\% of the primary policy's panel queries run slightly slower and its paired median saving is $-22$~ms. For the 32B pair the panel is the OBQA development panel of the main experiments. The policy, the Text reference, and the receiver agent alone run in rotating order, in four segments of 32 questions, the last three after untimed warm-up requests on questions outside the panel. The replayed policy answers equal the offline answers on every request, and dropping the first question of each segment changes no conclusion (primary policy: 1,377~ms [1,213, 1,538] on 124 questions). The replay records whole-request latency, not component times, so the table splits the paired difference by route: a skipped question saves about 1.86~s, and a question that waits pays about 90~ms for the probe. The receiver agent alone takes 486~ms.
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{Every prospective policy lowers mean latency on its 128-question development panel, by 23.5 to 34.0\% for the three-agent system and by 56.4 to 66.4\% for the 32B pair (ms; savings: reference minus policy, paired-bootstrap 95\% CIs). (a) Components: means over all 128 requests of each arm, with steps not run counted as zero, as $T_{\rm A}$ / $T_{\rm probe}$ / $T_{\rm B}$ / $T_{\rm C}$. (b) Route split: mean paired saving on skipped questions, and mean extra latency on questions that wait.}
+\label{tab:prospective_latency}\label{tab:e1_latency}\label{tab:e2b_latency}
+\renewcommand{\arraystretch}{1.1}\setlength{\tabcolsep}{2.5pt}
+\vspace{5pt}\textit{(a) Three agents}\par\smallskip
+\begin{tabular*}{\linewidth}{@{}l@{\hspace{5pt}\extracolsep{\fill}}ccccccc@{}}\toprule
+& & \multicolumn{2}{c}{Mean latency} & & & \multicolumn{2}{c@{}}{Components}\\\cmidrule(lr){3-4}\cmidrule(l){7-8}
+Policy & \begin{tabular}[b]{@{}c@{}}Skipped\\on panel (\%)\end{tabular} & Policy & Reference & \begin{tabular}[b]{@{}c@{}}Mean saving\\{}[95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}Relative saving (\%)\\{}[95\% CI]\end{tabular} & Policy & Reference\\\midrule
+joint, $\varepsilon=0.01$ & 39.8 & 1,573 & 2,056 & 483 [365, 604] & 23.5 [17.6, 29.5] & 538 / 39 / 797 / 199 & 534 / -- / 1,283 / 239\\
+joint, $\varepsilon=0.02$ & 50.8 & 1,400 & 2,017 & 618 [501, 732] & 30.6 [24.7, 36.6] & 526 / 39 / 644 / 190 & 524 / -- / 1,255 / 238\\
+label-free & 56.2 & 1,355 & 2,051 & 697 [581, 818] & 34.0 [28.1, 40.0] & 536 / 40 / 588 / 190 & 532 / -- / 1,278 / 241\\\bottomrule
+\end{tabular*}
+\par\vspace{9pt}
+\textit{(b) 32B pair}\par\smallskip
+\begin{tabular*}{\linewidth}{@{}l@{\hspace{5pt}\extracolsep{\fill}}ccccccc@{}}\toprule
+& & \multicolumn{2}{c}{Mean latency} & & & \multicolumn{2}{c@{}}{Route split}\\\cmidrule(lr){3-4}\cmidrule(l){7-8}
+Policy & \begin{tabular}[b]{@{}c@{}}Skipped\\on panel (\%)\end{tabular} & Policy & Reference & \begin{tabular}[b]{@{}c@{}}Mean saving\\{}[95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}Relative\\saving (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Saved\\if skipped\end{tabular} & \begin{tabular}[b]{@{}c@{}}Extra\\if waiting\end{tabular}\\\midrule
+joint, $\varepsilon=0.01$ & 75.0 & 1,064 & 2,441 & 1,377 [1,219, 1,533] & 56.4 & 1,866 & 93\\
+joint, $\varepsilon=0.02$ & 82.8 & 917 & 2,442 & 1,525 [1,377, 1,667] & 62.5 & 1,860 & 88\\
+label-free & 87.5 & 817 & 2,435 & 1,618 [1,485, 1,750] & 66.4 & 1,862 & 91\\\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{The verifier's gain comes from the two facts: a fact-free verifier matches the cheap path, and the receiver reading the facts directly is the most accurate and fastest path (1,000 development questions; descriptive). Accuracy with question-bootstrap 95\% CIs; generation time: mean per question on one A100-SXM4-40GB in the offline runs.}
+\label{tab:e1_controls}
+\renewcommand{\arraystretch}{1.1}\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}cc@{}}\toprule
+Path & Accuracy (\%) [95\% CI] & Mean generation time (ms)\\\midrule
+C alone & 61.7 [58.7, 64.7] & 197\\
+A+C (cheap path) & 63.1 [60.2, 66.2] & 715\\
+A + B without facts + C & 63.6 [60.7, 66.6] & 2,188\\
+A+B+C (reference) & 77.5 [74.9, 80.1] & 2,092\\
+B+C (no A) & 85.2 [83.0, 87.3] & 1,205\\
+C reading the two facts & 93.2 [91.7, 94.8] & 195\\\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize
+\caption{Seven of the thirteen deviations from the three-agent protocol precede every output, and none changes a model input, the score, a primary endpoint, or a sample rule. When: timing relative to the first reading of calibration (Cal), development (Dev), sealed-test (Test), and timing outputs.}
+\label{tab:e1_deviations}
+\renewcommand{\arraystretch}{1.1}\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\linewidth}{@{}r@{\hspace{5pt}}p{0.66\linewidth}@{\extracolsep{\fill}}p{0.255\linewidth}@{}}\toprule
+\# & Deviation & When\\\midrule
+1 & Leak shares quoted in the protocol were measured on 96 prompt-tuning questions; full-split values are reported (superseded by 9). & before all outputs\\
+2 & Generation ran on single GPUs (A, B, and C on one A100); the timing layout is unchanged. & before all outputs\\
+3 & Scheduling fix (GPU lock, chained submission) after two jobs collided before writing any record. & before all outputs\\
+4 & Fit-split controls (C alone, C reading the facts) added; descriptive. & before all outputs\\
+5 & The freeze record names its parent commit; the freeze commit is identified by a tag. & before all outputs\\
+6 & Remaining shards ran on a second cluster with the same GPU model and environment, behind an exact-match gate on four fit questions, with a per-shard lock; scheduling-only extensions followed. & before all outputs; extended after Cal and after Dev\\
+7 & The calibration analysis need not wait for the fit controls of entry 4, whose accuracies may be committed after calibration outputs are read; descriptive. & before all outputs\\
+8 & Calibration tests ran before the development outputs and fit controls were complete. & after Cal and Dev, before Test\\
+9 & Correction of the protocol's leak shares (pre-freeze subsample); full-split values are used. & after Cal and Dev, before Test\\
+10 & Clarification: C's reference history contains B's instruction without the facts and A's note, as in Text+fact; the code is unchanged since the freeze. & during test generation, before Test\\
+11 & Correction: the protocol's 60.7\% zero share and 12 merged candidates came from the first 112 fit questions; the full fit split gives 57.15\% and 11. & after Test, before timing\\
+12 & The timing panel ran on the second cluster (same GPU model, exclusive node), one run per policy enforced by a lock; failure handling fixed before timing. & before timing\\
+13 & Clarification: the 1,051 deduplicated questions outside the four splits were never processed by any model. & after all outputs\\\bottomrule
+\end{tabular*}
+\end{table}
+
+\paragraph{Controls fixed in the three-agent protocol.} On development (descriptive; Table~\ref{tab:e1_controls}), $G=14.4$ points [12.2, 16.7], and the label-free, primary, and $\varepsilon=0.02$ policies skip 54.9, 39.1, and 48.4\% of questions. C reading the two facts directly is more accurate than the pipeline (+15.7 points [13.3, 18.2]) and faster, so when the facts can be handed to C, the pipeline can be simplified. The experiment tests skipping within a fixed information flow, not the choice of architecture. B without A is also more accurate than A+B+C, and A with a fact-free B matches A+C (63.6 vs.\ 63.1\%). On fit, C alone answers 60.1\% and C reading the facts 92.7\%. A's message names an option in 9.55, 11.1, and 9.85\% of fit, development, and sealed questions, and B's message contains the correct option's text in 72.0, 72.4, and 72.2\%.
+
+
+\paragraph{Deviations.} Every difference between a protocol and its execution was recorded as it occurred; the full records are released with the dataset. Table~\ref{tab:e1_deviations} lists all thirteen for the three-agent system. For the 32B pair, five entries change no model input, score, test, policy, or pass rule. Before any formal output, two option strings that an anonymization step had altered in our copy of the inputs were restored to the original OBQA text. The label log-probabilities behind the score and the component times of the replay were not saved; the score code, which was fixed before the run, and the route split above stand in for them. The other three concern job scheduling: one-hour shards, each gated by an exact match on two regenerated pilot questions, shard sizes and a submission rule reset from measured times after the pilot, and one resubmission after a refusal for lack of disk space.
+

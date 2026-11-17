@@ -60,7 +60,7 @@ rows = [
  ("Options rotated, no recalibration", "large/OBQA/C2C", C2C, 12, 582, 2.06, (1.07, 3.57), True, H, "& 12 & 2.06 [1.07, 3.57] & $2.2\\times10^{-4}$"),
  ("Options rotated, no recalibration", "large/OBQA/Text+fact", TEXT, 14, 545, 2.57, (1.41, 4.27), False, H, "& 14 & 2.57 [1.41, 4.27] & $3.4\\times10^{-3}$"),
 ]
-# Table 2 of the main text must carry the same sealed/held-out/later counts.
+# Table 4 of the main text must carry the same sealed/held-out/later counts.
 for s in ["sealed 20/1,100", "sealed 11/1,047", "held out 8/388", "held out 12/595", "held out 13/595",
           "held out 16/558", "held out 3/440", "held out 15/794", "held out 15/733", "sealed 9/364", "54/1,044"]:
     need(T2, s, "tab_main_economics.tex")

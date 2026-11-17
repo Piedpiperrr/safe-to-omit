@@ -31,19 +31,36 @@ system keeps communicating.
   comparable headroom and reproduce a median **76%** of the oracle's gain over the receiver
   (Table 1).
 - **Whether a message can be skipped depends on how often and how predictably it changes the
-  receiver's answer**, not on its overall accuracy.
+  receiver's answer**, not on its overall accuracy; every certified C2C path is less accurate
+  than the receiver alone.
+- **Where Text helps, skipping keeps most of its gain.** In the four such settings with unseen
+  questions, the deployed policies skip 59 to 80% of them and keep an estimated **76 to 95%** of
+  the gain over the receiver (Table 2).
 - **Safety does not determine efficiency.** At batch size one, skipping Text saves hundreds of
   milliseconds per query (**717.6 ms** for the large pair on ARC, with 95.0% of questions
-  skipped); skipping C2C saves far less (8 to 111 ms) (Table 2).
+  skipped); skipping C2C saves far less (8 to 111 ms) (Table 4).
 - In eleven tests on unseen questions, every certified policy we could test kept its change
   rate's 95% upper bound below 5%; on the sealed ARC test, the large pair's Text policy changed
   **20 of 1,100** skipped answers.
 
+Two prospective tests fix every rule before any calibration output (Table 3; Appendix G.6), and a
+batched replay measures latency beyond batch size one:
+
+- **A three-agent system (QASC).** The primary policy skips the verifier agent, the only agent
+  that sees the supporting facts, on 39.9% of 2,000 sealed questions, loses 5 corrections, and
+  keeps **12.55** of its 12.80-point gain.
+- **A 32B helper and receiver (OBQA).** The same procedure skips the helper on 68.4% of 744
+  held-out questions and keeps the whole 2.55-point gain.
+- **Batched serving (Appendix H).** With skipped requests returning early in static batches of 1,
+  8 and 32, skipping lowers mean request latency by 35 to 67% in all twelve settings.
+
 **Models:** three Qwen helper/receiver pairs, *small* (Qwen2.5-0.5B-Instruct → Qwen3-0.6B),
 *medium* (Qwen2.5-1.5B-Instruct → Qwen3-1.7B) and *large* (Qwen2.5-7B-Instruct → Qwen3-8B),
 with the released C2C fusers; cross-family extensions with OLMo-2-1124-7B-Instruct,
-Llama-3.2-1B-Instruct and Llama-3.1-8B-Instruct.
-**Benchmarks:** OpenBookQA, ARC-Challenge and MMLU-Pro, plus SQuAD and GSM8K.
+Llama-3.2-1B-Instruct and Llama-3.1-8B-Instruct; a 32B pair (Qwen2.5-32B-Instruct → Qwen3-32B);
+and a three-agent system of two Qwen2.5-7B-Instruct agents and a Qwen3-8B receiver.
+**Benchmarks:** OpenBookQA, ARC-Challenge and MMLU-Pro, plus SQuAD and GSM8K; QASC for the
+three-agent system.
 
 ## Reproducing the paper
 
@@ -76,7 +93,7 @@ fails if any figure differs from the committed one. Figure 1 is a schematic.
 |---|---|---|
 | `verify_a_certification.py` | the certification test at all 20 grid points and the deployed threshold for large/OBQA/Text, large/ARC/Text and medium/OBQA/C2C | calibration ledgers |
 | `verify_b_e22_ratio.py` | the null/real gain ratio 0.547 of the rate-matched null, large/OBQA/Text (Table 1) | per-question answers of the real and null inputs |
-| `verify_c_table2_row.py` | Table 2, large/ARC/Text: 95.0% skipped and 9 of 284 skipped answers changed | per-question confidence scores and parsed labels |
+| `verify_c_table4_row.py` | Table 4, large/ARC/Text: 95.0% skipped and 9 of 284 skipped answers changed | per-question confidence scores and parsed labels |
 
 Every other table and figure has its stored results in the dataset: each experiment's protocol
 (`PREREG*.md` with its SHA-256), `SUMMARY.md`, `DEVIATIONS.md` and result tables.

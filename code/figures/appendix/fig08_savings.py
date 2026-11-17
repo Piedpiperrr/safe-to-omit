@@ -5,17 +5,17 @@ policy across runs and implementations, as grouped bars.
 
 Two panels with separate scales (Text-reference and C2C-reference policies).
 For each policy: solid bar = the original replay (first configuration;
-Table 18, tab:e2e_full) with its paired bootstrap 95% whisker and its mean
+Table 26, tab:e2e_full) with its paired bootstrap 95% whisker and its mean
 printed above; markers on it = the three repeats (second configuration;
-Table 20, tab:repeats); outlined bar = the single later run of Text+fact or a
-Llama-8B policy (second configuration; Appendix H text, Table 29); hatched
+Table 28, tab:repeats); outlined bar = the single later run of Text+fact or a
+Llama-8B policy (second configuration; Appendix H text, Table 39); hatched
 bar = answering skipped questions from the probe's argmax (second
-configuration; Table 21, tab:impl); black tick = the component estimate fixed
+configuration; Table 29, tab:impl); black tick = the component estimate fixed
 before the replays (large pair: results/boundaries_large_small/summary/
 panel_cost.csv; medium pair: the CPU recombination stated in Appendix H).
 
 Checks: every number is parsed from the appendix source; the original savings
-agree across Tables 18 and 20 and the main text's Table 2 is not touched; the
+agree across Tables 26 and 28 and the main text's Table 4 is not touched; the
 component estimates agree with the stated differences (-1.76 to +20.50 ms);
 every saving class is recomputed from the intervals; and the figure's claims
 (argmax raises every saving; classes are unchanged) are asserted.
@@ -47,7 +47,7 @@ t19a = t19[:t19.index("(b)")] if "(b)" in t19 else t19
 rep = {}
 for m in re.finditer(r"(medium|large) & (OBQA|ARC|MMLU-Pro) & (Text|C2C) & " + " & ".join([NUM] * 4), t19a):
     s = f"{m.group(1)}/{m.group(2)}/{m.group(3)}"; v = [f(x) for x in m.groups()[3:]]
-    assert v[0:3] == orig[s], s                                  # Table 20 original = Table 18
+    assert v[0:3] == orig[s], s                                  # Table 28 original = Table 26
     rep[s] = [v[3:6], v[6:9], v[9:12]]
 assert len(rep) == 8
 impl = {}

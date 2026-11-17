@@ -10,8 +10,8 @@ ratio (mean of 1,000 draws) drawn from 1 on a log axis; whisker = 95%
 question-bootstrap interval; filled = interval excludes 1, outlined = it
 includes 1. The stratified large/ARC Text ratio is a lower bound.
 
-Numbers are parsed from Table 14 (tab:e22) in new_app_C.tex and checked against
-Table 13(a) (tab:null_matched) and Table 1 of the main text.
+Numbers are parsed from Table 18 (tab:e22) in new_app_C.tex and checked against
+Table 17(a) (tab:null_matched) and Table 1 of the main text.
 """
 import re, sys, os
 from decimal import Decimal, ROUND_HALF_UP

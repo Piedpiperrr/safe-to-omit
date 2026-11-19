@@ -18,6 +18,7 @@
 <meta name="citation_author" content="Yan, Feng">
 <meta name="citation_publication_date" content="2026/11">
 <meta name="citation_pdf_url" content="https://piedpiperrr.github.io/safe-to-omit/paper.pdf">
+<meta name="citation_arxiv_id" content="2611.23570">
 <link rel="canonical" href="https://piedpiperrr.github.io/safe-to-omit/">
 
 <meta property="og:type" content="article">
@@ -117,7 +118,8 @@ dialog.full.zoom .full-stage img { max-width:none; max-height:none; width:2160px
    "url": "https://piedpiperrr.github.io/safe-to-omit/",
    "mainEntityOfPage": "https://piedpiperrr.github.io/safe-to-omit/",
    "image": "https://piedpiperrr.github.io/safe-to-omit/assets/overview-large.png",
-   "abstract": "In collaborative multi-agent systems, a receiver agent often waits for a message from a helper agent, which can be either natural-language text or its latent KV cache. While this communication can improve performance, it also adds latency. We investigate when a receiver agent can skip the helper agent's message safely (the final answer rarely changes) and beneficially (the time saved exceeds the cost of deciding). We propose a dynamic skipping mechanism that reads the receiver agent's confidence without the message and applies a finite-sample statistical test. This test certifies a confidence threshold at which, with high probability, at most 5% of skipped answers change; if no threshold passes, the system keeps communicating. We evaluate our mechanism on five benchmarks: three multiple-choice benchmarks with three model pairs each, plus an extractive (SQuAD) and a math (GSM8K) benchmark. Three main insights emerge. First, oracle headroom, a common metric for routing among paths, is weak evidence that messages help. Control inputs without answer-specific content, matched to change answers as often as real messages, give comparable headroom and reproduce a median 76% of the oracle's gain over the receiver agent. Whether text messages beat these controls with statistical significance depends on how they are matched. Second, whether a message can be skipped depends on how often and how predictably it alters the receiver agent's answer, not on its overall accuracy. Third, safety does not determine efficiency: at batch size one, skipping text messages saves hundreds of milliseconds per query, whereas skipping latent KV cache saves far less. Certification extends to SQuAD, which a label-free rule chose from eight candidate settings, while on GSM8K no threshold passes. Finally, in eleven tests on unseen questions, every certified policy we could test kept its change rate's 95% upper bound below 5%, though only four tests had a pass criterion set in advance, and the sealed KV-cache result holds only under our answer parser.",
+   "abstract": "In collaborative multi-agent systems, a receiver agent often waits for a message from a helper agent, which can be either natural-language text or its latent KV cache. While this communication can improve performance, it also adds latency. We investigate when a receiver agent can skip the helper agent's message safely (the final answer rarely changes) and beneficially (the time saved exceeds the cost of deciding). We propose a dynamic skipping mechanism that reads the receiver agent's confidence without the message and applies a finite-sample statistical test. This test certifies a confidence threshold at which, with high probability, at most 5% of skipped answers change; if no threshold passes, the system keeps communicating. We evaluate our mechanism on OpenBookQA, ARC-Challenge, and MMLU-Pro with three Qwen model pairs, on cross-family receiver and helper agents, and on SQuAD and GSM8K. Four main insights emerge. First, oracle headroom, a common metric for routing among paths, is weak evidence that messages help: control inputs without answer-specific content, matched to change answers as often as real messages, reproduce a median 76% of the oracle's gain over the receiver agent. Second, whether a message can be skipped depends on how often and how predictably it alters the receiver agent's answer, not on its overall accuracy; every certified KV-cache path is less accurate than the receiver agent alone. Third, where text messages help, skipping can keep most of their gain: in the four such settings with unseen questions, the deployed policies skip 59 to 80% of them and keep an estimated 76 to 95% of the gain over the receiver agent. In two prospective tests with every rule fixed in advance, the procedure skips the verifier agent of a three-agent system on 39.9% of sealed questions while keeping 12.55 of its 12.80-point gain, and a 32B helper agent on 68.4% of held-out questions while keeping its whole gain. Fourth, safety does not determine efficiency: at batch size one, skipping text messages saves hundreds of milliseconds per query, whereas skipping latent KV cache saves far less. Certification extends to SQuAD, which a label-free rule chose from eight candidate settings, but not to GSM8K. In eleven tests on unseen questions, every certified policy we could test kept its change rate's 95% upper bound below 5% under our answer parsers.",
+   "sameAs": ["https://arxiv.org/abs/2611.23570"],
    "datePublished": "2026-11",
    "keywords": [
     "LLM agents",
@@ -203,6 +205,7 @@ dialog.full.zoom .full-stage img { max-width:none; max-height:none; width:2160px
     </p>
   <p class="affiliations"><span><sup>1</sup> University of Houston</span><span><sup>2</sup> Argonne National Laboratory</span><span><sup>3</sup> Oregon State University</span><span><sup>*</sup> Corresponding author</span></p>
   <nav class="resources" aria-label="Paper resources">
+    <a class="resource" href="https://arxiv.org/abs/2611.23570"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>arXiv</a>
     <a class="resource" href="paper.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h4M10 12h5M10 16h5"/></svg>Paper</a>
     <a class="resource" href="https://github.com/Piedpiperrr/safe-to-omit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></svg>Code</a>
     <a class="resource" href="https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg>Dataset</a>
@@ -226,14 +229,18 @@ dialog.full.zoom .full-stage img { max-width:none; max-height:none; width:2160px
   </section>
   <section class="reading citation" id="cite" aria-labelledby="cite-title">
     <div class="section-heading"><h2 id="cite-title">Citation</h2><a href="citation.bib">Download BibTeX ↗</a></div>
-    <p>Xinyang Li, Chih-Hsuan Yang, Xiaolong Ma, Anjir Ahmed Chowdhury, Vikram Vasudevan, Rajeev Thakur, and Feng Yan. <em>Preprint, 2026.</em></p>
+    <p>Xinyang Li, Chih-Hsuan Yang, Xiaolong Ma, Anjir Ahmed Chowdhury, Vikram Vasudevan, Rajeev Thakur, and Feng Yan. <em>arXiv preprint <a href="https://arxiv.org/abs/2611.23570">arXiv:2611.23570</a>, 2026.</em></p>
     <details id="bibtex-details">
       <summary>BibTeX</summary>
       <pre id="bibtex"><code>@misc{li2026safetoomit,
-  title  = {Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an {LLM} Agent Skips Another's Message},
-  author = {Li, Xinyang and Yang, Chih-Hsuan and Ma, Xiaolong and Chowdhury, Anjir Ahmed and Vasudevan, Vikram and Thakur, Rajeev and Yan, Feng},
-  year   = {2026},
-  note   = {Preprint}
+  title         = {Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an {LLM} Agent Skips Another's Message},
+  author        = {Li, Xinyang and Yang, Chih-Hsuan and Ma, Xiaolong and Chowdhury, Anjir Ahmed and Vasudevan, Vikram and Thakur, Rajeev and Yan, Feng},
+  year          = {2026},
+  eprint        = {2611.23570},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2611.23570},
+  url           = {https://arxiv.org/abs/2611.23570}
 }</code></pre>
       <button type="button" class="copy" data-copy="bibtex">Copy BibTeX</button><span class="copy-status" role="status" aria-live="polite"></span>
     </details>

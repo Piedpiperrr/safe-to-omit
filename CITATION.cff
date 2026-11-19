@@ -32,7 +32,9 @@ preferred-citation:
   type: article
   title: "Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message"
   year: 2026
-  notes: "Preprint"
+  journal: "arXiv preprint arXiv:2611.23570"
+  doi: "10.48550/arXiv.2611.23570"
+  url: "https://arxiv.org/abs/2611.23570"
   authors:
     - given-names: Xinyang
       family-names: Li

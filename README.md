@@ -1,7 +1,8 @@
 # Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an LLM Agent Skips Another's Message
 
-**Preprint · November 2026**
+**Preprint · [arXiv:2611.23570](https://arxiv.org/abs/2611.23570) · November 2026**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.23570-b31b1b)](https://arxiv.org/abs/2611.23570)
 [![Project page](https://img.shields.io/badge/Project-Page-1f6f8b)](https://piedpiperrr.github.io/safe-to-omit/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-333333)](https://piedpiperrr.github.io/safe-to-omit/paper.pdf)
 [![HF dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-ICLR2027--SafeToOmit-ffcc4d)](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit)
@@ -167,10 +168,14 @@ and `cpu_reanalysis`.
 
 ```bibtex
 @misc{li2026safetoomit,
-  title  = {Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an {LLM} Agent Skips Another's Message},
-  author = {Li, Xinyang and Yang, Chih-Hsuan and Ma, Xiaolong and Chowdhury, Anjir Ahmed and Vasudevan, Vikram and Thakur, Rajeev and Yan, Feng},
-  year   = {2026},
-  note   = {Preprint}
+  title         = {Safe to Omit, Worth Omitting? Keeping the Answer and Cutting Latency When an {LLM} Agent Skips Another's Message},
+  author        = {Li, Xinyang and Yang, Chih-Hsuan and Ma, Xiaolong and Chowdhury, Anjir Ahmed and Vasudevan, Vikram and Thakur, Rajeev and Yan, Feng},
+  year          = {2026},
+  eprint        = {2611.23570},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2611.23570},
+  url           = {https://arxiv.org/abs/2611.23570}
 }
 ```
 

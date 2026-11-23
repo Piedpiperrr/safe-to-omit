@@ -1,6 +1,8 @@
 # Paper map
 
 Every table and figure in the paper, the stored results behind it, and how this release checks it.
+Numbers and appendix letters follow arXiv version 2 (arXiv:2611.23570v2). The map for version 1, with its
+numbering, is [PAPER_MAP_V1.md](PAPER_MAP_V1.md); the correspondence between the two is at the end of this file.
 Folders under `results/`, `records/`, `configs/` and `splits/` are in the dataset
 [AgentsSci/ICLR2027-SafeToOmit](https://huggingface.co/datasets/AgentsSci/ICLR2027-SafeToOmit)
 (`make data`); the subset the checks and figures read is also committed here.
@@ -17,60 +19,85 @@ Experiment folders keep the experiment IDs used during the research (E3 … E22,
 |---|---|---|---|
 | Fig. 1 | schematic of message skipping | — | — |
 | Table 1 | oracle headroom and the rate-matched null | `results/e09a/`, `results/e22/` | stored results |
-| Table 2 | gain retention on unseen questions: the four helpful Text policies | `results/cpu_reanalysis/` | stored results |
-| Table 3 | prospective tests: every policy of the three-agent system (QASC, sealed test) and of the 32B pair (OBQA, held out) | `results/three_agent_qasc/`, `results/scale_32b/` | make verify: three-agent policies and primary sealed-test row (`verify/verify_d_three_agent.py`) |
-| Fig. 2 | certification boundary over all settings and the two prospective tests | values transcribed from Tables 6 and 9 and Appendices G.2–G.3; the two prospective tests recomputed from `results/scale_32b/recheck/dev.csv` and `results/three_agent_qasc/recheck/sealed.csv` (also in this repository) | make figures |
-| Table 4 | every deployed policy: skipped share, development and unseen changes, level, delta-accuracy, G, kept, saving | `results/frozen_pipeline/`, `results/sealed_arc_test/`, `results/e09b_e09c/`, `results/e16/`, `results/e20_full/`, `results/e21/` | make verify: row large/ARC/Text (`verify/verify_c_table4_row.py`) |
+| Fig. 2 | certification boundary over all settings and the two prospective tests | values transcribed from Tables 8 and 11 and Appendices E.2–E.3; the two prospective tests recomputed from `results/scale_32b/recheck/dev.csv` and `results/three_agent_qasc/recheck/sealed.csv` (also in this repository) | make figures |
+| Table 2 | gain retention on unseen questions: the four helpful Text policies and, in the last two rows, the two prospective tests | `results/cpu_reanalysis/`, `results/three_agent_qasc/`, `results/scale_32b/` | stored results; make verify: three-agent primary sealed-test row (`verify/verify_d_three_agent.py`) |
+| Table 3 | every deployed policy: skipped share, development and unseen changes, level, delta-accuracy, G, kept, saving | `results/frozen_pipeline/`, `results/sealed_arc_test/`, `results/e09b_e09c/`, `results/e16/`, `results/e20_full/`, `results/e21/` | make verify: row large/ARC/Text (`verify/verify_c_table4_row.py`, named after the arXiv v1 table number) |
 | App. A | method and protocol | `configs/` (also in this repository), `code/pipeline/` | — |
-| App. B, Table 5 | provenance and exposure; parser exposure | `results/answer_parser_v2/` | stored results |
+| App. B, Table 4 | provenance and exposure; parser exposure | `results/answer_parser_v2/` | stored results |
 | App. B | the reused large/OBQA/Text certification: the declared 100-test family on large/OBQA/Text (60 new + 40 reused) | `results/zero_gold_controls/summary/` | stored results |
 | App. B | the other tests on the same calibration questions: the earlier large/OBQA screen (Diff, H, Random) and 300 correctness-trained heads under label budgets (R32/R128/R512 x r0-r4); 460 tests in all | `results/historical_large_obqa_screen/`, `results/historical_large_obqa_gold_budget/` | stored results |
-| App. C, Table 6 | development certification boundary, all settings | `results/frozen_pipeline/confidence_boundaries/` | stored results |
-| App. C, Table 7 | calibration statistics of the fourteen main settings | `results/frozen_pipeline/confidence_boundaries/calibration_all_160.csv` | make verify: three settings (`verify/verify_a_certification.py`) |
-| App. C, Fig. 3 | calibration bound and development change rate at every grid point, large and small pairs | `results/boundaries_large_small/summary/calibration_all_160.csv`, `risk_coverage_curves.csv`; `configs/confidence_boundaries/deployments/all.json` | make figures |
-| App. C, Fig. 4 | same-target baselines: receiver alone, random skipping, historical learned predictor | `results/e00_baselines/`, `code/figures/appendix/record_tables/baselines.tex`, `results/frozen_pipeline/learned_control_D/zero_gold_controls/main_dev.csv` | make figures |
-| App. C, Table 8 | post-hoc variants | `results/e13/results/` | stored results |
-| App. C, Table 9 | small and medium MMLU-Pro (E8) | `results/e08/analysis/` | stored results |
-| App. C, Table 10 | MMLU-Pro subgroups | `results/mmlu_pro_breadth/`, `results/e17/results/E17_6_mmlu_categories.csv` | stored results |
-| App. C, Table 11 | per-discipline MMLU-Pro certification and coverage | `results/cpu_reanalysis/` | stored results |
-| App. D | small-sample check: the timestamps and the 0.80 cut | `results/e13/results/item4_*`, `results/e13/SUMMARY.md` | stored results |
-| App. D, Table 12 | fit-split prediction (E15) | `results/e15/results/e15_1_per_setting.csv` | stored results |
-| App. D, Fig. 5 | binormal certification grid (E17-5) | `results/e17/results/E17_5c_grid.csv`, `E17_5c_contour.csv`, `E17_5b_binormal.csv` | make figures |
-| App. D | helper-aware score (E9c) | `results/e09b_e09c/analysis/E9C_RESULTS.json` | stored results |
-| App. E, Table 13 | gain retention under skipping | `results/e13/results/` | stored results |
-| App. E, Tables 14–15 | label-light certificate (E21) | `results/e21/results/` | stored results |
-| App. E | medium/OBQA/Text lost-correction test (36 labels, no threshold passes) | `results/cpu_reanalysis/` | stored results |
-| App. E, Table 16 | single models next to the pair with Text | `results/cpu_reanalysis/` | stored results |
-| App. E, Fig. 6 | share of the gain kept at each tolerance; reference corrections lost and kept | `results/e13/results/`, `code/figures/appendix/record_tables/omit_keep.tex`, `code/figures/appendix/record_tables/patterns.tex` | make figures |
-| App. F, Table 17 | matched-null headroom and gain; rotated options and another question's message | `results/e09a/results/`, `results/e01_e02_e04/results/e4_null_controls.csv`, `results/e13/results/item1_best_fixed_headroom.csv` | stored results |
-| App. F, Tables 18–19 | per-path null, stratified next to unstratified (Table 18), and the direction of the changes (Table 19) | `results/e22/results/` | make verify: the large/OBQA/Text ratio (`verify/verify_b_e22_ratio.py`) |
-| App. F, Fig. 7 | each path against the content-free null, both matching designs (from Tables 17–18) | `results/e09a/results/`, `results/e22/results/` | make figures |
-| App. F, Fig. 8 | paths that alone are right; co-changed questions; receiver uncertainty of changed answers | `code/figures/appendix/record_tables/patterns.tex`, `results/e09a/results/e9a_overlap.csv`, `results/e09a/results/e9a_receiver_confidence.csv` | make figures |
-| App. G.1 | cross-family transfer X1, X2; Llama-3.1-8B receiver X3 | `results/x01_x02_cross_family/`, `results/x03_llama_receiver/` | stored results |
-| App. G.2 | Text+fact (E6) and the stronger helper (E16-5) | `results/e06/e6/`, `results/e16/results/e16_5/` | stored results |
-| App. G.3, Tables 20–21 | SQuAD short answers (E20 pilot and full) | `results/e20_pilot/`, `results/e20_full/` | stored results |
-| App. G.4 | GSM8K: E10 is the preregistered check (no candidate threshold certifies); E18 planned a derivation-prefix score on the same split and stopped at its reproduction check, so no prefix score was tested | `results/e10/`, `results/e18/` | stored results |
-| App. G.5 | sampled receiver answers (X4) | `results/x04_sampled_answers/` | stored results |
-| App. G.6, Table 22 | calibration tests of both prospective tests, every candidate | `results/three_agent_qasc/`, `results/scale_32b/` | make verify: three-agent policies (`verify/verify_d_three_agent.py`) |
-| App. G.6, Table 23 | timing panels of both prospective tests | `results/three_agent_qasc/`, `results/scale_32b/` | stored results |
-| App. G.6, Table 24 | three-agent controls (development) | `results/three_agent_qasc/` | stored results |
-| App. G.6, Table 25 | three-agent deviations, with their timing | `results/three_agent_qasc/DEVIATIONS.md` | stored results |
-| App. G.6 | 32B pair: development results, helper alone, deviations | `results/scale_32b/` | stored results |
-| App. H, Table 26 | end-to-end replays | `results/frozen_pipeline/dev_e2e_replay/`, `results/medium_e2e_replay/`, `results/mmlu_pro_e2e_replay/` | stored results |
-| App. H, Table 27 | busy-GPU time | `results/e15/results/e15_2_busy_savings.csv` | stored results |
-| App. H, Table 28 | the three repeated replays (E3) | `results/e03_repeat{1,2,3}/`, `results/e12/results/` | stored results |
-| App. H, Table 29 | reuse and argmax (E7) | `results/e07/`, `results/r2_analysis/` | stored results |
-| App. H, Table 30 | panel representativeness; C2C port check | `results/frozen_pipeline/confidence_boundaries/panel_cost.csv`, `results/e14/` | stored results |
-| App. H, Fig. 9 | every replayed saving across configurations, repeats and implementations, with the component estimates | Tables 26 and 28–29 (folders above); `results/boundaries_large_small/summary/panel_cost.csv` | make figures |
-| App. H, Tables 31–32 | batched serving: latency and throughput of the three arms at B = 1, 8, 32; routes and answers across batch sizes | `results/batched_serving/` | stored results |
-| App. I, Table 33 | held-out OBQA (E9b) | `results/e09b_e09c/analysis/E9B_RESULTS.json` | stored results |
-| App. I, Table 34 | later out-of-sample tests (E16-1, E16-2) | `results/e16/results/analysis_oos/` | stored results |
-| App. I, Table 35 | option rotation (E21b) | `results/e21b/results/primary_policies.csv` | stored results |
-| App. I | sealed ARC; official extraction (E14-1, E17-4) | `results/sealed_arc_test/`, `results/e14/`, `results/e17/results/E17_4_audit.csv` | stored results |
-| App. I, Fig. 10 | every frozen out-of-sample test with its 95% interval (from Tables 4 and 33–35 and Appendices G.3 and I) | folders of Tables 33–35 and `results/sealed_arc_test/`, `results/e20_full/` | make figures |
-| App. J, Tables 36–40 | zero uncertainty, AUROC without u = 0, the u = 0 rule, saving by source, receiver rotation | `results/e17/results/` | stored results |
-| App. J, Fig. 11 | change rate at u = 0 and u > 0; share of the saving from u > 0 (from Tables 36 and 39) | `results/e17/results/` | make figures |
-| App. J | probe precision and ties (E16-3) | `results/e16/results/analysis_e16_3/`, `results/e16/results/verification/` | stored results |
-| App. J | unparseable answers (E11, E19) | `results/e11/results/`, `results/e19/results/` | stored results |
-| App. K, Table 41 | related approaches | — | — |
-| App. L | prompts and the answer parser; rendered prompts of the prospective tests and the verifier instruction | `results/e13/PROMPTS_AND_PARSER.md`; `configs/three_agent_qasc/rendered_examples/`, `configs/three_agent_qasc/prompts/B_prompt_v2.json`, `configs/scale_32b/rendered_examples/` (also in this repository) | stored results |
+| App. C, Table 5 | matched-null headroom and gain; rotated options and another question's message | `results/e09a/results/`, `results/e01_e02_e04/results/e4_null_controls.csv`, `results/e13/results/item1_best_fixed_headroom.csv` | stored results |
+| App. C, Tables 6–7 | per-path null, stratified next to unstratified (Table 18), and the direction of the changes (Table 19) | `results/e22/results/` | make verify: the large/OBQA/Text ratio (`verify/verify_b_e22_ratio.py`) |
+| App. C, Fig. 3 | each path against the content-free null, both matching designs (from Tables 5–6) | `results/e09a/results/`, `results/e22/results/` | make figures |
+| App. C, Fig. 4 | paths that alone are right; co-changed questions; receiver uncertainty of changed answers | `code/figures/appendix/record_tables/patterns.tex`, `results/e09a/results/e9a_overlap.csv`, `results/e09a/results/e9a_receiver_confidence.csv` | make figures |
+| App. D, Table 8 | development certification boundary, all settings | `results/frozen_pipeline/confidence_boundaries/` | stored results |
+| App. D, Table 9 | calibration statistics of the fourteen main settings | `results/frozen_pipeline/confidence_boundaries/calibration_all_160.csv` | make verify: three settings (`verify/verify_a_certification.py`) |
+| App. D, Fig. 5 | calibration bound and development change rate at every grid point, large and small pairs | `results/boundaries_large_small/summary/calibration_all_160.csv`, `risk_coverage_curves.csv`; `configs/confidence_boundaries/deployments/all.json` | make figures |
+| App. D, Fig. 6 | same-target baselines: receiver alone, random skipping, historical learned predictor | `results/e00_baselines/`, `code/figures/appendix/record_tables/baselines.tex`, `results/frozen_pipeline/learned_control_D/zero_gold_controls/main_dev.csv` | make figures |
+| App. D, Table 10 | post-hoc variants | `results/e13/results/` | stored results |
+| App. D, Table 11 | small and medium MMLU-Pro (E8) | `results/e08/analysis/` | stored results |
+| App. D, Table 12 | MMLU-Pro subgroups | `results/mmlu_pro_breadth/`, `results/e17/results/E17_6_mmlu_categories.csv` | stored results |
+| App. D, Table 13 | per-discipline MMLU-Pro certification and coverage | `results/cpu_reanalysis/` | stored results |
+| App. E.1 | cross-family transfer X1, X2; Llama-3.1-8B receiver X3 | `results/x01_x02_cross_family/`, `results/x03_llama_receiver/` | stored results |
+| App. E.2 | Text+fact (E6) and the stronger helper (E16-5) | `results/e06/e6/`, `results/e16/results/e16_5/` | stored results |
+| App. E.3, Tables 14–15 | SQuAD short answers (E20 pilot and full) | `results/e20_pilot/`, `results/e20_full/` | stored results |
+| App. E.4 | GSM8K: E10 is the preregistered check (no candidate threshold certifies); E18 planned a derivation-prefix score on the same split and stopped at its reproduction check, so no prefix score was tested | `results/e10/`, `results/e18/` | stored results |
+| App. E.5 | sampled receiver answers (X4) | `results/x04_sampled_answers/` | stored results |
+| App. F, Table 16 | held-out OBQA (E9b) | `results/e09b_e09c/analysis/E9B_RESULTS.json` | stored results |
+| App. F, Table 17 | later out-of-sample tests (E16-1, E16-2) | `results/e16/results/analysis_oos/` | stored results |
+| App. F, Table 18 | option rotation (E21b) | `results/e21b/results/primary_policies.csv` | stored results |
+| App. F | sealed ARC; official extraction (E14-1, E17-4) | `results/sealed_arc_test/`, `results/e14/`, `results/e17/results/E17_4_audit.csv` | stored results |
+| App. F, Fig. 7 | every frozen out-of-sample test with its 95% interval (from Tables 3 and 16–18 and Appendices E.3 and F) | folders of Tables 16–18 and `results/sealed_arc_test/`, `results/e20_full/` | make figures |
+| App. G, Tables 19–23 | zero uncertainty, AUROC without u = 0, the u = 0 rule, saving by source, receiver rotation | `results/e17/results/` | stored results |
+| App. G, Fig. 8 | change rate at u = 0 and u > 0; share of the saving from u > 0 (from Tables 19 and 22) | `results/e17/results/` | make figures |
+| App. G | probe precision and ties (E16-3) | `results/e16/results/analysis_e16_3/`, `results/e16/results/verification/` | stored results |
+| App. G | unparseable answers (E11, E19) | `results/e11/results/`, `results/e19/results/` | stored results |
+| App. H | small-sample check: the timestamps and the 0.80 cut | `results/e13/results/item4_*`, `results/e13/SUMMARY.md` | stored results |
+| App. H, Table 24 | fit-split prediction (E15) | `results/e15/results/e15_1_per_setting.csv` | stored results |
+| App. H, Fig. 9 | binormal certification grid (E17-5) | `results/e17/results/E17_5c_grid.csv`, `E17_5c_contour.csv`, `E17_5b_binormal.csv` | make figures |
+| App. H | helper-aware score (E9c) | `results/e09b_e09c/analysis/E9C_RESULTS.json` | stored results |
+| App. I, Table 25 | gain retention under skipping | `results/e13/results/` | stored results |
+| App. I, Tables 26–27 | label-light certificate (E21) | `results/e21/results/` | stored results |
+| App. I | medium/OBQA/Text lost-correction test (36 labels, no threshold passes) | `results/cpu_reanalysis/` | stored results |
+| App. I, Table 28 | single models next to the pair with Text | `results/cpu_reanalysis/` | stored results |
+| App. I, Fig. 10 | share of the gain kept at each tolerance; reference corrections lost and kept | `results/e13/results/`, `code/figures/appendix/record_tables/omit_keep.tex`, `code/figures/appendix/record_tables/patterns.tex` | make figures |
+| App. J | deviations of both prospective tests (summarized in the paper; listed in [RECORDS_MOVED_V2.md](RECORDS_MOVED_V2.md) and in each folder's `DEVIATIONS.md`) | `results/three_agent_qasc/DEVIATIONS.md`, `results/scale_32b/DEVIATIONS.md` | stored results |
+| App. J.1, Table 29 | the three-agent system: agents, inputs and outputs | `configs/three_agent_qasc/` (also in this repository) | — |
+| App. J.1, Table 30; App. J.2, Table 34 | calibration tests of both prospective tests at the candidates that decide the three policies; every candidate is in [RECORDS_MOVED_V2.md](RECORDS_MOVED_V2.md) | `results/three_agent_qasc/`, `results/scale_32b/` | make verify: three-agent policies (`verify/verify_d_three_agent.py`) |
+| App. J.1, Table 31 | three-agent sealed test, every policy | `results/three_agent_qasc/` | make verify: three-agent primary sealed-test row (`verify/verify_d_three_agent.py`) |
+| App. J.1, Table 32; App. J.2, Table 37 | timing panels of both prospective tests | `results/three_agent_qasc/`, `results/scale_32b/` | stored results |
+| App. J.1, Table 33 | three-agent controls (development) | `results/three_agent_qasc/` | stored results |
+| App. J.2, Tables 35–36 | 32B pair: held-out questions; development questions and single models | `results/scale_32b/` | stored results |
+| App. K.1, Table 38 | end-to-end replays | `results/frozen_pipeline/dev_e2e_replay/`, `results/medium_e2e_replay/`, `results/mmlu_pro_e2e_replay/` | stored results |
+| App. K.1, Table 39 | busy-GPU time | `results/e15/results/e15_2_busy_savings.csv` | stored results |
+| App. K.1, Table 40 | the three repeated replays (E3) | `results/e03_repeat{1,2,3}/`, `results/e12/results/` | stored results |
+| App. K.1, Table 41 | reuse and argmax (E7) | `results/e07/`, `results/r2_analysis/` | stored results |
+| App. K.1, Table 42 | panel representativeness; C2C port check | `results/frozen_pipeline/confidence_boundaries/panel_cost.csv`, `results/e14/` | stored results |
+| App. K.1, Fig. 11 | every replayed saving across configurations, repeats and implementations, with the component estimates | Tables 38 and 40–41 (folders above); `results/boundaries_large_small/summary/panel_cost.csv` | make figures |
+| App. K.2, Tables 43–44 | batched serving: latency and throughput of the three arms at B = 1, 8, 32; routes and answers across batch sizes | `results/batched_serving/` | stored results |
+| App. L, Table 45 | related approaches | — | — |
+| App. M | prompts and the answer parser; rendered prompts of the prospective tests and the verifier instruction | `results/e13/PROMPTS_AND_PARSER.md`; `configs/three_agent_qasc/rendered_examples/`, `configs/three_agent_qasc/prompts/B_prompt_v2.json`, `configs/scale_32b/rendered_examples/` (also in this repository) | stored results |
+
+## Correspondence with arXiv version 1
+
+Version 2 reorders the appendix by the four questions of Section 4 and moves the audit records listed in
+[RECORDS_MOVED_V2.md](RECORDS_MOVED_V2.md) out of the PDF. Code comments and script names keep the version 1 numbering.
+
+| version 2 | version 1 | content |
+|---|---|---|
+| A | A | method and protocol |
+| B | B | provenance and exposure |
+| C | F | headroom and the null control (Q1) |
+| D | C | all settings and robustness (Q2) |
+| E.1–E.5 | G.1–G.5 | extensions (Q2, Q3) |
+| F | I | out-of-sample tests (Q2) |
+| G | J | what the certificates rest on (Q2) |
+| H | D | predicting the boundary (Q2) |
+| I | E | accuracy under skipping (Q3) |
+| J | G.6 | prospective tests: J.1 three-agent system, J.2 32B pair (Q3, Q4) |
+| K.1 | H | latency at batch size one (Q4) |
+| K.2 | H (batched serving) | batched serving (Q4) |
+| L | K | related approaches |
+| M | L | prompts and answer parser |
+
+Tables: version 1 Tables 1–2 keep their numbers; version 1 Table 3 (prospective tests) is now the last two rows of Table 2 and Appendix J; version 1 Table 4 is Table 3. Figures: 1 and 2 keep their numbers; version 1 Figures 3–11 are now 5, 6, 9, 10, 3, 4, 11, 7 and 8, in that order.

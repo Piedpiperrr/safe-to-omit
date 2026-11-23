@@ -4,58 +4,16 @@ The paper's appendix is a shortened version of an earlier, fuller record of ever
 details below were left out of the appendix for length. Each bullet gives the detail, with its
 numbers exactly as in that record, and the file that holds it (paths are relative to the dataset
 root; see [RECORDS.md](RECORDS.md)). The earlier text
-used "omit" for what the paper calls "skip"; quotations keep the original word.
+used "omit" for what the paper calls "skip"; quotations keep the original word. Appendix letters, tables and figures follow arXiv version 2
+(the version 1 letter is given in each heading; [PAPER_MAP.md](PAPER_MAP.md) maps the two). The audit records that
+version 2 moved out of the PDF are in [RECORDS_MOVED_V2.md](RECORDS_MOVED_V2.md).
 
-## Appendix A — Method and protocol
+## Appendix A: Method and protocol (version 1: Appendix A)
 
 - **Role of the learned predictor.** The learned predictor (internal name `D`) is a control, not a
   candidate for the main method. Record: `configs/confidence_boundaries/frozen_config.json` (key `D`).
 
-## Appendix C — All settings and robustness of the boundary
-
-- **Medium-pair development diagnostics** (OBQA/Text, OBQA/C2C, ARC/Text, ARC/C2C): average
-  precision 0.494, 0.502, 0.412, 0.611. Changed answers that became correct / became incorrect /
-  stayed incorrect: 0/0/0, 7/1/3, 0/0/0, 2/1/1. INVALID parses of R/reference/policy: 8/1/1,
-  8/16/14, 2/0/0, 2/12/10. Record:
-  `results/boundaries_medium/execution_retry1_20260915T164957Z/summary/compact_summary.csv`.
-- **Additional diagnostics.** For the small and large pairs, the released records also provide
-  panel-level comparisons with an undeployable post-hoc agreement reference, valid-only rankings
-  and INVALID decompositions, and paired uncertainty for accuracy and cost differences.
-  Record: `results/boundaries_large_small/summary/` (`panel_cost.csv`, `ranking.csv`,
-  `invalid_decomposition.csv`, `paired_bootstrap.csv`).
-- **Clopper–Pearson 0.999 bound** for the calibration statistics of Table 7, in its row order: 0.232,
-  0.161, 0.419, 0.296; 0.096, 0.049, 0.102, 0.031; 0.033, 0.038, 0.035, 0.048, 0.041, 0.045. Record:
-  `results/r1_cpu_prep/results/item2_calibration_table.csv`.
-- **MMLU-Pro.** "Both references accept q=0.40 (threshold u≤3.8385×10⁻⁵) … Text changes 67 answers
-  (p=1.34×10⁻⁷, CP 0.0406) and C2C 75 (p=1.01×10⁻⁵, CP 0.0446)". Record:
-  `results/mmlu_pro_breadth/calibration/40_test_ledger.csv`.
-- **Small- and medium-pair MMLU-Pro runs.** "the 96,256 requests then ran with no duplicate or
-  missing key and no input mismatch." Record: `results/e08/SUMMARY.md`.
-- **Same-target baselines.** The per-component latency table (Figure 4b) is in
-  `code/figures/appendix/record_tables/baselines.tex`.
-- **Historical routers.** "Earlier complete end-to-end routers and auxiliary scores retain their
-  original sources and are not merged with the unified panels." Record:
-  `results/boundaries_large_small/summary/historical_e2e_reference_reused.csv`.
-
-## Appendix D — Predicting the boundary
-
-- **Small-sample convention.** Samples use "development questions for Text+fact, which has no
-  fit-split reference outputs"; "a sample with no disagreement predicts deployment, and one with no
-  agreement predicts fallback." Record: `results/e13/PREREG_E13.md`.
-- **Fit-split saving.** "unlike [the paper's saving equation], the gap is not conditioned on
-  omission." Record: `results/e15/PREREG_E15.md`.
-- **Helper-aware score, Text+fact.** For Text+fact the helper prefill omits the fact, as frozen; a second,
-  descriptive row with the fact in the prefill is in the released records. Record:
-  `results/e09b_e09c/analysis/E9C_RESULTS.json`.
-
-## Appendix E — Accuracy under skipping
-
-- **"Other" and "Unused (omit/keep)".** "Other counts omitted questions where R and the reference
-  are wrong but the other communication action is correct, and unused counts questions where some
-  action is correct but the policy is not, split by side." Values:
-  `code/figures/appendix/record_tables/omit_keep.tex` (plotted in part in Figure 6b).
-
-## Appendix F — Headroom and the null control
+## Appendix C: Headroom and the null control (version 1: Appendix F)
 
 - **All eight correctness patterns** of R/Text/C2C (1 = correct; INVALID counts as incorrect;
   development):
@@ -71,22 +29,48 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
   | large/MMLU-Pro | 1083 | 54 | 121 | 110 | 150 | 75 | 45 | 1003 |
 
   Questions with C2C correct and Text wrong: 123, 66, 59, 17, 20, 5, and 185 in the order of the
-  table. Record: `code/figures/appendix/record_tables/patterns.tex` (plotted in Figure 8a).
+  table. Record: `code/figures/appendix/record_tables/patterns.tex` (plotted in Figure 4a).
 - **Correct answers, R / rotated options / another question's message** (same order): 285/290/316,
   110/123/130, 490/482/507, 217/216/220, 617/599/624, 268/260/271, 1282/1286/1306. Record:
   `results/e01_e02_e04/results/e4_null_controls.csv`.
 - **Unmatched null oracle** over R and the two perturbed inputs: 488, 200, 596, 245, 679, 277, 1599
   correct; null headroom 23.18, 23.41, 11.99, 8.36, 7.41, 2.01, 11.09 points. Record: same file.
 - **Forced** (mean number of shared questions per draw on which the two joint nulls must agree):
-  84.3, 37.0, 20.9, 8.3, 3.7, 1.0, 133.3 (Appendix F prints the range). Record:
+  84.3, 37.0, 20.9, 8.3, 3.7, 1.0, 133.3 (Appendix C prints the range). Record:
   `results/e09a/results/e9a_ratios.csv`.
 - **Joint-null headroom, mean [2.5, 97.5 percentiles over draws]:** 138.1 [128, 148], 56.3 [49, 64],
   90.9 [83, 97], 25.6 [22, 28], 40.1 [34, 46], 7.6 [6, 9], 260.8 [244, 273]. Record:
   `results/e13/results/item1_best_fixed_headroom.csv`.
 
-## Appendix G — Extensions
+## Appendix D: All settings and robustness of the boundary (version 1: Appendix C)
 
-### G.1 Cross-family pairs
+- **Medium-pair development diagnostics** (OBQA/Text, OBQA/C2C, ARC/Text, ARC/C2C): average
+  precision 0.494, 0.502, 0.412, 0.611. Changed answers that became correct / became incorrect /
+  stayed incorrect: 0/0/0, 7/1/3, 0/0/0, 2/1/1. INVALID parses of R/reference/policy: 8/1/1,
+  8/16/14, 2/0/0, 2/12/10. Record:
+  `results/boundaries_medium/execution_retry1_20260915T164957Z/summary/compact_summary.csv`.
+- **Additional diagnostics.** For the small and large pairs, the released records also provide
+  panel-level comparisons with an undeployable post-hoc agreement reference, valid-only rankings
+  and INVALID decompositions, and paired uncertainty for accuracy and cost differences.
+  Record: `results/boundaries_large_small/summary/` (`panel_cost.csv`, `ranking.csv`,
+  `invalid_decomposition.csv`, `paired_bootstrap.csv`).
+- **Clopper–Pearson 0.999 bound** for the calibration statistics of Table 9, in its row order: 0.232,
+  0.161, 0.419, 0.296; 0.096, 0.049, 0.102, 0.031; 0.033, 0.038, 0.035, 0.048, 0.041, 0.045. Record:
+  `results/r1_cpu_prep/results/item2_calibration_table.csv`.
+- **MMLU-Pro.** "Both references accept q=0.40 (threshold u≤3.8385×10⁻⁵) … Text changes 67 answers
+  (p=1.34×10⁻⁷, CP 0.0406) and C2C 75 (p=1.01×10⁻⁵, CP 0.0446)". Record:
+  `results/mmlu_pro_breadth/calibration/40_test_ledger.csv`.
+- **Small- and medium-pair MMLU-Pro runs.** "the 96,256 requests then ran with no duplicate or
+  missing key and no input mismatch." Record: `results/e08/SUMMARY.md`.
+- **Same-target baselines.** The per-component latency table (Figure 6b) is in
+  `code/figures/appendix/record_tables/baselines.tex`.
+- **Historical routers.** "Earlier complete end-to-end routers and auxiliary scores retain their
+  original sources and are not merged with the unified panels." Record:
+  `results/boundaries_large_small/summary/historical_e2e_reference_reused.csv`.
+
+## Appendix E: Extensions (version 1: Appendix G)
+
+### E.1 Cross-family pairs
 
 - **Llama pair.** "Receiver-only outputs and ProbeMax scores are those of the small pair (all 5,626
   inputs matched)." Record: `results/x01_x02_cross_family/x1/notes/prepare_checks.json`.
@@ -99,14 +83,14 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
   bit, and a 16-question smoke test with the new receiver had no unparseable answer." Record:
   `results/x03_llama_receiver/DEVIATIONS.md`, `results/x03_llama_receiver/results/smoke/SMOKE_CHECK.json`.
 
-### G.2 Stronger helper
+### E.2 Stronger helper
 
 - **Smallest p-values.** "0.26 (OBQA, q=0.05, 26 changes among 601 omitted calibration questions)
   and 0.026 (ARC, q=0.05, 6 of 256)". Record: `results/e16/results/analysis_e16_5/ledger_40.csv`.
 - **Unparseable answers.** "development: 8 and 2 for the receiver alone, none with the messages".
   Record: `results/e16/results/analysis_e16_5/E16_5_RESULTS.json`.
 
-### G.3 SQuAD
+### E.3 SQuAD
 
 - **Protocol.** The full-run protocol added "Text outputs for the fit questions, used only for
   re-splits"; "an empty answer is INVALID, and two INVALID answers agree." Record:
@@ -125,14 +109,14 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
   test"; "Among the 154 development changes, Text corrects 49 answers and breaks 39 … On test, the
   figures are 54 and 36 among 155 changes". Record: same file.
 
-### G.4 GSM8K
+### E.4 GSM8K
 
 - **Extractor.** "commas, currency and percent signs and a trailing period are stripped, and the
   result is compared as a decimal with trailing zeros removed"; "an answer that does not parse would
   take u=1 and never be omitted." Record: `results/e10/PREREG_E10.md`.
 - **Whole-continuation score.** "well spread (0.0163 to 0.1952)". Record: `results/e10/SUMMARY.md`.
 
-### G.5 Sampled answers
+### E.5 Sampled answers
 
 - **Changes by uncertainty.** At u=0, 2 of 354 (OBQA) and 0 of 217 (ARC) skipped answers change,
   "against 17 of 218 and 8 of 67 of the others." Record:
@@ -140,7 +124,56 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
 - **Disagreement difference.** "sampling adds −0.27 [−0.94, 0.40] and −0.33 [−1.00, 0.00] points
   (paired bootstrap)". Record: `results/x04_sampled_answers/results/analysis/X4_SUMMARY.md`.
 
-## Appendix H — Latency
+## Appendix F: Out-of-sample tests (version 1: Appendix I)
+
+- **Sealed ARC thresholds.** Text "u≤0.01800704002380371"; C2C "u≤0.0007095932960510254". Record:
+  `results/sealed_arc_test/protocol/` (`fit_thresholds_large_arc.json`, `large_arc_C.json`).
+- **Later tests.** "τ=0.00937 for Llama OBQA at q=0.60, 0.0150 for Llama ARC at q=0.70, and
+  3.58×10⁻⁷ for medium ARC at q=0.60". Record: `results/e16/results/analysis_oos/oos_results.csv`.
+- **Sealed run.** "Runtime startup (46.4 s) was excluded". Text: "1,073 neutral questions correct and
+  80 incorrect under both paths; median latency 324.5 ms (policy) versus 1030.5 ms (fixed)". C2C:
+  "1,054 correct and 108 incorrect … median latency 324.4 versus 382.0 ms". Record:
+  `results/sealed_arc_test/summary/` (`accuracy_decomposition.csv`, `e2e_latency_utility.csv`,
+  `runtime_diagnostics.json`).
+- **Download.** "download and file checks handled undecoded Parquet bytes, and the gold column was
+  never decoded or joined." Record: `results/sealed_arc_test/evidence/DOWNLOAD_ATTEMPT.json`.
+- **Interrupted analysis (later tests).** "One analysis run stopped in a threaded file read after the
+  seal receipts were written". Record: `results/e16/DEVIATIONS.md`.
+
+## Appendix G: What the certificates rest on (version 1: Appendix J)
+
+- **Unparseable share by split.** The ranges printed in Appendix G (0.000 to 0.707 over the
+  eighteen main settings, 0.187 to 0.495 over the seven OLMo and Llama settings) are calibration
+  values; on development they are 0.000 to 0.709 and 0.159 to 0.403. Pooled over the seven OLMo and
+  Llama settings: 0.318 (calibration) and 0.304 (development). Record:
+  `results/e11/results/E11a_cell3_share_aggregate.csv`.
+- **Filter versus deployable rule.** "The two differ because the non-deployable filter also removes
+  questions on which the reference is the unparseable one, and there the receiver's answer genuinely
+  differs from what the deployed system returns." Record: `results/e11/E11C_SUMMARY.md`.
+- **Precision.** FP32 used "SDPA, memory-efficient backend, TF32 off". "over the others the smallest
+  [non-top mass] is 6.04×10⁻⁸, and every zero has a top-two logit gap of at least 16.75". With the
+  logit-gap tie-break, "medium/OBQA/C2C deploys q=0.50 instead of 0.55 (Jaccard 0.915 with the
+  original omitted set; coverage 48.1 against 52.6%)". Record: `results/e16/RESULTS.md`,
+  `results/e16/results/analysis_e16_3/E16_3_RESULTS.json`.
+## Appendix H: Predicting the boundary (version 1: Appendix D)
+
+- **Small-sample convention.** Samples use "development questions for Text+fact, which has no
+  fit-split reference outputs"; "a sample with no disagreement predicts deployment, and one with no
+  agreement predicts fallback." Record: `results/e13/PREREG_E13.md`.
+- **Fit-split saving.** "unlike [the paper's saving equation], the gap is not conditioned on
+  omission." Record: `results/e15/PREREG_E15.md`.
+- **Helper-aware score, Text+fact.** For Text+fact the helper prefill omits the fact, as frozen; a second,
+  descriptive row with the fact in the prefill is in the released records. Record:
+  `results/e09b_e09c/analysis/E9C_RESULTS.json`.
+
+## Appendix I: Accuracy under skipping (version 1: Appendix E)
+
+- **"Other" and "Unused (omit/keep)".** "Other counts omitted questions where R and the reference
+  are wrong but the other communication action is correct, and unused counts questions where some
+  action is correct but the policy is not, split by side." Values:
+  `code/figures/appendix/record_tables/omit_keep.tex` (plotted in part in Figure 10b).
+
+## Appendix K.1: Latency at batch size one (version 1: Appendix H)
 
 - **Cold first probe.** "The first formal OBQA/Text policy probe took 2022.73 ms and remains in its
   57.64 ms mean probe/selector cost; the other three settings had means between 42.09 and
@@ -170,34 +203,3 @@ used "omit" for what the paper calls "skip"; quotations keep the original word.
 - **Port check.** Under our parser the small-pair receiver alone answers 191 of 500. Record:
   `results/e01_e02_e04/results/e1_accuracy.csv`.
 
-## Appendix I — Out-of-sample tests
-
-- **Sealed ARC thresholds.** Text "u≤0.01800704002380371"; C2C "u≤0.0007095932960510254". Record:
-  `results/sealed_arc_test/protocol/` (`fit_thresholds_large_arc.json`, `large_arc_C.json`).
-- **Later tests.** "τ=0.00937 for Llama OBQA at q=0.60, 0.0150 for Llama ARC at q=0.70, and
-  3.58×10⁻⁷ for medium ARC at q=0.60". Record: `results/e16/results/analysis_oos/oos_results.csv`.
-- **Sealed run.** "Runtime startup (46.4 s) was excluded". Text: "1,073 neutral questions correct and
-  80 incorrect under both paths; median latency 324.5 ms (policy) versus 1030.5 ms (fixed)". C2C:
-  "1,054 correct and 108 incorrect … median latency 324.4 versus 382.0 ms". Record:
-  `results/sealed_arc_test/summary/` (`accuracy_decomposition.csv`, `e2e_latency_utility.csv`,
-  `runtime_diagnostics.json`).
-- **Download.** "download and file checks handled undecoded Parquet bytes, and the gold column was
-  never decoded or joined." Record: `results/sealed_arc_test/evidence/DOWNLOAD_ATTEMPT.json`.
-- **Interrupted analysis (later tests).** "One analysis run stopped in a threaded file read after the
-  seal receipts were written". Record: `results/e16/DEVIATIONS.md`.
-
-## Appendix J — What the certificates rest on
-
-- **Unparseable share by split.** The ranges printed in Appendix J (0.000 to 0.707 over the
-  eighteen main settings, 0.187 to 0.495 over the seven OLMo and Llama settings) are calibration
-  values; on development they are 0.000 to 0.709 and 0.159 to 0.403. Pooled over the seven OLMo and
-  Llama settings: 0.318 (calibration) and 0.304 (development). Record:
-  `results/e11/results/E11a_cell3_share_aggregate.csv`.
-- **Filter versus deployable rule.** "The two differ because the non-deployable filter also removes
-  questions on which the reference is the unparseable one, and there the receiver's answer genuinely
-  differs from what the deployed system returns." Record: `results/e11/E11C_SUMMARY.md`.
-- **Precision.** FP32 used "SDPA, memory-efficient backend, TF32 off". "over the others the smallest
-  [non-top mass] is 6.04×10⁻⁸, and every zero has a top-two logit gap of at least 16.75". With the
-  logit-gap tie-break, "medium/OBQA/C2C deploys q=0.50 instead of 0.55 (Jaccard 0.915 with the
-  original omitted set; coverage 48.1 against 52.6%)". Record: `results/e16/RESULTS.md`,
-  `results/e16/results/analysis_e16_3/E16_3_RESULTS.json`.

@@ -27,6 +27,9 @@ system keeps communicating.
 
 ## Main findings
 
+Table, figure and appendix numbers follow arXiv version 2; the [paper map](docs/PAPER_MAP.md) gives
+version 1's.
+
 - **Oracle headroom is weak evidence that messages help.** Control inputs without
   answer-specific content, matched to change answers as often as the real messages, give
   comparable headroom and reproduce a median **76%** of the oracle's gain over the receiver
@@ -39,12 +42,12 @@ system keeps communicating.
   the gain over the receiver (Table 2).
 - **Safety does not determine efficiency.** At batch size one, skipping Text saves hundreds of
   milliseconds per query (**717.6 ms** for the large pair on ARC, with 95.0% of questions
-  skipped); skipping C2C saves far less (8 to 111 ms) (Table 4).
+  skipped); skipping C2C saves far less (8 to 111 ms) (Table 3).
 - In eleven tests on unseen questions, every certified policy we could test kept its change
   rate's 95% upper bound below 5%; on the sealed ARC test, the large pair's Text policy changed
   **20 of 1,100** skipped answers.
 
-Two prospective tests fix every rule before any calibration output (Table 3; Appendix G.6), and a
+Two prospective tests fix every rule before any calibration output (Table 2, last two rows; Appendix J), and a
 batched replay measures latency beyond batch size one:
 
 - **A three-agent system (QASC).** The primary policy skips the verifier agent, the only agent
@@ -52,7 +55,7 @@ batched replay measures latency beyond batch size one:
   keeps **12.55** of its 12.80-point gain.
 - **A 32B helper and receiver (OBQA).** The same procedure skips the helper on 68.4% of 744
   held-out questions and keeps the whole 2.55-point gain.
-- **Batched serving (Appendix H).** With skipped requests returning early in static batches of 1,
+- **Batched serving (Appendix K.2).** With skipped requests returning early in static batches of 1,
   8 and 32, skipping lowers mean request latency by 35 to 67% in all twelve settings.
 
 **Models:** three Qwen helper/receiver pairs, *small* (Qwen2.5-0.5B-Instruct → Qwen3-0.6B),
@@ -94,8 +97,8 @@ fails if any figure differs from the committed one. Figure 1 is a schematic.
 |---|---|---|
 | `verify_a_certification.py` | the certification test at all 20 grid points and the deployed threshold for large/OBQA/Text, large/ARC/Text and medium/OBQA/C2C | calibration ledgers |
 | `verify_b_e22_ratio.py` | the null/real gain ratio 0.547 of the rate-matched null, large/OBQA/Text (Table 1) | per-question answers of the real and null inputs |
-| `verify_c_table4_row.py` | Table 4, large/ARC/Text: 95.0% skipped and 9 of 284 skipped answers changed | per-question confidence scores and parsed labels |
-| `verify_d_three_agent.py` | the prospective three-agent test (Table 3): the three calibrated policies with the 40 labels the rule queries, and the primary policy's sealed-test row (798 skipped, 5 changed, 5 lost corrections, 12.55 of 12.80 points kept) | per-question scores, answers and queried labels of the fit, calibration and sealed splits |
+| `verify_c_table4_row.py` | Table 3, large/ARC/Text (the script is named after Table 4 of arXiv version 1): 95.0% skipped and 9 of 284 skipped answers changed | per-question confidence scores and parsed labels |
+| `verify_d_three_agent.py` | the prospective three-agent test (Table 2 and Appendix J.1): the three calibrated policies with the 40 labels the rule queries, and the primary policy's sealed-test row (798 skipped, 5 changed, 5 lost corrections, 12.55 of 12.80 points kept) | per-question scores, answers and queried labels of the fit, calibration and sealed splits |
 
 Every other table and figure has its stored results in the dataset: each experiment's protocol
 (`PREREG*.md` with its SHA-256), `SUMMARY.md`, `DEVIATIONS.md` and result tables.
@@ -154,9 +157,10 @@ docs/              paper map, released records, details the appendix leaves out
 
 ## Documentation
 
-- [Paper map](docs/PAPER_MAP.md): every table and figure → stored results → how it is checked
+- [Paper map](docs/PAPER_MAP.md): every table and figure → stored results → how it is checked (arXiv version 2 numbering; [version 1](docs/PAPER_MAP_V1.md))
 - [Released records](docs/RECORDS.md): every record the paper says is released, and where it is
 - [Appendix details](docs/APPENDIX_DETAILS.md): details the appendix leaves out for length
+- [Records moved out of the PDF](docs/RECORDS_MOVED_V2.md): the full calibration tests and deviations of the two prospective tests, and the freeze order of the extensions, which arXiv version 2 shortens
 - [Appendix figures](code/figures/appendix/README.md): what each figure script reads and checks
 - [Version-2 files](docs/FILES_V2.md): every code, configuration and split file added in version 2
 
